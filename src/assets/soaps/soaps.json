@@ -1,0 +1,74 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Lavender Handmade Soap",
+            "description": "A soothing handmade soap with the calming scent of lavender. Made with natural ingredients and essential oils.",
+            "price": 5.99,
+            "image": "http://northshoresoapworks.com/Soaps/_0001_coconut-nut.png"
+        },
+        {
+            "id": 2,
+            "name": "Tea Tree & Eucalyptus Soap",
+            "description": "An invigorating soap blend of tea tree and eucalyptus oils, perfect for a refreshing shower experience.",
+            "price": 6.99,
+            "image": "http://northshoresoapworks.com/Soaps/_0001_coconut-nut.png"
+        },
+        {
+            "id": 3,
+            "name": "Oatmeal & Honey Soap",
+            "description": "A gentle exfoliating soap made with oatmeal and honey, leaving your skin feeling soft and moisturized.",
+            "price": 4.99,
+            "image": "http://northshoresoapworks.com/Soaps/_0001_coconut-nut.png"
+        },
+        {
+            "id": 4,
+            "name": "Coconut Milk Soap",
+            "description": "Nourish your skin with the creamy lather of coconut milk soap. Perfect for hydrating dry skin.",
+            "price": 7.99,
+            "image": "http://northshoresoapworks.com/Soaps/_0001_coconut-nut.png"
+        },
+        {
+            "id": 5,
+            "name": "Lemongrass & Sage Soap",
+            "description": "Refresh and rejuvenate your senses with the energizing scent of lemongrass and sage in this all-natural soap.",
+            "price": 5.49,
+            "image": "http://northshoresoapworks.com/Soaps/_0001_coconut-nut.png"
+        },
+        {
+            "id": 6,
+            "name": "Charcoal Detox Soap",
+            "description": "Cleanse and detoxify your skin with this activated charcoal soap. Helps to draw out impurities and toxins.",
+            "price": 8.99,
+            "image": "http://northshoresoapworks.com/Soaps/_0001_coconut-nut.png"
+        },
+        {
+            "id": 7,
+            "name": "Rosemary Mint Soap",
+            "description": "Invigorate your senses with the refreshing blend of rosemary and mint in this natural handmade soap.",
+            "price": 6.49,
+            "image": "http://northshoresoapworks.com/Soaps/_0001_coconut-nut.png"
+        },
+        {
+            "id": 8,
+            "name": "Shea Butter Soap",
+            "description": "Pamper your skin with the luxurious moisture of shea butter soap. Great for dry and sensitive skin types.",
+            "price": 9.99,
+            "image": "http://northshoresoapworks.com/Soaps/_0001_coconut-nut.png"
+        },
+        {
+            "id": 9,
+            "name": "Orange Zest Soap",
+            "description": "Brighten your day with the uplifting citrus scent of orange zest soap. Leaves your skin feeling refreshed and revitalized.",
+            "price": 5.79,
+            "image": "http://northshoresoapworks.com/Soaps/_0001_coconut-nut.png"
+        },
+        {
+            "id": 10,
+            "name": "Cucumber Aloe Vera Soap",
+            "description": "Soothe and hydrate your skin with the cooling properties of cucumber and aloe vera in this gentle soap.",
+            "price": 6.99,
+            "image": "http://northshoresoapworks.com/Soaps/_0001_coconut-nut.png"
+        }
+    ]
+}

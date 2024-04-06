@@ -1,0 +1,34 @@
+:root {
+    --white: #f4f1f0;
+    --cream: #EEE7D5;
+    --stone: #DABDA5;
+    --mocha: #A48371;
+    --meadow: #A0A168;
+    --cypress: #717F66;
+    --khaki: #625A3C;
+    --walnut: #5F4438;
+    --bone: #E2D9C4;
+    --bone-opacity: #e2d9c485;
+    --black: #1a1a1a;
+    --black-opacity: #1a1a1a69;
+}
+
+@font-face {
+    font-family: 'Copperplate' !important;
+    src: url('../fonts/OPTICopperplate-Heavy.otf') format('opentype');
+    /* Additional font styles (e.g., font-weight, font-style) can be specified here */
+}
+
+body,
+html {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Copperplate' !important;
+    background-image: url("http://northshoresoapworks.com/images/shop_img.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}

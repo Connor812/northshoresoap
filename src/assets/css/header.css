@@ -1,0 +1,30 @@
+nav {
+    background-color: var(--mocha);
+    height: 70px;
+}
+
+nav ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-link {
+    color: var(--stone) !important;
+}
+
+.active {
+    color: var(--cream) !important;
+
+}
+
+.nav-link:hover {
+    color: var(--cream) !important;
+}
+
+#navbarNav {
+    background-color: var(--mocha);
+    padding: 10px;
+    z-index: 1;
+}
