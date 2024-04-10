@@ -5,12 +5,15 @@ function SoapCard({ soap, index }) {
     const soapIndex = `soap_page_${index}`;
 
     return (
-        <React.Fragment key={index}>
-            <button data-bs-toggle="modal" data-bs-target={`#${soapIndex}`} className="soap-card-soap-page" style={{ marginRight: '10px', flexShrink: 0 }}>
+        <div key={index} className="soap-card-soap-page">
+            <button data-bs-toggle="modal" data-bs-target={`#${soapIndex}`} className="soap-card-btn">
                 <img src={soap.image} alt={soap.name} style={{ maxWidth: '100%' }} />
-                <h6>{soap.name}</h6>
             </button>
-        </React.Fragment>
+
+            <div className="soap-card-title">
+                <h6>{soap.name}</h6>
+            </div>
+        </div>
 
     );
 }

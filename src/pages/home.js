@@ -11,7 +11,7 @@ function Home() {
    const [search, setSearch] = useState(''); // Search for soap by name
    const data = useContext(DataContext);
 
-   console.log(search);
+   console.log(data);
 
    const scrollLeft = () => {
       getImageWidth();
@@ -94,7 +94,7 @@ function Home() {
             <div className="soap-search-results">
 
                {search !== '' && (
-                  <div className="soap-search-results">
+                  <>
                      {soaps.products.map((soap, index) => {
                         if (soap.name.toLowerCase().includes(search.toLowerCase()) || soap.description.toLowerCase().includes(search.toLowerCase())) {
                            return (
@@ -106,7 +106,7 @@ function Home() {
                      {soaps.products.every((soap) => !soap.name.toLowerCase().includes(search.toLowerCase()) && !soap.description.toLowerCase().includes(search.toLowerCase())) && (
                         <p>No search results found.</p>
                      )}
-                  </div>
+                  </>
                )}
             </div>
          </section>

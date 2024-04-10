@@ -4,7 +4,7 @@ function CartItem({ item, index, removeItem, updateQuantity }) {
 
     return (
         <div key={index} id={`item_${index}`} className="cart-item">
-            <img src={item.imageUrl} alt="Product" width="150" height="auto" className="cart-item-image" />
+            <img src={item.imageUrl} alt="Product" className="cart-item-image" />
             <div className="cart-item-details">
                 <h2 className="cart-item-name">{item.name}</h2>
                 <div className="cart-item-price">${item.price}</div>

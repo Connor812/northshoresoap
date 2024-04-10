@@ -1,45 +1,88 @@
 .soap-page-wrapper {
-    /* background-image: url("http://northshoresoapworks.com/images/category_bg.png"); */
     width: 100%;
     height: 100vh;
-    color: var(--cream);
-    padding: 0 5%;
+    color: var(--mocha);
 }
 
 .soap-page-wrapper-background {
-    margin-top: 100px;
-    border: 2px solid var(--cream);
-    border-radius: 50px;
     padding: 20px;
-    backdrop-filter: blur(10px);
+    padding-top: 50px;
+    background-image: url("http://northshoresoapworks.com/images/category_bg.png");
+    background-repeat: repeat;
 }
-
-.soap-heading {}
 
 .soap-page-soap-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
     padding: 20px;
 }
 
 .soap-card-soap-page {
-    background: none;
-    border: none;
-    flex: 0 0 auto;
-    padding: 0 10px;
+    width: 25%;
+    min-width: 200px;
     height: auto;
-    width: 15%;
-    min-width: 150px;
-    padding: 20px;
-    max-width: 330px;
-    color: var(--cream);
-    transition: 200ms;
-    border-radius: 20px;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.soap-card-soap-page:hover {
+.soap-card-soap-page button {
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    padding: 15px;
+    background: none;
+    border: none;
     border-radius: 20px;
-    background-color: var(--bone-opacity);
+    transition: 200ms;
+}
+
+.soap-card-soap-page button:hover {
+    background-color: var(--mocha-opacity);
+    color: var(--white);
+}
+
+.soap-card-title {
+    color: var(--mocha);
+    text-align: center;
+    min-height: 55.5px !important;
+    width: 100%;
+    background-color: var(--white);
+    padding: 5px;
+    border-top: 2px solid var(--grey);
+    border-bottom: 8px solid var(--grey);
+    margin: 3px;
+    margin-top: auto;
+}
+
+.soap-page-side-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.soap-middle-column {
+    flex: 0 0 auto;
+    width: 66.66666667% !important;
+}
+
+@media screen and (max-width: 1117px) {
+    .soap-page-side-col {
+        display: none !important;
+    }
+
+    .soap-middle-column {
+        flex: 0 0 auto;
+        width: 100% !important;
+    }
+
+    .soap-page-wrapper-background {
+        padding: 0;
+        padding-top: 50px;
+    }
+
 }

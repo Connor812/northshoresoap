@@ -3,6 +3,7 @@
     --cream: #EEE7D5;
     --stone: #DABDA5;
     --mocha: #A48371;
+    --mocha-opacity: #a4837195;
     --meadow: #A0A168;
     --cypress: #717F66;
     --khaki: #625A3C;
@@ -11,6 +12,7 @@
     --bone-opacity: #e2d9c485;
     --black: #1a1a1a;
     --black-opacity: #1a1a1a69;
+    --grey: #D6D6D6;
 }
 
 @font-face {

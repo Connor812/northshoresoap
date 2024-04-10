@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CartItem from "../components/cartItem.js";
+import { Link } from 'react-router-dom';
 import "../assets/css/cart.css";
 
 function Cart() {
@@ -72,6 +73,9 @@ function Cart() {
                   <div className="cart-total-grand">
                      Grand Total: ${grandTotal}
                   </div>
+                  <center>
+                     <Link className="checkout-btn" to="/checkout">Checkout</Link>
+                  </center>
                </div>
             </div>
          </section>

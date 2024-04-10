@@ -10,6 +10,7 @@ import Household from './pages/household.js';
 import Clothing from './pages/clothing.js';
 import Jewelry from './pages/jewelry.js';
 import Cart from './pages/cart.js';
+import Checkout from './pages/checkout.js';
 
 import { DataProvider } from './hooks/dataContext.js'; // Import DataProvider
 import "./assets/css/main.css";
@@ -32,6 +33,7 @@ function App() {
             <Route path="/clothing" element={<Clothing />} />
             <Route path="/jewelry" element={<Jewelry />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </div>
       </DataProvider>
