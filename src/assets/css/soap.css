@@ -36,6 +36,7 @@
     max-width: 330px;
     color: var(--cream);
     transition: 200ms;
+    border-radius: 20px;
 }
 
 .soap-card-soap-page:hover {

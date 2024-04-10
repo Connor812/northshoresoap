@@ -8,9 +8,10 @@ import "../assets/css/home.css";
 function Home() {
    const carouselRef = useRef(null);
    const [itemWidth, setItemWidth] = useState(300); // Initial width, adjust as needed
+   const [search, setSearch] = useState(''); // Search for soap by name
    const data = useContext(DataContext);
 
-   console.log(data);
+   console.log(search);
 
    const scrollLeft = () => {
       getImageWidth();
@@ -77,18 +78,37 @@ function Home() {
 
             <p className="text-center">SELECT A SOAP TO LEARN ABOUT ITS GOODNESS & YOU CAN MIX AND MATCH</p>
             <div className="sent-btn-container">
-               <button className="sent-btn">Sent One</button>
-               <button className="sent-btn">Sent Two</button>
-               <button className="sent-btn">Sent Three</button>
-               <button className="sent-btn">Sent Four</button>
-               <button className="sent-btn">Sent Five</button>
-               <button className="sent-btn">Sent Six</button>
-               <button className="sent-btn">Sent Seven</button>
+               <button className="sent-btn" onClick={() => setSearch("Lavender")}>Lavender</button>
+               <button className="sent-btn" onClick={() => setSearch("Eucalyptus")}>Eucalyptus</button>
+               <button className="sent-btn" onClick={() => setSearch("Citrus")}>Citrus</button>
+               <button className="sent-btn" onClick={() => setSearch("Rose")}>Rose</button>
+               <button className="sent-btn" onClick={() => setSearch("Peppermint")}>Peppermint</button>
+               <button className="sent-btn" onClick={() => setSearch("Coconut")}>Coconut</button>
+               <button className="sent-btn" onClick={() => setSearch("Sandalwood")}>Sandalwood</button>
             </div>
             <center className="sent-search-container">
                <label htmlFor="sent-search">Search For Your Favorite Fragrance: </label>
-               <input type="text" className="fragrance-search" />
+               <input type="text" className="fragrance-search" onInput={(event) => setSearch(event.target.value)} />
             </center>
+
+            <div className="soap-search-results">
+
+               {search !== '' && (
+                  <div className="soap-search-results">
+                     {soaps.products.map((soap, index) => {
+                        if (soap.name.toLowerCase().includes(search.toLowerCase()) || soap.description.toLowerCase().includes(search.toLowerCase())) {
+                           return (
+                              <HomeSoapCard key={index} soap={soap} index={index} />
+                           );
+                        }
+                        return null;
+                     })}
+                     {soaps.products.every((soap) => !soap.name.toLowerCase().includes(search.toLowerCase()) && !soap.description.toLowerCase().includes(search.toLowerCase())) && (
+                        <p>No search results found.</p>
+                     )}
+                  </div>
+               )}
+            </div>
          </section>
 
          <center className="category-header">

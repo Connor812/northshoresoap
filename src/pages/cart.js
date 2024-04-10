@@ -1,22 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
+import CartItem from "../components/cartItem.js";
 import "../assets/css/cart.css";
 
 function Cart() {
 
    const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
+   const [subTotal, setSubtotal] = useState(cartItems.reduce((accumulator, item) => (accumulator + item.price * item.quantity), 0).toFixed(2));
+   const [hst, setHst] = useState((cartItems.reduce((accumulator, item) => (accumulator + item.price * item.quantity), 0) * 0.13).toFixed(2));
+   const [grandTotal, setGrandTotal] = useState((cartItems.reduce((accumulator, item) => (accumulator + item.price * item.quantity), 0) * 1.13).toFixed(2));
+
    function removeItem(itemElememt, itemId) {
-
-      const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-      console.log(itemElememt, itemId);
-
       const updatedCartItems = cartItems.filter(item => item.id !== itemId);
+      const updatedSubTotal = updatedCartItems.reduce((accumulator, item) => (accumulator + item.price * item.quantity), 0).toFixed(2);
+      const updatedHst = (updatedSubTotal * 0.13).toFixed(2);
+      const updatedGrandTotal = (parseFloat(updatedSubTotal) + parseFloat(updatedHst)).toFixed(2);
+
       localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+      setSubtotal(updatedSubTotal);
+      setHst(updatedHst);
+      setGrandTotal(updatedGrandTotal);
+   }
 
-      const itemElement = document.getElementById(itemElememt);
-      itemElement.remove();
+   function updateQuantity(itemId, action) {
+      const updatedCartItems = cartItems.map(item => {
+         if (item.id === itemId) {
+            if (action === "increase") {
+               return { ...item, quantity: item.quantity + 1 };
+            } else if (action === "decrease" && item.quantity > 1) {
+               return { ...item, quantity: item.quantity - 1 };
+            }
+         }
+         return item;
+      });
 
+      const updatedSubTotal = updatedCartItems.reduce((accumulator, item) => (accumulator + item.price * item.quantity), 0).toFixed(2);
+      const updatedHst = (updatedSubTotal * 0.13).toFixed(2);
+      const updatedGrandTotal = (parseFloat(updatedSubTotal) + parseFloat(updatedHst)).toFixed(2);
+
+      localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+      setSubtotal(updatedSubTotal);
+      setHst(updatedHst);
+      setGrandTotal(updatedGrandTotal);
    }
 
    return (
@@ -31,33 +56,26 @@ function Cart() {
                ) : (
                   cartItems.map((item, index) => {
                      return (
-
-                        <div key={index} id={`item_${index}`} className="cart-item">
-                           <img src={item.imageUrl} alt="Product" width="150" height="auto" className="cart-item-image" />
-                           <div className="cart-item-details">
-                              <h2 className="cart-item-name">{item.name}</h2>
-                              <div className="cart-item-price">${item.price}</div>
-                              <div>
-                                 <span className="cart-item-quantity">Quantity: {item.quantity}</span>
-                                 <button className="cart-item-remove" onClick={() => removeItem(`item_${index}`, item.id)}>
-                                    <svg width="45" height="45" className="bi bi-x" viewBox="0 0 16 16">
-                                       <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-                                    </svg>
-                                 </button>
-                              </div>
-                           </div>
-                        </div>
+                        <CartItem key={index} item={item} index={index} removeItem={removeItem} updateQuantity={updateQuantity} />
                      )
                   })
                )}
+               <div className="cart-total">
+                  <hr />
+                  <div className="cart-total-amount">
+                     SubTotal: ${subTotal}
+                  </div>
+                  <div className="cart-total-hst">
+                     HST: ${hst}
+                  </div>
+                  <hr />
+                  <div className="cart-total-grand">
+                     Grand Total: ${grandTotal}
+                  </div>
+               </div>
             </div>
-
-
          </section>
-
-
-
-      </main>
+      </main >
    );
 }
 
