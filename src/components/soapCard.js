@@ -11,7 +11,7 @@ function SoapCard({ soap, index }) {
             </button>
 
             <div className="soap-card-title">
-                <h6>{soap.name}</h6>
+                {soap.name}
             </div>
         </div>
 

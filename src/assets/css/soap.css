@@ -34,26 +34,34 @@
     max-width: 200px;
     height: 100%;
     padding: 15px;
+    padding-bottom: 0;
     background: none;
     border: none;
     border-radius: 20px;
     transition: 200ms;
+    display: flex;
+    align-items: flex-end;
 }
 
-.soap-card-soap-page button:hover {
-    background-color: var(--mocha-opacity);
-    color: var(--white);
+.soap-card-soap-page button img {
+    padding: 10px;
+    padding-bottom: 0;
 }
 
 .soap-card-title {
+    line-height: 0.9;
     color: var(--mocha);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    min-height: 55.5px !important;
+    font-size: 12pt;
+    min-height: 40px !important;
     width: 100%;
     background-color: var(--white);
     padding: 5px;
-    border-top: 2px solid var(--grey);
-    border-bottom: 8px solid var(--grey);
+    border-top: 1px solid var(--grey);
+    border-bottom: 9px solid var(--grey);
     margin: 3px;
     margin-top: auto;
 }

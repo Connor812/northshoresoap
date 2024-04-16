@@ -44,11 +44,12 @@
 
 }
 
-.soap-carousel img {
+.soap-card-img {
     width: 100%;
-    height: auto;
+    height: 170px;
     object-fit: cover;
     margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 .soap-carousel>div {
@@ -59,20 +60,38 @@
 .soap-card {
     background: none;
     border: none;
-    padding: 0 10px;
-    height: auto;
-    width: 30%;
-    min-width: 150px;
+    min-width: 300px !important;
     padding: 20px;
     color: var(--mocha);
     transition: 200ms;
-    max-width: 250px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .soap-card:hover {
     border-radius: 20px;
     background-color: var(--bone);
+}
+
+@media screen and (max-width: 1238.4px) {
+    .soap-search-wrapper {
+        padding: 5% 0;
+    }
+
+    .arrow-btn {
+        display: none;
+    }
+
+    .carousel-content {
+        width: 100%;
+        overflow-x: scroll !important;
+    }
+
+    .soap-card {
+        display: inline-block;
+    }
 }
 
 .sent-btn-container {
@@ -97,7 +116,6 @@
     background-color: var(--cypress);
 
 }
-
 
 .sent-search-container {
     margin-top: 30px;
@@ -201,7 +219,6 @@
 .modal-content {
     border-radius: 50px !important;
     border: 2px solid var(--mocha);
-    color: var(--mocha)
 }
 
 .modal-dialog {
@@ -212,7 +229,7 @@
 .soap-display {
     display: flex;
     padding: 15px 60px !important;
-    color: var(--mocha);
+    color: var(--walnut);
 }
 
 @media screen and (max-width: 720px) {
@@ -263,7 +280,7 @@
 .quantity {
     width: 50px;
     height: auto;
-    border: 1px solid var(--mocha);
+    border: 1px solid var(--walnut);
 }
 
 .buy-button {

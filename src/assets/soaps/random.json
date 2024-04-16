@@ -1,0 +1,46 @@
+{
+    "products": [
+        {
+            "id": 11,
+            "name": "Flowers",
+            "description": "A soothing handmade soap with the calming scent of lavender. Made with natural ingredients and essential oils.",
+            "price": 5.99,
+            "image": "http://northshoresoapworks.com/images/flowers.png"
+        },
+        {
+            "id": 12,
+            "name": "Cup",
+            "description": "An invigorating soap blend of tea tree and eucalyptus oils, perfect for a refreshing shower experience.",
+            "price": 6.99,
+            "image": "http://northshoresoapworks.com/images/cup.png"
+        },
+        {
+            "id": 13,
+            "name": "Sweater",
+            "description": "A gentle exfoliating soap made with oatmeal and honey, leaving your skin feeling soft and moisturized.",
+            "price": 4.99,
+            "image": "http://northshoresoapworks.com/images/sweater.png"
+        },
+        {
+            "id": 14,
+            "name": "Reth",
+            "description": "Nourish your skin with the creamy lather of coconut milk soap. Perfect for hydrating dry skin.",
+            "price": 7.99,
+            "image": "http://northshoresoapworks.com/images/reth.png"
+        },
+        {
+            "id": 15,
+            "name": "More Flowers",
+            "description": "Refresh and rejuvenate your senses with the energizing scent of lemongrass and sage in this all-natural soap.",
+            "price": 5.49,
+            "image": "http://northshoresoapworks.com/images/more-flowers.png"
+        },
+        {
+            "id": 16,
+            "name": "ouster",
+            "description": "Cleanse and detoxify your skin with this activated charcoal soap. Helps to draw out impurities and toxins.",
+            "price": 8.99,
+            "image": "http://northshoresoapworks.com/images/ouster.png"
+        }
+    ]
+}

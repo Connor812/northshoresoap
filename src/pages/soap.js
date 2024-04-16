@@ -1,13 +1,13 @@
 import React from "react";
 import soaps from "../assets/soaps/soaps.json";
+import randomItems from "../assets/soaps/random.json";
 import { SoapCard, SoapCardModal } from "../components/soapCard.js";
 import "../assets/css/soap.css";
 
 function Soap() {
     function getRandomItem() {
-        return soaps.products[Math.floor(Math.random() * soaps.products.length)];
+        return randomItems.products[Math.floor(Math.random() * randomItems.products.length)];
     }
-
 
     return (
         <>

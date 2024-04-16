@@ -11,6 +11,7 @@ import Clothing from './pages/clothing.js';
 import Jewelry from './pages/jewelry.js';
 import Cart from './pages/cart.js';
 import Checkout from './pages/checkout.js';
+import Payment from './pages/payment.js'
 
 import { DataProvider } from './hooks/dataContext.js'; // Import DataProvider
 import "./assets/css/main.css";
@@ -23,6 +24,7 @@ function App() {
       <DataProvider>
         <div>
           <Header />
+          <Cart />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -32,8 +34,8 @@ function App() {
             <Route path="/bath" element={<Bath />} />
             <Route path="/clothing" element={<Clothing />} />
             <Route path="/jewelry" element={<Jewelry />} />
-            <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
+            <Route path="/payment" element={<Payment />} />
           </Routes>
         </div>
       </DataProvider>

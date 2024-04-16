@@ -1,5 +1,5 @@
 :root {
-    --white: #f4f1f0;
+    --white: white;
     --cream: #EEE7D5;
     --stone: #DABDA5;
     --mocha: #A48371;
@@ -13,6 +13,7 @@
     --black: #1a1a1a;
     --black-opacity: #1a1a1a69;
     --grey: #D6D6D6;
+    --red: #842029;
 }
 
 @font-face {
@@ -23,14 +24,29 @@
 
 body,
 html {
+    background-color: var(--cream) !important;
     padding: 0px;
     margin: 0px;
     width: 100%;
     height: 100vh;
     font-family: 'Copperplate' !important;
-    background-image: url("http://northshoresoapworks.com/images/shop_img.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: repeat;
-    background-attachment: fixed;
+}
+
+hr {
+    border: 1px solid var(--mocha) !important;
+    width: 100%;
+}
+
+.cart-button {
+    background: none;
+    border: none;
+}
+
+.cart-button svg {
+    fill: var(--stone);
+    transition: 300ms;
+}
+
+.cart-button svg:hover {
+    fill: var(--cream);
 }

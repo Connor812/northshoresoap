@@ -5,8 +5,8 @@ function HomeSoapCard({ soap, index }) {
     const soapIndex = `soap_${index}`;
     return (
         <React.Fragment key={index}>
-            <button data-bs-toggle="modal" data-bs-target={`#${soapIndex}`} key={soap.id} className="soap-card" style={{ marginRight: '10px', flexShrink: 0 }}>
-                <img src={soap.image} alt={soap.name} style={{ maxWidth: '100%' }} />
+            <button data-bs-toggle="modal" data-bs-target={`#${soapIndex}`} key={soap.id} className="soap-card">
+                <img src={soap.image} alt={soap.name} className="soap-card-img"/>
                 <h6>{soap.name}</h6>
             </button>
 

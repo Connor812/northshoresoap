@@ -15,6 +15,7 @@ function Home() {
 
    const scrollLeft = () => {
       getImageWidth();
+      console.log(itemWidth);
       if (carouselRef.current) {
          carouselRef.current.scrollTo({
             top: 0,
@@ -26,6 +27,7 @@ function Home() {
 
    const scrollRight = () => {
       getImageWidth();
+      console.log(itemWidth);
       if (carouselRef.current) {
          carouselRef.current.scrollTo({
             top: 0,
@@ -36,7 +38,7 @@ function Home() {
    };
 
    function getImageWidth() {
-      const firstImage = document.querySelector('.soap-card img');
+      const firstImage = document.querySelector('.soap-card');
       if (firstImage) {
          setItemWidth(firstImage.clientWidth);
       }
