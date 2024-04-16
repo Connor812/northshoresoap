@@ -6,7 +6,7 @@ function HomeSoapCard({ soap, index }) {
     return (
         <React.Fragment key={index}>
             <button data-bs-toggle="modal" data-bs-target={`#${soapIndex}`} key={soap.id} className="soap-card">
-                <img src={soap.image} alt={soap.name} className="soap-card-img"/>
+                <img src={soap.image} alt={soap.name} className="soap-card-img" />
                 <h6>{soap.name}</h6>
             </button>
 
@@ -14,6 +14,9 @@ function HomeSoapCard({ soap, index }) {
                 <div className="modal-dialog modal-dialog-centered">
                     <div className="modal-content">
                         <div className="modal-body soap-display">
+                            <div className="close-btn-container">
+                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
                             <div className="left-side">
                                 <img src="http://northshoresoapworks.com/images/white_bg_logo.jpg" alt="logo" className="soap-logo" />
                                 <img src={soap.image} alt={soap.name} className="soap-image" />
@@ -25,12 +28,10 @@ function HomeSoapCard({ soap, index }) {
                                 <p className="ingredients">These ingredients are designed to create lather and effectively remove dirt, oil, a</p>
                             </div>
                             <div className="right-side">
-                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                <div className="d-flex justify-content-between">
+                                <div>
                                     <h4>
                                         {soap.name}
                                     </h4>
-
                                 </div>
 
                                 <br />

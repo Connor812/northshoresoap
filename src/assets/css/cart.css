@@ -48,6 +48,7 @@
     position: absolute;
     top: 30px;
     left: 40px;
+    z-index: 1;
 }
 
 .cart-modal-close-btn svg {
