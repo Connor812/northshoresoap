@@ -36,6 +36,7 @@
 .cart {
     width: 100%;
     padding: 0px 20px;
+    color: var(--mocha);
 }
 
 .cart-modal-header {
@@ -67,8 +68,11 @@
 }
 
 .cart-item-image {
-    width: 150px;
+    width: 250px;
     height: 100%;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px var(--mocha);
 }
 
 .cart-title {

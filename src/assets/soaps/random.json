@@ -1,46 +1,101 @@
 {
-    "products": [
+    "objects": [
         {
-            "id": 11,
-            "name": "Flowers",
-            "description": "A soothing handmade soap with the calming scent of lavender. Made with natural ingredients and essential oils.",
-            "price": 5.99,
-            "image": "http://northshoresoapworks.com/images/flowers.png"
+            "type": "ITEM",
+            "id": "H32AYR2IODIKXKFDYCFTD4F7",
+            "updated_at": "2024-04-22T16:31:27.433Z",
+            "created_at": "2024-04-02T15:12:15.262Z",
+            "version": 1713803487433,
+            "is_deleted": false,
+            "present_at_all_locations": true,
+            "item_data": {
+                "name": "TEST SOAP 1",
+                "description": "This is a test soap",
+                "is_taxable": true,
+                "visibility": "PRIVATE",
+                "variations": [
+                    {
+                        "type": "ITEM_VARIATION",
+                        "id": "RTGVFPGXWVOR7K62WTMU4OL4",
+                        "updated_at": "2024-04-22T16:20:51.109Z",
+                        "created_at": "2024-04-02T15:12:15.262Z",
+                        "version": 1713802851109,
+                        "is_deleted": false,
+                        "present_at_all_locations": true,
+                        "item_variation_data": {
+                            "item_id": "H32AYR2IODIKXKFDYCFTD4F7",
+                            "name": "Regular",
+                            "ordinal": 1,
+                            "pricing_type": "FIXED_PRICING",
+                            "price_money": {
+                                "amount": 800,
+                                "currency": "CAD"
+                            },
+                            "track_inventory": false,
+                            "inventory_alert_type": "NONE",
+                            "sellable": true,
+                            "stockable": true,
+                            "channels": [
+                                "CH_aKajDW8McbvYE6PQGqdpa8FtFisZ7fiXZ8vfYRlQuYC"
+                            ]
+                        }
+                    }
+                ],
+                "product_type": "REGULAR",
+                "skip_modifier_screen": false,
+                "ecom_available": true,
+                "ecom_visibility": "VISIBLE",
+                "image_ids": [
+                    "FPYJYA2ZQYELWUA3KV3MKJQW",
+                    "OWNHP2RPFOATKREQD6O5ROA4"
+                ],
+                "categories": [
+                    {
+                        "id": "TYZEXSLMH53M2T2WA6MPQDFV",
+                        "ordinal": -2251731094208512
+                    }
+                ],
+                "pickup_fulfillment_preferences_id": "fprefs_127ylzb5n8zsnqsvh34np8fss",
+                "delivery_fulfillment_preferences_id": "fprefs_127ylzb5m63agga6a9zg39ofw",
+                "description_html": "<p>This is a test soap</p>",
+                "description_plaintext": "This is a test soap",
+                "channels": [
+                    "CH_aKajDW8McbvYE6PQGqdpa8FtFisZ7fiXZ8vfYRlQuYC"
+                ],
+                "shipping_fulfillment_preferences_id": "fprefs_127ylzb5nqzbdnydnmaph9bek",
+                "dine_in_fulfillment_preferences_id": "fprefs_127ylzb5mpmqq507ixd0hroqk",
+                "is_archived": false,
+                "reporting_category": {
+                    "id": "TYZEXSLMH53M2T2WA6MPQDFV",
+                    "ordinal": -2251731094208512
+                }
+            }
         },
         {
-            "id": 12,
-            "name": "Cup",
-            "description": "An invigorating soap blend of tea tree and eucalyptus oils, perfect for a refreshing shower experience.",
-            "price": 6.99,
-            "image": "http://northshoresoapworks.com/images/cup.png"
+            "type": "IMAGE",
+            "id": "FPYJYA2ZQYELWUA3KV3MKJQW",
+            "updated_at": "2024-04-03T17:56:41.585Z",
+            "created_at": "2024-04-03T17:56:41.585Z",
+            "version": 1712167001585,
+            "is_deleted": false,
+            "present_at_all_locations": true,
+            "image_data": {
+                "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/a8a9b0baa615c29073fca2771a5a7953cb5ae6ff/original.png"
+            }
         },
         {
-            "id": 13,
-            "name": "Sweater",
-            "description": "A gentle exfoliating soap made with oatmeal and honey, leaving your skin feeling soft and moisturized.",
-            "price": 4.99,
-            "image": "http://northshoresoapworks.com/images/sweater.png"
-        },
-        {
-            "id": 14,
-            "name": "Reth",
-            "description": "Nourish your skin with the creamy lather of coconut milk soap. Perfect for hydrating dry skin.",
-            "price": 7.99,
-            "image": "http://northshoresoapworks.com/images/reth.png"
-        },
-        {
-            "id": 15,
-            "name": "More Flowers",
-            "description": "Refresh and rejuvenate your senses with the energizing scent of lemongrass and sage in this all-natural soap.",
-            "price": 5.49,
-            "image": "http://northshoresoapworks.com/images/more-flowers.png"
-        },
-        {
-            "id": 16,
-            "name": "ouster",
-            "description": "Cleanse and detoxify your skin with this activated charcoal soap. Helps to draw out impurities and toxins.",
-            "price": 8.99,
-            "image": "http://northshoresoapworks.com/images/ouster.png"
+            "type": "IMAGE",
+            "id": "OWNHP2RPFOATKREQD6O5ROA4",
+            "updated_at": "2024-04-22T16:31:24.55Z",
+            "created_at": "2024-04-22T16:31:24.55Z",
+            "version": 1713803484550,
+            "is_deleted": false,
+            "present_at_all_locations": true,
+            "image_data": {
+                "name": "1135889.jpg",
+                "url": "https://items-images-production.s3.us-west-2.amazonaws.com/files/6345bcba0df6e59cf198bf7525f9b929d7bcddf1/original.jpeg"
+            }
         }
-    ]
+    ],
+    "latest_time": "2024-04-22T16:31:27.433Z"
 }

@@ -1,15 +1,13 @@
 import "../assets/css/header.css";
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-function Header() {
+function Header({ updateCart, cartItems, setCartItems }) {
+  const location = useLocation();
 
-  // Define state to manage the active link
-  const [activeLink, setActiveLink] = useState('Home');
-
-  // Function to handle click on nav links
-  const handleClick = (link) => {
-    setActiveLink(link);
+  // Function to check if a link is active based on the URL pathname
+  const isActiveLink = (path) => {
+    return location.pathname === path;
   };
 
   return (
@@ -22,26 +20,24 @@ function Header() {
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link
-                className={`nav-link ${activeLink === 'Home' ? 'active' : ''}`}
-                onClick={() => handleClick('Home')}
-                to="/"
+                className={`nav-link ${isActiveLink('/northshoresoap') ? 'active' : ''}`}
+                to="/northshoresoap"
               >
                 Home
               </Link>
             </li>
             <li className="nav-item">
               <Link
-                className={`nav-link ${activeLink === 'About' ? 'active' : ''}`}
-                onClick={() => handleClick('About')}
+                className={`nav-link ${isActiveLink('/about') ? 'active' : ''}`}
                 to="/about"
               >
                 About
               </Link>
             </li>
+
             <li className="nav-item">
               <Link
-                className={`nav-link ${activeLink === 'Contact' ? 'active' : ''}`}
-                onClick={() => handleClick('Contact')}
+                className={`nav-link ${isActiveLink('/contact') ? 'active' : ''}`}
                 to="/contact"
               >
                 Contact
@@ -49,8 +45,7 @@ function Header() {
             </li>
             <li className="nav-item">
               <Link
-                className={`nav-link ${activeLink === 'Soap' ? 'active' : ''}`}
-                onClick={() => handleClick('Soap')}
+                className={`nav-link ${isActiveLink('/soap') ? 'active' : ''}`}
                 to="/soap"
               >
                 Soap
@@ -58,8 +53,7 @@ function Header() {
             </li>
             <li className="nav-item">
               <Link
-                className={`nav-link ${activeLink === 'Bath' ? 'active' : ''}`}
-                onClick={() => handleClick('Bath')}
+                className={`nav-link ${isActiveLink('/bath') ? 'active' : ''}`}
                 to="/bath"
               >
                 Bath & Skin
@@ -67,8 +61,7 @@ function Header() {
             </li>
             <li className="nav-item">
               <Link
-                className={`nav-link ${activeLink === 'Household' ? 'active' : ''}`}
-                onClick={() => handleClick('Household')}
+                className={`nav-link ${isActiveLink('/household') ? 'active' : ''}`}
                 to="/household"
               >
                 Household
@@ -76,8 +69,7 @@ function Header() {
             </li>
             <li className="nav-item">
               <Link
-                className={`nav-link ${activeLink === 'Clothing' ? 'active' : ''}`}
-                onClick={() => handleClick('Clothing')}
+                className={`nav-link ${isActiveLink('/clothing') ? 'active' : ''}`}
                 to="/clothing"
               >
                 Clothing
@@ -85,17 +77,17 @@ function Header() {
             </li>
             <li className="nav-item">
               <Link
-                className={`nav-link ${activeLink === 'Jewelry' ? 'active' : ''}`}
-                onClick={() => handleClick('Jewelry')}
+                className={`nav-link ${isActiveLink('/jewelry') ? 'active' : ''}`}
                 to="/jewelry"
               >
                 Jewelry
               </Link>
             </li>
 
+
           </ul>
         </div>
-        <button type="button" className="cart-button" data-bs-toggle="modal" data-bs-target="#cart-modal">
+        <button type="button" className="cart-button" data-bs-toggle="modal" data-bs-target="#cart-modal" onClick={() => updateCart(JSON.parse(localStorage.getItem("cartItems")))} >
           <svg width="30" height="30" className="bi bi-cart2" viewBox="0 0 16 16">
             <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
           </svg>
@@ -104,5 +96,4 @@ function Header() {
     </nav>
   );
 }
-
 export default Header;

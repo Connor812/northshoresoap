@@ -1,9 +1,182 @@
+.button {
+    display: inline-block;
+    background-color: var(--meadow);
+    color: var(--white);
+    border: 1px solid var(--mocha);
+    border-radius: 50px;
+    padding: 8px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 300ms;
+    min-width: 150px;
+    transition: 200ms;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: var(--cypress);
+    color: var(--white);
+}
+
 .checkout-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+@media screen and (max-width: 1400px) {
+    .checkout-wrapper {
+        flex-direction: column;
+    }
+
+    .cart-contents {
+        width: 100% !important;
+        border-right: none !important;
+    }
+
+    .address-form-wrapper {
+        width: 100% !important;
+    }
+
+    .checkout-logo {
+        max-width: 800px;
+    }
+
+    .white-background {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+.cart-contents {
+    width: 60%;
+    padding: 10px;
+    background-color: var(--white);
+    color: var(--mocha);
+    border-right: 1px solid var(--mocha);
+}
+
+.item-labels {
+    width: 50%;
+}
+
+.checkout-cart-list {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul.checkout-cart-list hr:last-child {
+    border: 2px solid var(--walnut) !important;
+}
+
+.checkout-cart-item {
+    position: relative;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.checkout-quantity-container {
+    border: 1px solid var(--black);
+    border-right: none;
+    border-left: none;
+    padding: 0px;
+    height: 40px;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    height: 100%;
+    margin: 0px;
+    padding: 0px 10px;
+    background: none;
+    border-top: none;
+    border-bottom: none;
+    border-left: 1px solid var(--black);
+    border-right: 1px solid var(--black);
+    transition: 200ms;
+    fill: var(--black);
+}
+
+.quantity-btn:hover {
+    background-color: var(--mocha);
+    fill: var(--cream)
+}
+
+.checkout-cart-item-img {
+    width: 180px;
+    margin-right: 50px;
+}
+
+.checkout-cart-item-details {
     width: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--black);
+}
+
+.remove-item-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    fill: var(--mocha);
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: 200ms;
+}
+
+.remove-item-btn:hover {
+    fill: var(--walnut);
+}
+
+.total-section {
+    font-size: 14pt;
+}
+
+.coupon-code-section {
+    width: 100%;
+}
+
+.coupon-code {
+    border: none;
+    border-bottom: 1px solid var(--mocha);
+    font-size: 18pt;
+    color: var(--mocha);
+    margin-right: 15px;
+}
+
+
+.white-background {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--white);
+    border: 1px solid var(--mocha);
+}
+
+.address-form-wrapper {
+    width: 40%;
+    display: flex;
     justify-content: center;
+    align-items: start;
     padding-top: 20px;
-    color: var(--mocha)
+    color: var(--mocha);
+    padding: 40px 40px;
+    background-image: url("http://northshoresoapworks.com/images/category_bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    background-size: auto;
+}
+
+.checkout-logo {
+    width: 100%;
+    padding: 0px 10px;
 }
 
 .checkout-container {
@@ -30,7 +203,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
     margin: 8px 0;
 }
 
@@ -68,4 +241,20 @@
 
 .payment-button:hover {
     background-color: var(--walnut);
+}
+
+.checkout-spinner {
+    color: var(--cream);
+}
+
+#shipping-checkbox {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Payment */
+
+.payment {
+    width: 100%;
 }

@@ -30,9 +30,10 @@
     fill: var(--mocha);
     width: 50px;
     height: 50px;
+    transition: 200ms;
 }
 
-.soap-carousel button svg:hover {
+.arrow-btn:hover {
     fill: var(--walnut);
 
 }
@@ -41,7 +42,7 @@
     display: flex;
     overflow: hidden;
     position: relative;
-
+    width: 100%;
 }
 
 .soap-card-img {
@@ -50,6 +51,7 @@
     object-fit: cover;
     margin-bottom: 20px;
     border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px var(--mocha);
 }
 
 .soap-carousel>div {
@@ -233,7 +235,7 @@
 .soap-display {
     display: flex;
     padding: 15px 60px !important;
-    color: var(--walnut);
+    color: var(--mocha);
 }
 
 @media screen and (max-width: 720px) {
@@ -242,6 +244,8 @@
     }
 
     .left-side {
+        width: 100%;
+        max-width: 100% !important;
         margin-right: 0 !important;
         justify-content: center !important;
         align-items: center !important;
@@ -255,6 +259,7 @@
 
     .right-side {
         text-align: center !important;
+        width: 100%;
     }
 
     .buy-button {
@@ -273,6 +278,7 @@
 }
 
 .left-side {
+    max-width: 350px;
     display: flex;
     flex-direction: column;
     text-align: start;
@@ -294,8 +300,11 @@
 }
 
 .soap-image {
+    margin: 20px 0px;
     width: 300px;
     height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px var(--mocha);
 }
 
 .right-side {
@@ -308,21 +317,23 @@
 .quantity {
     width: 50px;
     height: auto;
-    border: 1px solid var(--walnut);
+    border: 1px solid var(--mocha);
 }
 
 .buy-button {
     background-color: var(--meadow);
-    color: var(--white);
+    fill: var(--white);
     padding: 5px 50px;
     border-radius: 30px;
     border: none;
     transition: 300ms;
     margin: 0 20px;
+
 }
 
 .buy-button:hover {
     background-color: var(--cypress);
+    fill: var(--white);
 }
 
 .btn-close {
@@ -343,5 +354,4 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    ;
 }

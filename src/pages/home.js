@@ -1,5 +1,4 @@
-import React, { useRef, useState, ReactFragment, useContext } from "react";
-import Logo from "../assets/images/logo.png";
+import React, { useRef, useState, useContext } from "react";
 import soaps from "../assets/soaps/soaps.json";
 import HomeSoapCard from "../components/homeSoapCard.js";
 import { DataContext } from "../hooks/dataContext.js";
@@ -9,9 +8,8 @@ function Home() {
    const carouselRef = useRef(null);
    const [itemWidth, setItemWidth] = useState(300); // Initial width, adjust as needed
    const [search, setSearch] = useState(''); // Search for soap by name
-   const data = useContext(DataContext);
-
-   console.log(data);
+   const dataProvider = useContext(DataContext);
+   const data = dataProvider.data;
 
    const scrollLeft = () => {
       getImageWidth();
@@ -48,7 +46,7 @@ function Home() {
       <div>
          <section className="soap-search-wrapper">
             <center>
-               <img className="logo" src={Logo} alt="Logo" />
+               <img className="logo" src="http://northshoresoapworks.com/images/logo.png" alt="Logo" />
             </center>
             <center className="gallery">
                <h3>HAND MADE SOAP GALLERY</h3>
@@ -63,11 +61,13 @@ function Home() {
                   </button>
                   <div className="carousel-content" ref={carouselRef} style={{ display: 'flex', overflowX: 'hidden' }}>
 
-                     {soaps.products.map((soap, index) => {
-                        return (
-                           <HomeSoapCard key={index} soap={soap} index={index} />
-                        )
-                     })}
+                     {
+                        data.length === 0 ? <p className="text-center fs-3" style={{ width: '100%' }}>Error Getting Soaps</p> :
+                           data.objects.map((soap, index) => {
+                              return (
+                                 <HomeSoapCard key={index} soap={soap} index={index} related_objects={data.related_objects} />
+                              )
+                           })}
 
                   </div>
                   <button onClick={scrollLeft} className="arrow-btn">
@@ -95,21 +95,26 @@ function Home() {
 
             <div className="soap-search-results">
 
-               {search !== '' && (
-                  <>
-                     {soaps.products.map((soap, index) => {
-                        if (soap.name.toLowerCase().includes(search.toLowerCase()) || soap.description.toLowerCase().includes(search.toLowerCase())) {
-                           return (
-                              <HomeSoapCard key={index} soap={soap} index={index} />
-                           );
+               {
+                  search !== '' && (
+                     <>
+                        {
+                           data.length === 0 ? <p>Error getting soaps.</p> :
+                              (() => {
+                                 const filteredSoaps = data.objects.filter((soap) => {
+                                    const { name, description } = soap.item_data;
+                                    return name.toLowerCase().includes(search.toLowerCase()) || description.toLowerCase().includes(search.toLowerCase());
+                                 });
+
+                                 return filteredSoaps.length === 0 ? <p>No search results found.</p> :
+                                    filteredSoaps.map((soap, index) => (
+                                       <HomeSoapCard key={index} soap={soap} index={index} related_objects={data.related_objects} />
+                                    ));
+                              })()
                         }
-                        return null;
-                     })}
-                     {soaps.products.every((soap) => !soap.name.toLowerCase().includes(search.toLowerCase()) && !soap.description.toLowerCase().includes(search.toLowerCase())) && (
-                        <p>No search results found.</p>
-                     )}
-                  </>
-               )}
+                     </>
+                  )
+               }
             </div>
          </section>
 

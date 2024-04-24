@@ -1,0 +1,16 @@
+.thankyou {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--mocha);
+    flex-direction: column;
+}
+
+.thankyou span {
+    font-size: 100px;
+}
+
+.copy-icon {
+    fill: var(--mocha);
+}

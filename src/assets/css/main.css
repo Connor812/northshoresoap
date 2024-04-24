@@ -11,7 +11,7 @@
     --bone: #E2D9C4;
     --bone-opacity: #e2d9c485;
     --black: #1a1a1a;
-    --black-opacity: #1a1a1a69;
+    --black-opacity: #1a1a1a3e;
     --grey: #D6D6D6;
     --red: #842029;
 }
@@ -29,7 +29,15 @@ html {
     margin: 0px;
     width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: 'Copperplate' !important;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 hr {
@@ -49,4 +57,14 @@ hr {
 
 .cart-button svg:hover {
     fill: var(--cream);
+}
+
+.coming-soon {
+    width: 100%;
+    font-size: 50px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--mocha);
 }

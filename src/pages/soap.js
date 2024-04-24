@@ -1,10 +1,13 @@
-import React from "react";
-import soaps from "../assets/soaps/soaps.json";
+import React, { useContext } from "react";
 import randomItems from "../assets/soaps/random.json";
-import { SoapCard, SoapCardModal } from "../components/soapCard.js";
+import ItemCard from "../components/itemCard.js";
+import { DataContext } from "../hooks/dataContext.js";
 import "../assets/css/soap.css";
 
 function Soap() {
+    const dataProvider = useContext(DataContext);
+    const data = dataProvider.data;
+
     function getRandomItem() {
         return randomItems.products[Math.floor(Math.random() * randomItems.products.length)];
     }
@@ -15,47 +18,41 @@ function Soap() {
                 <div className="soap-page-wrapper-background">
                     <div className="row">
                         <div className="soap-page-side-col col-2">
-                            <SoapCard soap={getRandomItem()} index={0} />
-                            <SoapCard soap={getRandomItem()} index={0} />
-                            <SoapCard soap={getRandomItem()} index={0} />
+                            {/* <ItemCard soap={getRandomItem()} index={0} />
+                            <ItemCard soap={getRandomItem()} index={0} />
+                            <ItemCard soap={getRandomItem()} index={0} /> */}
                         </div>
                         <div className="soap-middle-column">
                             <center className="soap-heading">
                                 <h1>HAND MADE ARTISAN SOAP IN OUR STORE</h1>
                             </center>
                             <section className="soap-page-soap-wrapper">
-                                {soaps.products.map((soap, index) => {
-                                    return (
-                                        <SoapCard key={index} soap={soap} index={index} />
-                                    )
-                                })}
+                                {data.length === 0 ? <p className="fs-3">Error Getting Soaps</p> :
+                                    data.objects.map((soap, index) => {
+                                        return (
+                                            <ItemCard key={index} soap={soap} index={index} related_objects={data.related_objects} />
+                                        )
+                                    })}
                             </section>
                             <center className="soap-heading">
                                 <h1>HAND MADE ARTISAN SOAP IN OUR STORE</h1>
                             </center>
-                            <section className="soap-page-soap-wrapper">
-                                {soaps.products.map((soap, index) => {
+                            {/* <section className="soap-page-soap-wrapper">
+                                {data.objects.map((soap, index) => {
                                     return (
-                                        <SoapCard key={index} soap={soap} index={index} />
+                                        <ItemCard key={index} soap={soap} index={index} related_objects={data.related_objects} />
                                     )
                                 })}
-                            </section>
+                            </section> */}
                         </div>
                         <div className="soap-page-side-col col-2">
-                            <SoapCard soap={getRandomItem()} index={0} />
-                            <SoapCard soap={getRandomItem()} index={0} />
-                            <SoapCard soap={getRandomItem()} index={0} />
+                            {/* <ItemCard soap={getRandomItem()} index={0} />
+                            <ItemCard soap={getRandomItem()} index={0} />
+                            <ItemCard soap={getRandomItem()} index={0} /> */}
                         </div>
                     </div>
                 </div>
             </main>
-            <div id="modal-container">
-                {soaps.products.map((soap, index) => {
-                    return (
-                        <SoapCardModal key={index} soap={soap} index={index} />
-                    )
-                })}
-            </div>
         </>
     );
 }

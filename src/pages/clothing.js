@@ -1,7 +1,11 @@
 import React from "react";
 
 function Clothing() {
-  return <div>Clothing</div>;
+  return (    
+    <div className="coming-soon">
+        Coming Soon!
+    </div>
+);
 }
 
 export default Clothing;

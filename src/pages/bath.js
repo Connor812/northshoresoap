@@ -1,7 +1,11 @@
 import React from "react";
 
 function Bath() {
-    return <div>Bath</div>;
+    return (    
+        <div className="coming-soon">
+            Coming Soon!
+        </div>
+    );
 }
 
 export default Bath;
