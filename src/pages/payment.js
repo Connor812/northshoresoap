@@ -66,35 +66,12 @@ function Payment({ order }) {
 
     }
 
-    // # Apple Pay For The Future
-    // const createPaymentRequest = () => {
-    //     return {
-    //         requestShippingContact: true,
-    //         requestBillingInfo: true,
-    //         currencyCode: "USD",
-    //         countryCode: "US",
-    //         total: {
-    //             label: "MERCHANT NAME",
-    //             amount: "100",
-    //             pending: false,
-    //         },
-    //         lineItems: [
-    //             {
-    //                 label: "Subtotal",
-    //                 amount: "100",
-    //                 pending: false,
-    //             },
-    //         ],
-    //     };
-    //     createPaymentRequest = { createPaymentRequest }
-    // };
-
     return (
-        <div className="payment">
+        <center className="payment">
             <PaymentForm applicationId={applicationId} locationId={locationId} cardTokenizeResponseReceived={cardTokenizeResponseReceived} >
                 <CreditCard />
             </PaymentForm>
-        </div>
+        </center>
     );
 }
 

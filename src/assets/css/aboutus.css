@@ -1,142 +1,128 @@
 .aboutus-wrapper {
-    width: 100%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
     flex: 1;
 }
 
-.aboutus-title {
-    text-align: center;
-    font-size: 70px;
-    color: var(--mocha);
-    text-decoration: underline;
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
 }
 
-.aboutus-container {}
+.bird-1 {
+    transform: scaleX(-1);
+}
 
-.shop-img {
-    width: 100%;
-    max-width: 700px;
-    float: left;
-    margin: 15px;
+.aboutus-logo {
+    max-width: 90%;
+    border-radius: 10px;
+}
+
+.bird-img {
+    width: 200px;
+    height: auto;
+}
+
+@media screen and (max-width: 1622px) {
+    .bird-img {
+        display: none
+    }
+
+    .logo-container {
+        justify-content: center;
+    }
+
 }
 
 .aboutus-description {
-    text-align: justify;
+    display: flex;
+    width: 100%;
+    padding: 0px 5%;
 }
 
-.about-workers {}
+@media screen and (max-width: 1170px) {
+    .aboutus-description {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutus-description p {
+        width: 100% !important;
+    }
+}
+
+.aboutus-description p {
+    width: 60%;
+}
+
+.aboutus-description img {
+    width: 60%;
+    min-width: 300px;
+    height: auto;
+    padding: 10px;
+    background-color: var(--white);
+    border: 1px solid var(--mocha);
+    margin-right: 20px;
+}
+
+.separator {
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    font-size: var(--large);
+    color: var(--mocha);
+}
+
+.worker-section {
+    width: 100%;
+    padding-bottom: 20px;
+    background-image: url("http://northshoresoapworks.com/images/category_bg.png");
+}
 
 .worker-container {
-    background-color: var(--black);
-    width: 100%;
-    height: 180px;
-    position: relative;
-    z-index: 1;
-    transition: 300ms;
-}
-
-.worker-container:hover .worker {
-    opacity: 0.7;
-    cursor: pointer;
+    padding: 0px 5%;
+    height: 315px;
+    margin-bottom: 20px;
 }
 
 .worker {
-    background-image: url("http://northshoresoapworks.com/images/category_bg.png");
     width: 100%;
-    height: 180px;
-    position: absolute;
-    z-index: -1;
-    opacity: 0.8;
-    transition: 300ms;
-    border: 1px solid var(--black);
-}
-
-.worker-name-container {
-    width: 180px;
-    height: 180px;
-    padding: 10px
-}
-
-.worker-name {
-    z-index: 1;
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-    background-color: var(--white);
-    border-radius: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 30px;
-    box-shadow: 5px 5px 5px -2px var(--black);
 }
 
-.worker-container:nth-child(even) {
-    display: flex;
-    justify-content: flex-end;
-}
-
-/* This is for the active class */
-
-.worker-container.worker-active {
-    height: 530px !important;
-}
-
-.worker-active {
-    transition: 300ms;
-}
-
-.worker-active .worker {
-    height: 530px !important;
-}
-
-.worker-active .worker-name-container {
-    display: none;
-}
-
-.worker-description-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-
-@media screen and (max-width: 560px) {}
-
-.worker-active .worker-description {
-    width: 100%;
-    height: 100%;
-    color: var(--black);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.worker-active .worker-description p {
-    margin-top: 10px;
-    padding: 50px 30px;
-    border: 1px solid var(--black);
-    border-radius: 20px;
-    background-color: var(--black-opacity);
-    color: var(--white);
-    max-height: 100%;
-    overflow: auto;
-}
-
-.worker-active .worker-description-container img {
-    height: calc(100% - 20px);
-    margin: 10px;
-    border: 1px solid var(--black);
-    border-radius: 20px;
-}
-
-.worker-active .worker-description-container {
-    display: flex !important;
-}
-
-.worker-container:nth-child(odd) .worker-description-container {
+.worker-container:nth-child(even) .worker {
     flex-direction: row-reverse;
 }
 
-.worker-description-container {
-    display: none;
+.worker-container:nth-child(even) img {
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+.worker img {
+    width: auto;
+    height: 315px;
+    margin-right: 10px;
+}
+
+.worker-description {
+    height: 270px;
+    overflow-y: scroll;
+    background-color: var(--white);
+    box-shadow: 0 0 0px 1px var(--mocha),
+        0 0 0px 10px var(--bone),
+        0 0 0px 13px var(--mocha);
+}
+
+.worker-description {
+    padding: 10px;
+}
+
+.worker-description h2 {
+    color: var(--mocha);
+    font-size: var(--large);
 }

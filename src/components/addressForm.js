@@ -40,12 +40,6 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                 className="input-container col-6"
                                 id="address-form"
                             >
-                                <label
-                                    htmlFor="first-name"
-                                    className="checkout-label"
-                                >
-                                    First Name:
-                                </label>
                                 <input
                                     required
                                     type="text"
@@ -57,12 +51,6 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                             </div>
 
                             <div className="input-container col-6">
-                                <label
-                                    htmlFor="last-name"
-                                    className="checkout-label"
-                                >
-                                    Last Name:
-                                </label>
                                 <input
                                     required
                                     type="text"
@@ -75,12 +63,6 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                         </div>
 
                         <div className="input-container">
-                            <label
-                                htmlFor="email"
-                                className="checkout-label"
-                            >
-                                Email:
-                            </label>
                             <input
                                 required
                                 type="text"
@@ -92,12 +74,6 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                         </div>
 
                         <div className="input-container">
-                            <label
-                                htmlFor="Phone"
-                                className="checkout-label"
-                            >
-                                Phone:
-                            </label>
                             <input
                                 required
                                 type="text"
@@ -109,12 +85,6 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                         </div>
 
                         <div className="input-container">
-                            <label
-                                htmlFor="street"
-                                className="checkout-label"
-                            >
-                                Street:
-                            </label>
                             <input
                                 required
                                 type="text"
@@ -125,29 +95,16 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                             />
                         </div>
                         <div className="input-container">
-                            <label
-                                htmlFor="Apt / Suite / Unit"
-                                className="checkout-label"
-                            >
-                                Apt / Suite / Unit:{" "}
-                                <span style={{ fontSize: "10pt" }}>(optional)</span>
-                            </label>
                             <input
                                 type="text"
                                 id="Apt / Suite / Unit"
                                 className="checkout-input"
-                                placeholder="Apt / Suite / Unit"
+                                placeholder="Apt / Suite / Unit (optional)"
                                 name="apt"
                             />
                         </div>
                         <div className="row">
                             <div className="input-container col-6">
-                                <label
-                                    htmlFor="city"
-                                    className="checkout-label"
-                                >
-                                    City:
-                                </label>
                                 <input
                                     required
                                     type="text"
@@ -159,12 +116,6 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                             </div>
 
                             <div className="input-container col-6">
-                                <label
-                                    htmlFor="country"
-                                    className="checkout-label"
-                                >
-                                    Country:
-                                </label>
                                 <select
                                     data-field="country_id"
                                     name="country"
@@ -445,12 +396,6 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                         </div>
                         <div className="row">
                             <div className="input-container col-6">
-                                <label
-                                    htmlFor="postal-code"
-                                    className="checkout-label"
-                                >
-                                    Postal code:
-                                </label>
                                 <input
                                     required
                                     type="text"
@@ -461,12 +406,6 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                 />
                             </div>
                             <div className="input-container col-6">
-                                <label
-                                    htmlFor="province"
-                                    className="checkout-label"
-                                >
-                                    Province:
-                                </label>
                                 <input
                                     required
                                     type="text"
@@ -512,12 +451,6 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                 className="input-container col-6"
                                 id="address-form"
                             >
-                                <label
-                                    htmlFor="first-name"
-                                    className="checkout-label"
-                                >
-                                    First Name:
-                                </label>
                                 <input
                                     required
                                     type="text"
@@ -529,12 +462,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                             </div>
 
                             <div className="input-container col-6">
-                                <label
-                                    htmlFor="last-name"
-                                    className="checkout-label"
-                                >
-                                    Last Name:
-                                </label>
+
                                 <input
                                     required
                                     type="text"
@@ -547,12 +475,6 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                         </div>
 
                         <div className="input-container">
-                            <label
-                                htmlFor="email"
-                                className="checkout-label"
-                            >
-                                Email:
-                            </label>
                             <input
                                 required
                                 type="text"
@@ -564,12 +486,6 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                         </div>
 
                         <div className="input-container">
-                            <label
-                                htmlFor="Phone"
-                                className="checkout-label"
-                            >
-                                Phone:
-                            </label>
                             <input
                                 required
                                 type="text"
@@ -585,7 +501,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                 className="checkout-label"
                                 htmlFor="startDate"
                             >
-                                Start:
+                                Pick Up Data:
                             </label>
                             <input
                                 required

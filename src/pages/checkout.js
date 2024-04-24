@@ -31,8 +31,6 @@ function Checkout() {
         e.preventDefault();
         let formId = "";
 
-        console.log(shipmentMethod);
-
         if (shipmentMethod === "no-method") {
             setError("Please select a delivery option");
             return;
@@ -41,11 +39,9 @@ function Checkout() {
         } else {
             formId = "shipment-form";
         }
-        console.log(formId);
+
         const form = document.getElementById(formId);
-        console.log(form);
         const formData = new FormData(form);
-        console.log(formData);
 
         // This checks for empty form fields
         for (let [key, value] of formData.entries()) {
@@ -59,17 +55,17 @@ function Checkout() {
                 return;
             }
         }
-        console.log("creating order");
+
         // Form validation for delivery option
         if (shipmentMethod === "no-method") {
-            console.log("no delivery option");
-            console.log(shipmentMethod + "<---");
             setError("Please select a delivery option");
             return;
         }
 
-        if (!validateEmail(formData.get("email"))) {
-            setError("Please enter a valid email address");
+        // Form validation for email
+        const invalidField = validateFormData(formData);
+        if (invalidField) {
+            setError(`Please check your ${invalidField}`);
             return;
         }
 
@@ -126,8 +122,8 @@ function Checkout() {
         })
             .then((response) => response.json())
             .then((data) => {
-                if (data.errors) {
-                    setError(data.errors[0].detail);
+                if (data.error) {
+                    setError(data.error);
                     paymentBtn.innerHTML = "Proceed to Payment";
                     paymentBtn.disabled = false;
                 } else {
@@ -145,10 +141,27 @@ function Checkout() {
             });
     }
 
-    function validateEmail(email) {
-        var re =
-            /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
+    function validateFormData(formData) {
+        const fields = {
+            "first-name": /^[a-zA-Z]+$/,
+            "last-name": /^[a-zA-Z]+$/,
+            "email": /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+            "phone": /^\d{10}$/,
+            "street": /^[a-zA-Z0-9\s]+$/,
+            "apt": /^[a-zA-Z0-9\s\W]*$/,
+            "city": /^[a-zA-Z\s]+$/,
+            "country": /^[a-zA-Z\s]+$/,
+            "postal-code": /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/,
+            "province": /^[a-zA-Z\s]+$/
+        };
+
+        for (let field in fields) {
+            if (!fields[field].test(formData.get(field))) {
+                return field;
+            }
+        }
+
+        return null;
     }
 
     return (
@@ -224,8 +237,8 @@ function Checkout() {
                     <div
                         className="checkout-container"
                     >
-                        <h1 className="text-center checkout-title">Checkout</h1>
-                        <div style={{ width: '100%' }}>
+                        <h1 className="text-center checkout-title">Cart Totals</h1>
+                        <div style={{ width: '100%', fontSize: '18pt' }}>
                             <hr />
                             Subtotal: ${(subTotal / 100).toFixed(2)}
                             <hr />
@@ -243,7 +256,7 @@ function Checkout() {
                         ) : (
                             stage
                         )}
-                        <div style={{ width: '100%' }}>
+                        <div style={{ width: '100%', fontSize: '18pt' }}>
                             <hr />
                             HST: ${salesTax / 100}
                             <br />

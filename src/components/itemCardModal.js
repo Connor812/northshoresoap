@@ -17,6 +17,7 @@ function ItemCardModal({ soap, related_objects, index }) {
             <div className="modal-dialog modal-dialog-centered">
                 <div className="modal-content">
                     <div className="modal-body soap-display">
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         <div className="left-side">
                             <img src="http://northshoresoapworks.com/images/white_bg_logo.jpg" alt="logo" className="soap-logo" />
                             <img src={imageUrl} alt={name} className="soap-image" />
@@ -28,7 +29,6 @@ function ItemCardModal({ soap, related_objects, index }) {
                             <p className="ingredients">These ingredients are designed to create lather and effectively remove dirt, oil, a</p>
                         </div>
                         <div className="right-side">
-                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             <div className="d-flex justify-content-between">
                                 <h4>
                                     {name}
