@@ -59,6 +59,7 @@
 }
 
 .item-labels {
+    display: flex;
     width: 47%;
 }
 
@@ -194,7 +195,11 @@ ul.checkout-cart-list hr:last-child {
 
 @media screen and (max-width: 560px) {
     .checkout-container {
-        padding: 20px 0px;
+        padding: 20px 10px;
+    }
+
+    .address-form-wrapper {
+        padding: 20px 10px;
     }
 }
 
@@ -279,4 +284,36 @@ ul.checkout-cart-list hr:last-child {
 
 #rswp-card-button:hover {
     background-color: var(--cypress);
+}
+
+@media screen and (max-width: 920px) {
+    .checkout-cart-item {
+        flex-direction: column;
+    }
+
+    .checkout-cart-item-img {
+        margin-right: 0px;
+    }
+
+    .checkout-cart-item-details {
+        flex-direction: column;
+    }
+
+    .checkout-cart-item-details h2 {
+        text-align: center;
+    }
+
+    .item-labels {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 645px) {
+    .continue-shopping-button {
+        display: none;
+    }
+
+    .checkout-bird-img {
+        display: none;
+    }
 }

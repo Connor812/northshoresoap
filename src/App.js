@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/header.js';
 import Home from './pages/home.js';
 import About from './pages/about.js';
-import Contact from './pages/contact.js';
 import Soap from './pages/soap.js';
 import Bath from './pages/bath.js';
 import Household from './pages/household.js';
@@ -34,13 +33,9 @@ function AppContent() {
 
   function updateCart(cartItems) {
     setCartItems(cartItems);
-    console.log(cartItems);
     setSubtotal(cartItems.reduce((accumulator, item) => (accumulator + item.price * item.quantity), 0).toFixed(2));
-    console.log(subTotal);
     setHst((cartItems.reduce((accumulator, item) => (accumulator + item.price * item.quantity), 0) * 0.13).toFixed(2));
-    console.log(hst);
     setGrandTotal((cartItems.reduce((accumulator, item) => (accumulator + item.price * item.quantity), 0) * 1.13).toFixed(2));
-    console.log(grandTotal);
   }
 
   return (
@@ -50,7 +45,6 @@ function AppContent() {
       <Routes>
         <Route path="/northshoresoap" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/soap" element={<Soap />} />
         <Route path="/household" element={<Household />} />
         <Route path="/bath" element={<Bath />} />

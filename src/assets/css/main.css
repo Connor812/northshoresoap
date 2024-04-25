@@ -51,6 +51,9 @@ hr {
 .cart-button {
     background: none;
     border: none;
+    position: absolute;
+    right: 20px;
+    top: 10px;
 }
 
 .cart-button svg {
@@ -60,6 +63,39 @@ hr {
 
 .cart-button svg:hover {
     fill: var(--cream);
+}
+
+.navbar {
+    position: relative;
+}
+
+.navbar .container {
+    margin-left: 0px !important;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: var(--stone);
+    transition: 200ms;
+}
+
+.nav-link a:hover {
+    color: var(--cream);
+}
+
+.navbar-nav {
+    background-color: var(--mocha);
+}
+
+@media screen and (max-width: 992px) {
+    .navbar-nav {
+        padding: 20px !important;
+        border-radius: 20px;
+    }
+
+    .cart-button {
+        position: static;
+    }
 }
 
 .coming-soon {

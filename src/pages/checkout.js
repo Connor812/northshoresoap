@@ -177,14 +177,15 @@ function Checkout() {
                             <img
                                 src="http://northshoresoapworks.com/images/bird.jpg"
                                 width="120px"
-                                alt=""
+                                alt="bird"
+                                className="checkout-bird-img"
                             />
                         </div>
                     </div>
 
                     <div className="d-flex justify-content-between fs-5">
                         <div>Product</div>
-                        <div className="item-labels d-flex justify-content-between">
+                        <div className="item-labels justify-content-between">
                             <div>Price</div>
                             <div>Quantity</div>
                             <div>SubTotal</div>
@@ -217,7 +218,7 @@ function Checkout() {
                         <div>
                             <Link
                                 to="/soap"
-                                className="button"
+                                className="button continue-shopping-button"
                             >
                                 Continue Shopping
                             </Link>
