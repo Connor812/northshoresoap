@@ -12,7 +12,7 @@ const DataProvider = ({ children }) => {
 
     useEffect(() => {
         // Fetch data when component mounts
-        fetch('https://localhost/NorthShoreSoapWorks/getItems.php')
+        fetch('http://northshoresoapworks.com/getItems.php')
             .then(response => response.json())
             .then(data => {
                 setData(data);

@@ -113,7 +113,7 @@ function Checkout() {
         paymentBtn.innerHTML = loadingSpinner;
         paymentBtn.disabled = true;
 
-        fetch("https://localhost/NorthShoreSoapWorks/createOrder.php", {
+        fetch("http://northshoresoapworks.com/createOrder.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -131,7 +131,7 @@ function Checkout() {
                     console.log(data);
                     paymentBtn.remove();
                     setError("");
-                    setStage(<Payment order={data} />);
+                    setStage(<Payment data={data} shipmentMethod={shipmentMethod} subTotal={subTotal} />);
                 }
             })
             .catch((err) => {
