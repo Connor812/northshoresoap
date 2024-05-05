@@ -5,15 +5,18 @@ import Payment from "./payment.js";
 import CheckoutCartItem from "../components/checkoutCartItem.js";
 import "../assets/css/checkout.css";
 import AddressForm from "../components/addressForm";
-import { Button, Collapse } from 'react-bootstrap';
 
 function Checkout() {
 
     const {
         cartItems,
+        setCartItems,
         subTotal,
+        setSubtotal,
         hst,
-        grandTotal
+        setHst,
+        grandTotal,
+        setGrandTotal,
     } = useContext(DataContext);
     const [shipmentMethod, setShipmentMethod] = useState("no-method");
     const [shippingCost, setShippingCost] = useState(0);
@@ -200,6 +203,10 @@ function Checkout() {
                                     index={index}
                                     item={item}
                                     cartItems={cartItems}
+                                    setCartItems={setCartItems}
+                                    setSubtotal={setSubtotal}
+                                    setHst={setHst}
+                                    setGrandTotal={setGrandTotal}
                                 />
                             );
                         })}
@@ -259,7 +266,7 @@ function Checkout() {
                         )}
                         <div style={{ width: '100%', fontSize: '18pt' }}>
                             <hr />
-                            HST: ${salesTax / 100}
+                            HST: ${(salesTax / 100).toFixed(2)}
                             <br />
                             Shipping: ${(shippingCost / 100).toFixed(2)}
                             <br />

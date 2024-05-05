@@ -20,11 +20,11 @@ function Payment({ data, shipmentMethod, subTotal }) {
     const firstName = order.fulfillments[0].shipment_details.recipient.address.first_name;
     const lastName = order.fulfillments[0].shipment_details.recipient.address.last_name;
     const email = order.fulfillments[0].shipment_details.recipient.email_address;
-    const street = order.fulfillments[0].shipment_details.recipient.address.address_line_1;    
-    const city = order.fulfillments[0].shipment_details.recipient.address.locality;    
-    const province = order.fulfillments[0].shipment_details.recipient.address.administrative_district_level_1;    
+    const street = order.fulfillments[0].shipment_details.recipient.address.address_line_1;
+    const city = order.fulfillments[0].shipment_details.recipient.address.locality;
+    const province = order.fulfillments[0].shipment_details.recipient.address.administrative_district_level_1;
     const postalCode = order.fulfillments[0].shipment_details.recipient.address.postal_code;
-    const country = order.fulfillments[0].shipment_details.recipient.address.country;    
+    const country = order.fulfillments[0].shipment_details.recipient.address.country;
 
     const orderDetails = {
         amount: total,
@@ -39,7 +39,7 @@ function Payment({ data, shipmentMethod, subTotal }) {
         postal_code: postalCode,
         country: country,
         shipment_method: shipmentMethod,
-        sub_total: subTotal,  
+        sub_total: subTotal,
     }
 
     const cardTokenizeResponseReceived = (tokenReceived) => {
@@ -56,6 +56,7 @@ function Payment({ data, shipmentMethod, subTotal }) {
         // Use fetch to send the nonce to the server
         fetch("http://northshoresoapworks.com/payment.php", {
             method: "POST",
+            mode: 'cors', 
             headers: {
                 "Content-Type": "application/json",
             },
