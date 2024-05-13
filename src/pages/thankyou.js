@@ -38,6 +38,9 @@ function Thankyou() {
                     </span>
                 </span>
             </span>
+            <div>
+                A Recipe Will Be Sent To Your Email Shortly
+            </div>
             <Link
                 to="/northshoresoap"
                 className="button"

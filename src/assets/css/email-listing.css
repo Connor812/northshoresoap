@@ -1,0 +1,59 @@
+.email-listing {
+    padding: 50px;
+    text-align: center;
+    color: var(--black);
+    background-image: url("http://northshoresoapworks.com/images/email-listing.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.email-listing-form {
+    padding: 20px;
+}
+
+.email-form-input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.email-form-input-container input {
+    width: 100%;
+    max-width: 400px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--black);
+}
+
+.email-form-submit {
+    padding: 10px 50px;
+    background-color: var(--meadow);
+    color: var(--white);
+    border: none;
+    border-radius: 20px;
+    transition: 200ms;
+    margin: 15px;
+}
+
+.email-form-submit:hover {
+    background-color: var(--cypress);
+}
+
+.email-form-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email-form-bottom img {
+    width: 200px;
+    height: auto;
+}
+
+.white {
+    color: var(--white)
+}

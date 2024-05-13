@@ -1,8 +1,8 @@
 import React, { useRef, useState, useContext } from "react";
-import soaps from "../assets/soaps/soaps.json";
 import HomeSoapCard from "../components/homeSoapCard.js";
 import { DataContext } from "../hooks/dataContext.js";
 import "../assets/css/home.css";
+import { Link } from "react-router-dom";
 
 function Home() {
    const carouselRef = useRef(null);
@@ -10,6 +10,9 @@ function Home() {
    const [search, setSearch] = useState(''); // Search for soap by name
    const dataProvider = useContext(DataContext);
    const data = dataProvider.data;
+   const categories = dataProvider.categories;
+
+   console.log(data.related_objectsd);
 
    const scrollLeft = () => {
       getImageWidth();
@@ -126,7 +129,7 @@ function Home() {
 
          <section className="category-container">
             <center>
-               <div id="category-carousel" className="carousel slide" data-bs-ride="carousel">
+               <div id="category-carousel" className="carousel home-carousel slide" data-bs-ride="carousel">
                   <div className="carousel-indicators">
                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -166,51 +169,43 @@ function Home() {
                </div>
             </center>
 
+            <h1 className="categories-header">Categories</h1>
+            <hr />
 
-            <div className="categories">
-               <div className="category">
-                  <img src="http://northshoresoapworks.com/images/fresh_flower_cuts.jpg" alt="" className="category-img" />
-                  <div className="title-container">
-                     <h2>Daily Fresh Cut Flowers</h2>
-                     <button>Order Ahead</button>
-                  </div>
-               </div>
+            <center>
+               <div className="categories">
+                  {
+                     categories.map(category => {
+                        const image_id = category.image_id;
+                        const category_id = category.id;
+                        const category_name = category.name;
+                        let relatedObject = data.related_objects.find(obj => obj.type === 'IMAGE' && obj.id === image_id);
 
-               <div className="category">
-                  <img src="http://northshoresoapworks.com/images/bath_skin_category.jpg" alt="" className="category-img" />
-                  <div className="title-container">
-                     <h2>Bath & Skin</h2>
-                     <button>Order Ahead</button>
-                  </div>
-               </div>
+                        if (!relatedObject) {
+                           relatedObject = {
+                              "image_data": {
+                                 "url": "http://northshoresoapworks.com/images/fancy_soap.webp",
+                                 "name": "Fancy Soap"
+                              }
+                           }
+                        }
 
-               <div className="category">
-                  <img src="http://northshoresoapworks.com/images/jewelery.jpg" alt="" className="category-img" />
-                  <div className="title-container">
-                     <h2>Jewelry</h2>
-                     <button>Order Ahead</button>
-                  </div>
-               </div>
-
-            </div>
-            <div className="categories">
-               <div className="category">
-                  <img src="http://northshoresoapworks.com/images/clothing.jpg" alt="" className="category-img" />
-                  <div className="title-container">
-                     <h2>Clothing</h2>
-                     <button>Order Ahead</button>
-                  </div>
-               </div>
-
-               <div className="category">
+                        const { url, image_name } = relatedObject.image_data;
+                        return (
+                           <Link key={category.id}>
+                              <div className="category">
+                                 <img src={url} alt={image_name} className="category-img" />
+                                 <div className="title-container">
+                                    <h6>{category_name}</h6>
+                                 </div>
+                              </div>
+                           </Link>
+                        );
+                     })
+                  }
 
                </div>
-
-               <div className="category">
-
-               </div>
-
-            </div>
+            </center>
          </section>
 
       </div>

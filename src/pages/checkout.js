@@ -66,7 +66,8 @@ function Checkout() {
         }
 
         // Form validation for email
-        const invalidField = validateFormData(formData);
+        const invalidField = shipmentMethod === "PICKUP" ? validatePickupFormData(formData) : validateShippingFormData(formData);
+
         if (invalidField) {
             setError(`Please check your ${invalidField}`);
             return;
@@ -123,39 +124,62 @@ function Checkout() {
             },
             body: JSON.stringify(order),
         })
-            .then((response) => response.json())
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            }
+            )
             .then((data) => {
-                if (data.error) {
-                    setError(data.error);
+                if (data.error || data.errors) {
+                    setError(data.errors[0].detail);
                     paymentBtn.innerHTML = "Proceed to Payment";
                     paymentBtn.disabled = false;
                 } else {
-                    console.log("Order created successfully");
-                    console.log(data);
                     paymentBtn.remove();
                     setError("");
                     setStage(<Payment data={data} shipmentMethod={shipmentMethod} subTotal={subTotal} />);
                 }
             })
             .catch((err) => {
-                setError(err.error);
+                setError(err.message);
                 paymentBtn.innerHTML = "Proceed to Payment";
                 paymentBtn.disabled = false;
             });
     }
 
-    function validateFormData(formData) {
+    function validateShippingFormData(formData) {
         const fields = {
             "first-name": /^[a-zA-Z]+$/,
             "last-name": /^[a-zA-Z]+$/,
             "email": /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-            "phone": /^\d{10}$/,
+            "phone": /^(1\s?)?(\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/,
             "street": /^[a-zA-Z0-9\s]+$/,
             "apt": /^[a-zA-Z0-9\s\W]*$/,
             "city": /^[a-zA-Z\s]+$/,
             "country": /^[a-zA-Z\s]+$/,
-            "postal-code": /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/,
+            "postal-code": /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$|^\d{5}$/i,
             "province": /^[a-zA-Z\s]+$/
+        };
+
+        for (let field in fields) {
+            if (!fields[field].test(formData.get(field))) {
+                return field;
+            }
+        }
+
+        return null;
+    }
+
+    function validatePickupFormData(formData) {
+        console.log(formData.get("startDate"));
+        const fields = {
+            "first-name": /^[a-zA-Z]+$/,
+            "last-name": /^[a-zA-Z]+$/,
+            "email": /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+            "phone": /^(1\s?)?(\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/,
+            "startDate": /^\d{4}-\d{2}-\d{2}$/,
         };
 
         for (let field in fields) {
@@ -211,6 +235,7 @@ function Checkout() {
                             );
                         })}
                     </ul>
+                    <hr className="coupon-separator" />
                 </div>
                 <div className="coupon-code-section">
                     <div className="d-flex justify-content-between pb-4">

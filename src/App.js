@@ -12,6 +12,7 @@ import Cart from './pages/cart.js';
 import Checkout from './pages/checkout.js';
 import Payment from './pages/payment.js';
 import Thankyou from './pages/thankyou.js';
+import EmailListing from './pages/emailListing.js';
 
 import { DataProvider, DataContext } from './hooks/dataContext.js'; // Import DataProvider
 import "./assets/css/main.css";
@@ -53,6 +54,7 @@ function AppContent() {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/thankyou" element={<Thankyou />} />
+        <Route path="/email_listing" element={<EmailListing />} />
       </Routes>
     </>
   );

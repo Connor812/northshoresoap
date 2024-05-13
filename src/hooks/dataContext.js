@@ -4,6 +4,7 @@ const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
     const [data, setData] = useState([]);
+    const [categories, setCategories] = useState([]);
     const [loading, setLoading] = useState(true);
     const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem("cartItems")) || []);
     const [subTotal, setSubtotal] = useState(cartItems.reduce((accumulator, item) => (accumulator + item.price * item.quantity), 0).toFixed(2));
@@ -12,10 +13,15 @@ const DataProvider = ({ children }) => {
 
     useEffect(() => {
         // Fetch data when component mounts
-        fetch('http://northshoresoapworks.com/getItems.php')
-            .then(response => response.json())
-            .then(data => {
+        Promise.all([
+            fetch('http://northshoresoapworks.com/getItems.php'),
+            fetch('http://northshoresoapworks.com/getCategories.php')
+        ])
+            .then(async ([res1, res2]) => {
+                const data = await res1.json();
+                const categories = await res2.json();
                 setData(data);
+                setCategories(categories);
                 setLoading(false);
             })
             .catch(error => {
@@ -35,7 +41,7 @@ const DataProvider = ({ children }) => {
     }
 
     return (
-        <DataContext.Provider value={{ data, cartItems, setCartItems, subTotal, setSubtotal, hst, setHst, grandTotal, setGrandTotal }}>
+        <DataContext.Provider value={{ data, categories, cartItems, setCartItems, subTotal, setSubtotal, hst, setHst, grandTotal, setGrandTotal }}>
             {children}
         </DataContext.Provider>
     );

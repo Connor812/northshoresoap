@@ -5,6 +5,9 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
 
     const [shippingOpen, setShippingOpen] = useState(false);
     const [pickupOpen, setPickupOpen] = useState(false);
+    const today = new Date();
+    const dateString = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
 
     return (
         <>
@@ -508,6 +511,8 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                 id="startDate"
                                 className="form-control"
                                 type="date"
+                                name="startDate"
+                                min={dateString}
                             />
                         </div>
                     </div>

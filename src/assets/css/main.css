@@ -69,6 +69,14 @@ hr {
     position: relative;
 }
 
+@media screen and (max-width: 992px){
+    .navbar-nav {
+        position: relative;
+        z-index: 1;
+        pointer-events: auto;
+    }
+}
+
 .navbar .container {
     margin-left: 0px !important;
 }
