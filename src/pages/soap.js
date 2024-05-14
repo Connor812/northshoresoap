@@ -12,10 +12,6 @@ function Soap() {
 
     console.log(data);
 
-    function getRandomItem() {
-        return data.objects[Math.floor(Math.random() * data.objects.length)];
-    }
-
     return (
         <>
             <main className="soap-page-wrapper">
@@ -31,7 +27,7 @@ function Soap() {
                                 <SoapCarousel />
 
                             </center>
-                            <h1 className="text-center m-0">HAND MADE ARTISAN SOAP IN OUR STORE</h1>
+                            <h1 className="text-center handmade-soap-header">HAND MADE ARTISAN SOAP IN OUR STORE</h1>
                             <hr />
                             <section className="soap-page-soap-wrapper">
                                 {data.length === 0 ? <p className="fs-3">Error Getting Soaps</p> :
