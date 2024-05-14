@@ -8,7 +8,6 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
     const today = new Date();
     const dateString = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
 
-
     return (
         <>
             <div
