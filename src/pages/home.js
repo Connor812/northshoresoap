@@ -12,7 +12,7 @@ function Home() {
    const data = dataProvider.data;
    const categories = dataProvider.categories;
 
-   console.log(data.related_objectsd);
+   console.log(categories);
 
    const scrollLeft = () => {
       getImageWidth();
