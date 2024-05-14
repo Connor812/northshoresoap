@@ -349,4 +349,5 @@
     border: none;
     border-bottom: 1px solid var(--mocha);
     border-radius: 0px !important;
+    color: var(--mocha);
 }
