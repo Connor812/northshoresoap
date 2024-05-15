@@ -1,0 +1,47 @@
+.display-items-wrapper {
+    width: 100%;
+    background-image: url("http://northshoresoapworks.com/images/category_bg.png");
+    background-repeat: repeat;
+    color: var(--mocha);
+    flex: 1
+}
+
+.display-items-category-title {
+    margin-top: 18px !important;
+    position: relative;
+}
+
+.display-item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 5%;
+    padding-top: 0;
+}
+
+.back-button {
+    position: absolute;
+    left: 20px;
+    font-size: 16pt;
+    background-color: var(--meadow);
+    padding: 10px 40px;
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    border-radius: 50px;
+    border: 1px solid var(--mocha);
+    transition: 200ms;
+}
+
+.back-button svg {
+    fill: var(--white);
+    transition: 200ms;
+}
+
+.back-button:hover {
+    background-color: var(--cypress);
+}
+
+.back-button:hover svg {
+    transform: translateX(-10px);
+}
