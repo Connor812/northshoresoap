@@ -4,10 +4,7 @@ import Header from './components/header.js';
 import Home from './pages/home.js';
 import About from './pages/about.js';
 import Soap from './pages/soap.js';
-import Bath from './pages/bath.js';
-import Household from './pages/household.js';
-import Clothing from './pages/clothing.js';
-import Jewelry from './pages/jewelry.js';
+import DisplayItems from './pages/displayItems.js';
 import Cart from './pages/cart.js';
 import Checkout from './pages/checkout.js';
 import Payment from './pages/payment.js';
@@ -47,10 +44,7 @@ function AppContent() {
         <Route path="/northshoresoap" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/soap" element={<Soap />} />
-        <Route path="/household" element={<Household />} />
-        <Route path="/bath" element={<Bath />} />
-        <Route path="/clothing" element={<Clothing />} />
-        <Route path="/jewelry" element={<Jewelry />} />
+        <Route path="/display_items" element={<DisplayItems />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/thankyou" element={<Thankyou />} />
