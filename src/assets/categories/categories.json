@@ -1,93 +1,338 @@
 {
-    "categories": [
-        {
-            "name": "Soap",
-            "id": "3ZW6QZSZIM53RTC2XCXFO24U"
+  "objects": [
+    {
+      "type": "CATEGORY",
+      "id": "UOJEDH6UESPJWSQXWCLLZDXI",
+      "updated_at": "2024-05-14T14:07:26.649Z",
+      "created_at": "2024-05-14T14:07:26.649Z",
+      "version": 1715695646649,
+      "is_deleted": false,
+      "present_at_all_locations": true,
+      "category_data": {
+        "name": "Soap",
+        "category_type": "REGULAR_CATEGORY",
+        "parent_category": {
+          "ordinal": -2251731094208512
         },
-        {
-            "name": "Hand Made",
-            "id": "5NCJBPMJBQXV7EWSRYVVPJT7"
+        "is_top_level": true,
+        "channels": ["CH_aKajDW8McbvYE6PQGqdpa8FtFisZ7fiXZ8vfYRlQuYC"],
+        "online_visibility": true
+      }
+    },
+    {
+      "type": "CATEGORY",
+      "id": "QUFWJ4SGZCCMF6WWSEF7UXEI",
+      "updated_at": "2024-05-14T14:08:12.561Z",
+      "created_at": "2024-05-14T14:08:12.561Z",
+      "version": 1715695692561,
+      "is_deleted": false,
+      "present_at_all_locations": true,
+      "category_data": {
+        "name": "Bath and Body",
+        "category_type": "REGULAR_CATEGORY",
+        "parent_category": {
+          "ordinal": -2251662374731776
         },
-        {
-            "name": "Handmade Bars",
-            "id": "TYZEXSLMH53M2T2WA6MPQDFV"
+        "is_top_level": true,
+        "channels": ["CH_aKajDW8McbvYE6PQGqdpa8FtFisZ7fiXZ8vfYRlQuYC"],
+        "online_visibility": true
+      }
+    },
+    {
+      "type": "CATEGORY",
+      "id": "MPGXPBAU24EW4DUYTKCER2CL",
+      "updated_at": "2024-05-14T14:08:21.893Z",
+      "created_at": "2024-05-14T14:08:21.893Z",
+      "version": 1715695701893,
+      "is_deleted": false,
+      "present_at_all_locations": true,
+      "category_data": {
+        "name": "Fashion",
+        "category_type": "REGULAR_CATEGORY",
+        "parent_category": {
+          "ordinal": -2251593655255040
         },
-        {
-            "name": "Handmade Liquids",
-            "id": "V3OEKBJVYWNU4ARVW2PNMGS6"
+        "is_top_level": true,
+        "channels": ["CH_aKajDW8McbvYE6PQGqdpa8FtFisZ7fiXZ8vfYRlQuYC"],
+        "online_visibility": true
+      }
+    },
+    {
+      "type": "CATEGORY",
+      "id": "MCDD55G4CZ73QHFL6UZ5CCDE",
+      "updated_at": "2024-05-14T14:08:32.019Z",
+      "created_at": "2024-05-14T14:08:32.019Z",
+      "version": 1715695712019,
+      "is_deleted": false,
+      "present_at_all_locations": true,
+      "category_data": {
+        "name": "Home Decor",
+        "category_type": "REGULAR_CATEGORY",
+        "parent_category": {
+          "ordinal": -2251524935778304
         },
-        {
-            "name": "Liquid",
-            "id": "6KP7VORELUQQ2YVPIFC7QP2O"
+        "is_top_level": true,
+        "channels": ["CH_aKajDW8McbvYE6PQGqdpa8FtFisZ7fiXZ8vfYRlQuYC"],
+        "online_visibility": true
+      }
+    },
+    {
+      "type": "CATEGORY",
+      "id": "PNIMH7OETH46YS4ENPPAIZTR",
+      "updated_at": "2024-05-14T14:08:49.696Z",
+      "created_at": "2024-05-14T14:08:49.696Z",
+      "version": 1715695729696,
+      "is_deleted": false,
+      "present_at_all_locations": true,
+      "category_data": {
+        "name": "Jewelry",
+        "category_type": "REGULAR_CATEGORY",
+        "parent_category": {
+          "ordinal": -2251456216301568
         },
-        {
-            "name": "Specialty",
-            "id": "IULFMDJBQMVB7QWY34YLZQYB"
+        "is_top_level": true,
+        "channels": ["CH_aKajDW8McbvYE6PQGqdpa8FtFisZ7fiXZ8vfYRlQuYC"],
+        "online_visibility": true
+      }
+    },
+    {
+      "type": "CATEGORY",
+      "id": "RJHPYTEC3VNTMYLZDEEKCZAY",
+      "updated_at": "2024-05-14T14:29:10.846Z",
+      "created_at": "2024-05-14T14:09:01.924Z",
+      "version": 1715696950846,
+      "is_deleted": false,
+      "present_at_all_locations": true,
+      "category_data": {
+        "name": "Botanicals",
+        "category_type": "REGULAR_CATEGORY",
+        "parent_category": {
+          "ordinal": -2251387496824832
         },
-        {
-            "name": "Specialty Bars",
-            "id": "XUGXHNPAFHDLFRC5O2J3U3HZ"
+        "is_top_level": true,
+        "channels": ["CH_aKajDW8McbvYE6PQGqdpa8FtFisZ7fiXZ8vfYRlQuYC"],
+        "online_visibility": true,
+        "ecom_seo_data": {
+          "page_title": "",
+          "page_description": "",
+          "permalink": ""
+        }
+      }
+    },
+    {
+      "type": "CATEGORY",
+      "id": "GBE7EUCMMOBF3DZZTXK27Z5L",
+      "updated_at": "2024-05-14T14:09:07.248Z",
+      "created_at": "2024-05-14T14:09:07.248Z",
+      "version": 1715695747248,
+      "is_deleted": false,
+      "present_at_all_locations": true,
+      "category_data": {
+        "name": "Pets",
+        "category_type": "REGULAR_CATEGORY",
+        "parent_category": {
+          "ordinal": -2251318777348096
         },
-        {
-            "name": "Specialty Liquids",
-            "id": "VYF75HUEVE35R7SBEWMSN4YN"
+        "is_top_level": true,
+        "channels": ["CH_aKajDW8McbvYE6PQGqdpa8FtFisZ7fiXZ8vfYRlQuYC"],
+        "online_visibility": true
+      }
+    },
+    {
+      "type": "CATEGORY",
+      "id": "X6GDN7IBZK5E6AUDTFUA66UZ",
+      "updated_at": "2024-05-14T14:20:05.177Z",
+      "created_at": "2024-05-14T14:09:13.829Z",
+      "version": 1715696405177,
+      "is_deleted": false,
+      "present_at_all_locations": true,
+      "category_data": {
+        "name": "Kids",
+        "category_type": "REGULAR_CATEGORY",
+        "parent_category": {
+          "ordinal": -2251250057871360
         },
-        {
-            "name": "Bath + Body",
-            "id": "ULO76XGL3UUQAM3MR4DVPUUM"
+        "is_top_level": true,
+        "channels": ["CH_aKajDW8McbvYE6PQGqdpa8FtFisZ7fiXZ8vfYRlQuYC"],
+        "online_visibility": true,
+        "ecom_seo_data": {
+          "page_title": "",
+          "page_description": "",
+          "permalink": ""
+        }
+      }
+    },
+    {
+      "type": "CATEGORY",
+      "id": "OLETSRZV2TEPVL3SALMWIC6Y",
+      "updated_at": "2024-05-14T14:09:32.351Z",
+      "created_at": "2024-05-14T14:09:32.351Z",
+      "version": 1715695772351,
+      "is_deleted": false,
+      "present_at_all_locations": true,
+      "category_data": {
+        "name": "Handmade",
+        "category_type": "REGULAR_CATEGORY",
+        "parent_category": {
+          "id": "UOJEDH6UESPJWSQXWCLLZDXI",
+          "ordinal": -2251731094208512
         },
-        {
-            "name": "Mist",
-            "id": "PGE7AOQ7VYE6HJQJS4MHRHD6"
+        "is_top_level": false,
+        "channels": ["CH_aKajDW8McbvYE6PQGqdpa8FtFisZ7fiXZ8vfYRlQuYC"],
+        "online_visibility": true,
+        "root_category": "UOJEDH6UESPJWSQXWCLLZDXI"
+      }
+    },
+    {
+      "type": "CATEGORY",
+      "id": "IC6GDQ6YPEVHMPWYVEWEBZ6Q",
+      "updated_at": "2024-05-14T14:10:14.783Z",
+      "created_at": "2024-05-14T14:09:49.771Z",
+      "version": 1715695814783,
+      "is_deleted": false,
+      "present_at_all_locations": true,
+      "category_data": {
+        "name": "Bar",
+        "category_type": "REGULAR_CATEGORY",
+        "parent_category": {
+          "id": "UOJEDH6UESPJWSQXWCLLZDXI",
+          "ordinal": -2251593655255040
         },
-        {
-            "name": "Oils",
-            "id": "4YLILMGMRXEEH4HPAMCR2MFZ"
+        "is_top_level": false,
+        "channels": ["CH_aKajDW8McbvYE6PQGqdpa8FtFisZ7fiXZ8vfYRlQuYC"],
+        "online_visibility": true,
+        "root_category": "UOJEDH6UESPJWSQXWCLLZDXI",
+        "ecom_seo_data": {
+          "page_title": "",
+          "page_description": "",
+          "permalink": ""
+        }
+      }
+    },
+    {
+      "type": "CATEGORY",
+      "id": "DOYWLZK67VKSWTA5XIW3UQLA",
+      "updated_at": "2024-05-14T14:10:08.642Z",
+      "created_at": "2024-05-14T14:09:58.708Z",
+      "version": 1715695808642,
+      "is_deleted": false,
+      "present_at_all_locations": true,
+      "category_data": {
+        "name": "Liquid",
+        "category_type": "REGULAR_CATEGORY",
+        "parent_category": {
+          "id": "UOJEDH6UESPJWSQXWCLLZDXI",
+          "ordinal": -2251662374731776
         },
-        {
-            "name": "Bubbles",
-            "id": "SQ7XH77Z23IFJ5VFL5KDREIG"
+        "is_top_level": false,
+        "channels": ["CH_aKajDW8McbvYE6PQGqdpa8FtFisZ7fiXZ8vfYRlQuYC"],
+        "online_visibility": true,
+        "root_category": "UOJEDH6UESPJWSQXWCLLZDXI",
+        "ecom_seo_data": {
+          "page_title": "",
+          "page_description": "",
+          "permalink": ""
+        }
+      }
+    },
+    {
+      "type": "CATEGORY",
+      "id": "VXAW262J7B5MC5JEHSJ2ZGF4",
+      "updated_at": "2024-05-14T14:10:26.65Z",
+      "created_at": "2024-05-14T14:10:26.65Z",
+      "version": 1715695826650,
+      "is_deleted": false,
+      "present_at_all_locations": true,
+      "category_data": {
+        "name": "Mist",
+        "category_type": "REGULAR_CATEGORY",
+        "parent_category": {
+          "id": "QUFWJ4SGZCCMF6WWSEF7UXEI",
+          "ordinal": -2251731094208512
         },
-        {
-            "name": "Creams",
-            "id": "HMNQRHBQKIJFS5XTXGW4XNGB"
-        },
-        {
-            "name": "Lotions",
-            "id": "AOMJ5C34THBMASUAXAIWE7JU"
-        },
-        {
-            "name": "Bombs",
-            "id": "QUP7ZRUBFWUCEUMVSSUIKI2O"
-        },
-        {
-            "name": "Salts",
-            "id": "KLDSRVXDTGHMDIWPLHERSMRY"
-        },
-        {
-            "name": "Deodorant",
-            "id": "TKDZQXEDGRNQRDN3BV4I5TF5"
-        },
-        {
-            "name": "Powders",
-            "id": "2NS3YN2GHPEHDW6RE6DTOEXU"
-        },
-        {
-            "name": "Shaving",
-            "id": "RVFENGVCO6YYZZGQNMHEIEIV"
-        },
-        {
-            "name": "",
-            "id":
-        },
-        {
-            "name": "",
-            "id":
-        },
-        {
-            "name": "",
-            "id":
-        },
-        
-    ]
+        "is_top_level": false,
+        "channels": ["CH_aKajDW8McbvYE6PQGqdpa8FtFisZ7fiXZ8vfYRlQuYC"],
+        "online_visibility": true,
+        "root_category": "QUFWJ4SGZCCMF6WWSEF7UXEI"
+      }
+    }
+  ]
 }
+
+
+{
+  "type": "ITEM",
+  "id": "R3OGKM2URYFP3DY6XFPGIIFT",
+  "updated_at": "2024-05-14T16:31:40.893Z",
+  "created_at": "2024-05-06T20:49:32.817Z",
+  "version": 1715704300893,
+  "is_deleted": false,
+  "present_at_all_locations": true,
+  "item_data": {
+    "name": "Burmese Wood",
+    "description": "Inspired by Myanmar's rich heritage, this artisanal bar blends Thanaka and regional botanicals for a luxurious bathing experience. Its creamy lather cleanses and hydrates, leaving skin soft and delicately scented.",
+    "is_taxable": true,
+    "visibility": "PRIVATE",
+    "available_online": false,
+    "available_for_pickup": false,
+    "available_electronically": false,
+    "variations": [
+      {
+        "type": "ITEM_VARIATION",
+        "id": "TJSPVFNPROUP6PKE73RS3LFK",
+        "updated_at": "2024-05-14T02:19:32.386Z",
+        "created_at": "2024-05-06T20:49:32.817Z",
+        "version": 1715653172386,
+        "is_deleted": false,
+        "present_at_all_locations": true,
+        "item_variation_data": {
+          "item_id": "R3OGKM2URYFP3DY6XFPGIIFT",
+          "name": "Regular",
+          "ordinal": 1,
+          "pricing_type": "FIXED_PRICING",
+          "price_money": {
+            "amount": 800,
+            "currency": "CAD"
+          },
+          "track_inventory": false,
+          "sellable": true,
+          "stockable": true,
+          "channels": [
+            "CH_aKajDW8McbvYE6PQGqdpa8FtFisZ7fiXZ8vfYRlQuYC"
+          ]
+        }
+      }
+    ],
+    "product_type": "REGULAR",
+    "skip_modifier_screen": false,
+    "ecom_available": true,
+    "ecom_visibility": "VISIBLE",
+    "image_ids": [
+      "5WEYGU4IURZB6PZWZ2GCHAPK"
+    ],
+    "categories": [
+      {
+        "id": "OLETSRZV2TEPVL3SALMWIC6Y",
+        "ordinal": -2251731094208512
+      },
+      {
+        "id": "UOJEDH6UESPJWSQXWCLLZDXI",
+        "ordinal": -2251731094208512
+      }
+    ],
+    "pickup_fulfillment_preferences_id": "fprefs_127zqsqcb48mbeo6diijt3o4c",
+    "delivery_fulfillment_preferences_id": "fprefs_127zqsqca37qcfgw5e1f15ejg",
+    "description_html": "<p>Inspired by Myanmar&#39;s rich heritage, this artisanal bar blends Thanaka and regional botanicals for a luxurious bathing experience. Its creamy lather cleanses and hydrates, leaving skin soft and delicately scented.</p>",
+    "description_plaintext": "Inspired by Myanmar's rich heritage, this artisanal bar blends Thanaka and regional botanicals for a luxurious bathing experience. Its creamy lather cleanses and hydrates, leaving skin soft and delicately scented.",
+    "channels": [
+      "CH_aKajDW8McbvYE6PQGqdpa8FtFisZ7fiXZ8vfYRlQuYC"
+    ],
+    "shipping_fulfillment_preferences_id": "fprefs_127zqsqcblqxeigh4fwa7fkrg",
+    "dine_in_fulfillment_preferences_id": "fprefs_127zqsqcalkdmz3eaygyvi2u4",
+    "is_archived": false,
+    "reporting_category": {
+      "id": "OLETSRZV2TEPVL3SALMWIC6Y",
+      "ordinal": -2251731094208512
+    }
+  }
+},
