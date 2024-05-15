@@ -14,7 +14,7 @@
 }
 
 .home-carousel {
-     max-width: 800px !important;
+    max-width: 800px !important;
 }
 
 .soap-carousel {
@@ -137,6 +137,8 @@
     border: var(--khaki) 1px solid;
 }
 
+/* ^ Category Section */
+
 .category-header {
     width: 100%;
     height: auto;
@@ -168,15 +170,15 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    max-width: 930px;
+    max-width: 1200px;
 }
 
 .category {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
-    height: 150px;
+    width: 230px;
+    height: 230px;
     background-position: center;
     background-size: cover;
     color: var(--white);
@@ -186,7 +188,7 @@
     border-radius: 30px;
 }
 
-.category h6 {
+.category h4 {
     margin: 0;
     transition: 200ms;
 }
@@ -203,7 +205,7 @@
     opacity: 0.7;
 }
 
-.category:hover h6 {
+.category:hover h4 {
     scale: 1.2;
 }
 
@@ -234,6 +236,14 @@
 
 .title-container button:hover {
     background-color: var(--cypress);
+}
+
+@media screen and (max-width: 500px) {
+    .category {
+        width: 150px;
+        height: 150px;
+    }
+    
 }
 
 /*  @ Soap Modal Display */
