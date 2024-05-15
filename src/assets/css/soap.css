@@ -6,11 +6,8 @@
 }
 
 .soap-page-wrapper-background {
-    height: 100%;
-    padding: 20px;
     background-image: url("http://northshoresoapworks.com/images/category_bg.png");
     background-repeat: repeat;
-    height: auto;
 }
 
 .soap-page-soap-wrapper {
@@ -23,8 +20,6 @@
 
 .soap-card-soap-page {
     width: 100%;
-    max-width: 300px;
-    min-width: 200px;
     height: auto;
     padding: 0px;
     margin: 0px;
@@ -35,9 +30,8 @@
 }
 
 .soap-card-soap-page button {
-    width: 100%;
-    max-width: 250px;
-    height: 100%;
+    width: 300px;
+    height: 195px;
     padding-bottom: 0;
     background: none;
     border: none;
@@ -51,8 +45,8 @@
 .soap-card-soap-page button img {
     margin-bottom: 10px;
     width: 100%;
-    object-fit: cover;
-    height: auto;
+    height: 100%;
+    object-fit: cover;   
     transition: 200ms;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px var(--mocha);
@@ -128,9 +122,66 @@
     .carousel-caption {
         display: none;
     }
-    
+
 }
 
 .handmade-soap-header {
     margin-top: 10px;
+}
+
+.links-to-categories-container {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--mocha);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.links-to-categories {
+    width: 200px;
+    height: auto;
+    color: var(--mocha);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.links-to-categories a {
+    color: var(--cream);
+    text-decoration: none;
+    transition: 200ms;
+}
+
+.links-to-categories a:hover {
+    color: var(--stone);
+    text-decoration: underline;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+}
+
+.links-to-categories-container hr {
+    border: 1px solid var(--cream) !important;
+    width: 100%;
+}
+
+.sticky-padding {
+    padding-top: 78px;
+}
+
+@media screen and (max-width: 900px) {
+    .links-to-categories-container {
+        display: none;
+    }
+
+    .sticky-padding {
+        padding-top: 0;
+    }
+
 }
