@@ -2,17 +2,25 @@ import React, { useRef, useState, useContext } from "react";
 import HomeSoapCard from "../components/homeSoapCard.js";
 import { DataContext } from "../hooks/dataContext.js";
 import "../assets/css/home.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { filterProducts } from "../utils/filterProducts.js";
 
 function Home() {
    const carouselRef = useRef(null);
    const [itemWidth, setItemWidth] = useState(300); // Initial width, adjust as needed
    const [search, setSearch] = useState(''); // Search for soap by name
    const dataProvider = useContext(DataContext);
+   const navigate = useNavigate();
    const data = dataProvider.data;
    const categories = dataProvider.categories;
 
    console.log(categories);
+
+   const soap_category_id = categories.find(category => category.name === 'Soap').id;
+
+   const soaps = filterProducts(data, soap_category_id);
+
+   console.log(soaps);
 
    const scrollLeft = () => {
       getImageWidth();
@@ -65,8 +73,8 @@ function Home() {
                   <div className="carousel-content" ref={carouselRef} style={{ display: 'flex', overflowX: 'hidden' }}>
 
                      {
-                        data.length === 0 ? <p className="text-center fs-3" style={{ width: '100%' }}>Error Getting Soaps</p> :
-                           data.objects.map((soap, index) => {
+                        soaps.length === 0 ? <p className="text-center fs-3" style={{ width: '100%' }}>Error Getting Soaps</p> :
+                           soaps.map((soap, index) => {
                               return (
                                  <HomeSoapCard key={index} soap={soap} index={index} related_objects={data.related_objects} />
                               )
@@ -104,7 +112,7 @@ function Home() {
                         {
                            data.length === 0 ? <p>Error getting soaps.</p> :
                               (() => {
-                                 const filteredSoaps = data.objects.filter((soap) => {
+                                 const filteredSoaps = soaps.filter((soap) => {
                                     const { name, description } = soap.item_data;
                                     return name.toLowerCase().includes(search.toLowerCase()) || description.toLowerCase().includes(search.toLowerCase());
                                  });
@@ -169,15 +177,15 @@ function Home() {
                </div>
             </center>
 
-            <h1 className="categories-header">Categories</h1>
+            {/* <h1 className="categories-header" id="categories">Categories</h1>
             <hr />
 
             <center>
                <div className="categories">
                   {
                      categories.map(category => {
+                        console.log(category);
                         const image_id = category.image_id;
-                        const category_id = category.id;
                         const category_name = category.name;
                         let relatedObject = data.related_objects.find(obj => obj.type === 'IMAGE' && obj.id === image_id);
 
@@ -191,21 +199,30 @@ function Home() {
                         }
 
                         const { url, image_name } = relatedObject.image_data;
+
+                        let path;
+
+                        if (category.name === 'Soap') {
+                           path = '/soap';
+                        } else {
+                           path = "/display_items";
+                        }
+
                         return (
-                           <Link key={category.id}>
+                           <div key={category.id} onClick={() => navigate(path, { state: { category } })}>
                               <div className="category">
                                  <img src={url} alt={image_name} className="category-img" />
                                  <div className="title-container">
-                                    <h6>{category_name}</h6>
+                                    <h4>{category_name}</h4>
                                  </div>
                               </div>
-                           </Link>
+                           </div>
                         );
                      })
                   }
 
                </div>
-            </center>
+            </center> */}
          </section>
 
       </div>
