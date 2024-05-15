@@ -5,9 +5,16 @@ function ItemCard({ soap, related_objects, index }) {
     const id = soap.item_data.variations[0].id;  // This is set up for only 1 variation
     const soapIndex = `soap_${id}`;
     const name = soap.item_data.name;
-    const imageId = soap.item_data.image_ids[0];
-    const imageObject = related_objects.find(obj => obj.id === imageId);
-    const imageUrl = imageObject.image_data.url;
+    let imageUrl;
+
+    if (soap.item_data.image_ids) {
+        const imageId = soap.item_data.image_ids[0];
+        const imageObject = related_objects.find(obj => obj.id === imageId);
+        imageUrl = imageObject.image_data.url;
+    } else {
+        imageUrl = "http://northshoresoapworks.com/images/replacement-image.png";
+    }
+
 
     return (
         <div key={index}>
