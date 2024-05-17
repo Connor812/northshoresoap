@@ -5,12 +5,17 @@
     flex: 1;
 }
 
+.soap-heading {
+    padding: 10px;
+}
+
 .soap-page-wrapper-background {
     background-image: url("http://northshoresoapworks.com/images/category_bg.png");
     background-repeat: repeat;
 }
 
 .soap-page-soap-wrapper {
+    max-width: 1880px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -130,6 +135,8 @@
 }
 
 .links-to-categories-container {
+    position: sticky;
+    top: 0;
     width: 100%;
     padding: 10px;
     background-color: var(--mocha);

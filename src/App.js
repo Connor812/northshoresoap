@@ -41,10 +41,11 @@ function AppContent() {
       <Header updateCart={updateCart} />
       <Cart />
       <Routes>
+        <Route path="/*" element={<Home />} />
         <Route path="/northshoresoap" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/soap" element={<Soap />} />
-        <Route path="/display_items" element={<DisplayItems />} />
+        <Route path="/display_items/:categoryId" element={<DisplayItems />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/thankyou" element={<Thankyou />} />

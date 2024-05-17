@@ -2,7 +2,7 @@ import React, { useRef, useState, useContext } from "react";
 import HomeSoapCard from "../components/homeSoapCard.js";
 import { DataContext } from "../hooks/dataContext.js";
 import "../assets/css/home.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { filterProducts } from "../utils/filterProducts.js";
 
 function Home() {
@@ -10,17 +10,10 @@ function Home() {
    const [itemWidth, setItemWidth] = useState(300); // Initial width, adjust as needed
    const [search, setSearch] = useState(''); // Search for soap by name
    const dataProvider = useContext(DataContext);
-   const navigate = useNavigate();
    const data = dataProvider.data;
    const categories = dataProvider.categories;
-
-   console.log(categories);
-
    const soap_category_id = categories.find(category => category.name === 'Soap').id;
-
    const soaps = filterProducts(data, soap_category_id);
-
-   console.log(soaps);
 
    const scrollLeft = () => {
       getImageWidth();
@@ -177,7 +170,7 @@ function Home() {
                </div>
             </center>
 
-            {/* <h1 className="categories-header" id="categories">Categories</h1>
+            <h1 className="categories-header" id="categories">Categories</h1>
             <hr />
 
             <center>
@@ -187,6 +180,7 @@ function Home() {
                         console.log(category);
                         const image_id = category.image_id;
                         const category_name = category.name;
+                        const category_id = category.id;
                         let relatedObject = data.related_objects.find(obj => obj.type === 'IMAGE' && obj.id === image_id);
 
                         if (!relatedObject) {
@@ -209,20 +203,20 @@ function Home() {
                         }
 
                         return (
-                           <div key={category.id} onClick={() => navigate(path, { state: { category } })}>
+                           <Link key={category.id} to={`/display_items/${category_id}`}>
                               <div className="category">
                                  <img src={url} alt={image_name} className="category-img" />
                                  <div className="title-container">
                                     <h4>{category_name}</h4>
                                  </div>
                               </div>
-                           </div>
+                           </Link>
                         );
                      })
                   }
 
                </div>
-            </center> */}
+            </center>
          </section>
 
       </div>
