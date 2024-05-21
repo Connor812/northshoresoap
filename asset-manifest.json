@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/northshoresoap/static/css/main.9f5507b7.css",
-    "main.js": "/northshoresoap/static/js/main.d2a2292a.js",
+    "main.css": "/northshoresoap/static/css/main.767f1940.css",
+    "main.js": "/northshoresoap/static/js/main.dc2cd6ba.js",
     "static/js/453.42441bd7.chunk.js": "/northshoresoap/static/js/453.42441bd7.chunk.js",
     "static/media/OPTICopperplate-Heavy.otf": "/northshoresoap/static/media/OPTICopperplate-Heavy.01ce6f318db42eec4c24.otf",
     "index.html": "/northshoresoap/index.html",
-    "main.9f5507b7.css.map": "/northshoresoap/static/css/main.9f5507b7.css.map",
-    "main.d2a2292a.js.map": "/northshoresoap/static/js/main.d2a2292a.js.map",
+    "main.767f1940.css.map": "/northshoresoap/static/css/main.767f1940.css.map",
+    "main.dc2cd6ba.js.map": "/northshoresoap/static/js/main.dc2cd6ba.js.map",
     "453.42441bd7.chunk.js.map": "/northshoresoap/static/js/453.42441bd7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9f5507b7.css",
-    "static/js/main.d2a2292a.js"
+    "static/css/main.767f1940.css",
+    "static/js/main.dc2cd6ba.js"
   ]
 }
