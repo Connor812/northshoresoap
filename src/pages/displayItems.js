@@ -58,14 +58,17 @@ function DisplayItems() {
         </h1>
         <hr />
       </center>
-      <div className="categories-select-container">
-        <select className='categories-select' onChange={(event) => handleCategoryChange(event.target.value)}>
-          {childCategories.map((childCategory, index) => {
-            return (
-              <option key={index} value={childCategory.id}>{childCategory.name}</option>
-            )
-          })}
-        </select>
+
+      <div className='categories-select-wrapper'>
+        <div className="categories-select-container">
+          <div>
+            {childCategories.map((childCategory, index) => {
+              return (
+                <button key={index} value={childCategory.id} onClick={(event) => handleCategoryChange(event.target.value)}>{childCategory.name}</button>
+              )
+            })}
+          </div>
+        </div>
       </div>
 
       <div className="display-item-container">
