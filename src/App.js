@@ -11,7 +11,8 @@ import Payment from './pages/payment.js';
 import Thankyou from './pages/thankyou.js';
 import EmailListing from './pages/emailListing.js';
 
-import { DataProvider, DataContext } from './hooks/dataContext.js'; // Import DataProvider
+import { DataProvider, DataContext } from './hooks/dataContext.js';
+import ScrollToTop from './utils/ScrollToTop.js';
 import "./assets/css/main.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -20,6 +21,7 @@ function App() {
   return (
     <Router>
       <DataProvider>
+        <ScrollToTop />
         <AppContent />
       </DataProvider>
     </Router>

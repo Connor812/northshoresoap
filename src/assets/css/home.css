@@ -344,6 +344,12 @@
     justify-content: center;
 }
 
+.item-card-modal-description {
+    max-height: 120px;
+    overflow-y: scroll;
+    margin: 10px 0;
+}
+
 .quantity {
     width: 50px;
     height: auto;

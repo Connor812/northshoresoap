@@ -49,10 +49,9 @@ function ItemCardModal({ soap, related_objects, index }) {
                                 </h4>
 
                             </div>
-
-                            <br />
-                            {description}
-                            <br />
+                            <div className="item-card-modal-description">
+                                {description}
+                            </div>
                             Price: ${price}
                             <br />
                             <div>

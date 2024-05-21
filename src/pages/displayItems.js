@@ -3,70 +3,49 @@ import { Link, useParams } from 'react-router-dom';
 import { filterProducts } from '../utils/filterProducts';
 import { DataContext } from "../hooks/dataContext.js";
 import ItemCard from '../components/itemCard';
-import Offcanvas from 'react-bootstrap/Offcanvas';
 import "../assets/css/display-items.css";
 
 function DisplayItems() {
 
-  const [show, setShow] = useState(false);
+  // Set up the pages
+  const itemsPerPage = 10;
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const handleClose = () => setShow(false);
-  const handleShow = (event) => {
-    event.preventDefault();
-    event.stopPropagation();
-    setShow(true);
-  }
-
+  // set up the data
   const dataProvider = useContext(DataContext);
   const data = dataProvider.data;
+  const relatedObjects = data.related_objects
   const categories = dataProvider.categories;
   const { categoryId } = useParams();
   const category = categories.find(category => category.id === categoryId);
   const categoryName = category.name;
   const childCategories = category.children_categories;
 
+  const items = filterProducts(data, categoryId);
+
+  // Set up the rest of the pages
+  const [totalPages, setTotalPages] = useState(Math.ceil(items.length / itemsPerPage));
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const [categoryItems, setCategoryItems] = useState(items);
+  const [currentItems, setCurrentItems] = useState(items.slice(startIndex, startIndex + itemsPerPage));
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    const startIndex = (pageNumber - 1) * itemsPerPage;
+    setCurrentItems(categoryItems.slice(startIndex, startIndex + itemsPerPage));
+    window.scrollTo(0, 0);
+  }
+
+  const handleCategoryChange = (newCategoryId) => {
+    const categoryItems = filterProducts(data, newCategoryId);
+    setCategoryItems(categoryItems);
+    setCurrentPage(1);
+    setTotalPages(Math.ceil(categoryItems.length / itemsPerPage));
+    setCurrentItems(categoryItems.slice(0, itemsPerPage));
+  }
+
   return (
     <div className="display-items-wrapper">
-
-      <Offcanvas className="sub-categories" show={show} onHide={handleClose} backdrop={false}>
-        <Offcanvas.Header>
-          <Offcanvas.Title className='sub-categories-title-container'>
-            <h1>
-              Categories
-            </h1>
-            <button className='sub-categories-close-btn' onClick={() => { handleClose() }}>
-              <svg width="40" height="40" viewBox="0 0 16 16">
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
-              </svg>
-            </button>
-          </Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-
-          {childCategories.map((childCategory) => {
-
-            const childCategoryName = childCategory.name;
-            const childCategoryId = childCategory.id;
-
-            return (
-              <div className="sub-category">
-                <a className="sub-category-link" href={`#${childCategoryId}`} onClick={() => handleClose()} >
-                  {childCategoryName}
-                </a>
-              </div>
-            )
-          })}
-
-
-        </Offcanvas.Body>
-      </Offcanvas>
-
-      <button className="show-sub-categories-btn" onClick={(event) => handleShow(event)}>
-        <svg width="15" height="15" viewBox="0 0 16 16">
-          <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
-        </svg>
-      </button>
-
       <center>
         <h1 className='display-items-category-title'>
           <Link className="back-button" to="/northshoresoap">
@@ -79,39 +58,41 @@ function DisplayItems() {
         </h1>
         <hr />
       </center>
+      <div className="categories-select-container">
+        <select className='categories-select' onChange={(event) => handleCategoryChange(event.target.value)}>
+          {childCategories.map((childCategory, index) => {
+            return (
+              <option key={index} value={childCategory.id}>{childCategory.name}</option>
+            )
+          })}
+        </select>
+      </div>
 
-      {childCategories.map((childCategory) => {
+      <div className="display-item-container">
 
-        const childCategoryName = childCategory.name;
-        const childCategoryId = childCategory.id;
+        {currentItems.length === 0
+          ? <h2>No items found</h2>
+          : currentItems.map((soap, index) => {
+            return (
+              <ItemCard key={index} soap={soap} related_objects={relatedObjects} index={index} />
+            );
+          })}
 
-        const categoryItems = filterProducts(data, childCategoryId);
+      </div>
 
-        return (
-          <section id={childCategoryId}>
-            <center>
-              <h1>{childCategoryName}</h1>
-              <hr />
-            </center>
-
-            <div className="display-item-container">
-
-              {
-                categoryItems.length === 0
-                  ? <h3 className="no-items">No items in this category</h3>
-                  :
-                  categoryItems.map((item, index) => {
-
-                    return (
-                      <ItemCard key={index} soap={item} related_objects={data.related_objects} index={index} />
-                    )
-
-                  })}
-
-            </div>
-          </section>
-        )
-      })}
+      <div className="pagination">
+        <img src="http://www.northshoresoapworks.com/images/small-arrow-left.png" alt="small arrow" />
+        {Array.from({ length: totalPages }, (_, index) => (
+          <button
+            key={index + 1}
+            onClick={() => handlePageChange(index + 1)}
+            className={currentPage === index + 1 ? "pagination-btn pagination-active" : "pagination-btn"}
+          >
+            {index + 1}
+          </button>
+        ))}
+        <img src="http://www.northshoresoapworks.com/images/small-arrow-right.png" alt="small arrow" />
+      </div>
     </div>
   );
 }
