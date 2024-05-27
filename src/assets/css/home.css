@@ -1,16 +1,16 @@
 .soap-search-wrapper {
     background-color: var(--cream);
-    padding: 5%;
+    padding: 1%;
     color: var(--mocha);
 }
 
 .logo {
-    max-width: 90%;
+    max-width: 60%;
     border-radius: 10px;
 }
 
 .gallery {
-    padding: 5%;
+    padding: 1% 5%;
 }
 
 .home-carousel {
@@ -51,7 +51,6 @@
 
 .soap-card-img {
     width: 100%;
-    height: 170px;
     object-fit: cover;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -66,8 +65,7 @@
 .soap-card {
     background: none;
     border: none;
-    width: 300px !important;
-    min-width: 300px !important;
+    min-width: 250px !important;
     padding: 20px;
     color: var(--mocha);
     transition: 200ms;
@@ -83,10 +81,6 @@
 }
 
 @media screen and (max-width: 1238.4px) {
-    .soap-search-wrapper {
-        padding: 5% 0;
-    }
-
     .arrow-btn {
         display: none;
     }
@@ -143,7 +137,7 @@
     width: 100%;
     height: auto;
     background-color: var(--white);
-    padding: 10px;
+    padding: 10px 10%;
     color: var(--mocha);
 }
 
@@ -253,7 +247,7 @@
     border: 2px solid var(--mocha);
 }
 
-.modal-dialog {
+.soap-card-modal-dialog {
     max-width: 1000px !important;
     border-radius: 30px;
 }
@@ -330,9 +324,8 @@
 }
 
 .soap-image {
-    margin: 20px 0px;
     width: 300px;
-    height: auto;
+    height: 200px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px var(--mocha);
 }

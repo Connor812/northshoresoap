@@ -1,5 +1,6 @@
 import React from "react";
 import ItemCardModal from "./itemCardModal";
+import ImageComponent from "../utils/Image";
 
 function ItemCard({ soap, related_objects, index }) {
     const id = soap.item_data.variations[0].id;  // This is set up for only 1 variation
@@ -15,12 +16,11 @@ function ItemCard({ soap, related_objects, index }) {
         imageUrl = "http://northshoresoapworks.com/images/replacement-image.png";
     }
 
-
     return (
         <div key={index}>
             <div className="soap-card-soap-page">
                 <button data-bs-toggle="modal" data-bs-target={`#${soapIndex}`} className="soap-card-btn">
-                    <img src={imageUrl} alt={name} style={{ maxWidth: '100%' }} />
+                    <ImageComponent src={imageUrl} alt={name} className="soap-card-image" height="144px" width="242px" />
                 </button>
 
                 <div className="soap-card-title">
@@ -34,4 +34,3 @@ function ItemCard({ soap, related_objects, index }) {
 }
 
 export default ItemCard;
-

@@ -5,6 +5,8 @@ import Payment from "./payment.js";
 import CheckoutCartItem from "../components/checkoutCartItem.js";
 import "../assets/css/checkout.css";
 import AddressForm from "../components/addressForm";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function Checkout() {
 
@@ -173,7 +175,6 @@ function Checkout() {
     }
 
     function validatePickupFormData(formData) {
-        console.log(formData.get("startDate"));
         const fields = {
             "first-name": /^[a-zA-Z]+$/,
             "last-name": /^[a-zA-Z]+$/,
@@ -201,7 +202,7 @@ function Checkout() {
                             <p>Thanks For Shopping With Us and Don't Forget Your Flowers!</p>
                         </div>
                         <div>
-                            <img
+                            <img loading="lazy"
                                 src="http://northshoresoapworks.com/images/bird.jpg"
                                 width="120px"
                                 alt="bird"
@@ -210,16 +211,14 @@ function Checkout() {
                         </div>
                     </div>
 
-                    <div className="d-flex justify-content-between fs-5">
-                        <div>Product</div>
-                        <div className="item-labels justify-content-between">
-                            <div>Price</div>
-                            <div>Quantity</div>
-                            <div>SubTotal</div>
-                        </div>
-                    </div>
+                    <Row className="fs-5">
+                        <Col sm={5}>Product</Col>
+                        <Col className="checkout-table-name text-center" sm={3}>Price</Col>
+                        <Col className="checkout-table-name" sm={2}>Quantity</Col>
+                        <Col className="checkout-table-name text-end" sm={2}>SubTotal</Col>
+                    </Row>
                     <hr />
-                    <ul className="checkout-cart-list">
+                    <div className="checkout-cart-list">
                         {cartItems.map((item, index) => {
                             return (
                                 <CheckoutCartItem
@@ -234,7 +233,7 @@ function Checkout() {
                                 />
                             );
                         })}
-                    </ul>
+                    </div>
                     <hr className="coupon-separator" />
                 </div>
                 <div className="coupon-code-section">
@@ -261,7 +260,7 @@ function Checkout() {
 
             <div className="address-form-wrapper">
                 <div className="white-background">
-                    <img
+                    <img loading="lazy"
                         src="http://northshoresoapworks.com/images/logo-black.jpg"
                         className="checkout-logo"
                         alt="Logo"
@@ -310,4 +309,3 @@ function Checkout() {
 }
 
 export default Checkout;
-

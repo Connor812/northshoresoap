@@ -13,12 +13,12 @@ function Home() {
    const dataProvider = useContext(DataContext);
    const data = dataProvider.data;
    const categories = dataProvider.categories;
-   const soap_category_id = categories.find(category => category.name === 'Soap').id;
+   // const soap_category_id = categories.find(category => category.name === 'Soap').id;
+   const soap_category_id = "OLETSRZV2TEPVL3SALMWIC6Y";
    const soaps = filterProducts(data, soap_category_id);
 
    const scrollLeft = () => {
       getImageWidth();
-      console.log(itemWidth);
       if (carouselRef.current) {
          carouselRef.current.scrollTo({
             top: 0,
@@ -30,7 +30,6 @@ function Home() {
 
    const scrollRight = () => {
       getImageWidth();
-      console.log(itemWidth);
       if (carouselRef.current) {
          carouselRef.current.scrollTo({
             top: 0,
@@ -51,20 +50,26 @@ function Home() {
       <div>
          <section className="soap-search-wrapper">
             <center>
-               <img className="logo" src="http://northshoresoapworks.com/images/logo.png" alt="Logo" />
+               <img loading="lazy" className="logo" src="http://northshoresoapworks.com/images/logo.png" alt="Logo" />
             </center>
             <center className="gallery">
                <h3>HAND MADE SOAP GALLERY</h3>
-               <p>
-                  Our soap is prized for its moisturizing properties, thanks to the presence of glycerine, which helps to maintain the skin's natural hydration levels. MORE...
+               <p className="arial">
+                  Our soap is prized for its moisturizing properties
+                  <br />
+                  The presence of glycerine which helps to maintain the skin's natural hydration levels.
                </p>
+               <hr />
+               <h5>
+                  Scroll To See Our Soap Collection
+               </h5>
                <section className="soap-carousel">
                   <button onClick={scrollRight} className="arrow-btn">
                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" className="bi bi-caret-left-fill" viewBox="0 0 16 16">
                         <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
                      </svg>
                   </button>
-                  <div className="carousel-content" ref={carouselRef} style={{ display: 'flex', overflowX: 'hidden' }}>
+                  <div className="carousel-content" ref={carouselRef} style={{ display: 'flex', overflowX: 'scroll' }}>
 
                      {
                         soaps.length === 0 ? <p className="text-center fs-3" style={{ width: '100%' }}>Error Getting Soaps</p> :
@@ -108,7 +113,8 @@ function Home() {
                               (() => {
                                  const filteredSoaps = soaps.filter((soap) => {
                                     const { name, description } = soap.item_data;
-                                    return name.toLowerCase().includes(search.toLowerCase()) || description.toLowerCase().includes(search.toLowerCase());
+                                    return name.toLowerCase().includes(search.toLowerCase()) ||
+                                       (description && description.toLowerCase().includes(search.toLowerCase()));
                                  });
 
                                  return filteredSoaps.length === 0 ? <p>No search results found.</p> :
@@ -141,7 +147,6 @@ function Home() {
                <div className="categories">
                   {
                      categories.map(category => {
-                        console.log(category);
                         const image_id = category.image_id;
                         const category_name = category.name;
                         const category_id = category.id;
@@ -169,7 +174,7 @@ function Home() {
                         return (
                            <Link key={category.id} to={`/display_items/${category_id}`}>
                               <div className="category">
-                                 <img src={url} alt={image_name} className="category-img" />
+                                 <img loading="lazy" src={url} alt={image_name} className="category-img" />
                                  <div className="title-container">
                                     <h4>{category_name}</h4>
                                  </div>

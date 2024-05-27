@@ -1,5 +1,6 @@
 import React from "react";
 import ItemCardModal from "./itemCardModal.js";
+import ImageComponent from "../utils/Image.js";
 
 function HomeSoapCard({ soap, related_objects, index }) {
     const id = soap.item_data.variations[0].id;  // This is set up for only 1 variation
@@ -18,7 +19,7 @@ function HomeSoapCard({ soap, related_objects, index }) {
     return (
         <React.Fragment key={index}>
             <button data-bs-toggle="modal" data-bs-target={`#${soapIndex}`} key={id} className="soap-card">
-                <img src={imageUrl} alt={name} className="soap-card-img" />
+                <ImageComponent src={imageUrl} alt={name} className="soap-card-img" height="140px" width="210px" />
                 <h6>{name}</h6>
             </button>
 

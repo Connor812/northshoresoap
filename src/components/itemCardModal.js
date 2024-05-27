@@ -1,5 +1,6 @@
 import React from "react";
 import { addItemToCart } from "../utils/addItemToCart.js";
+import ImageComponent from "../utils/Image.js";
 
 function ItemCardModal({ soap, related_objects, index }) {
     const id = soap.item_data.variations[0].id;  // This is set up for only 1 variation
@@ -28,13 +29,13 @@ function ItemCardModal({ soap, related_objects, index }) {
 
     return (
         <div key={index} className="modal fade" id={`${soapIndex}`} data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-dialog modal-dialog-centered soap-card-modal-dialog">
                 <div className="modal-content">
                     <div className="modal-body soap-display">
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         <div className="left-side">
-                            <img src="http://northshoresoapworks.com/images/white_bg_logo.jpg" alt="logo" className="soap-logo" />
-                            <img src={imageUrl} alt={name} className="soap-image" />
+                            <img loading="lazy" src="http://northshoresoapworks.com/images/white_bg_logo.jpg" alt="logo" className="soap-logo" />
+                            <ImageComponent src={imageUrl} alt={name} className="soap-image" height="200px" width="300px" />
                             <h6 className="natural-ingredients">
                                 <u>
                                     Natural Ingredients

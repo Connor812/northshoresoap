@@ -36,14 +36,12 @@ function EmailListing() {
         })
             .then(response => {
                 if (!response.ok) {
-                    console.log(response);
                     throw new Error('Network response was not ok');
                 }
                 return response.json(); // Get the response text
             })
             .then(data => {
                 // Log the parsed data
-                console.log('Response:', data);
                 if (data.error) {
                     setError(data.error);
                 }
@@ -63,7 +61,7 @@ function EmailListing() {
         <div className='email-listing'>
 
             <center>
-                <img className="logo" src="http://northshoresoapworks.com/images/logo.png" alt="Logo" />
+                <img loading="lazy" className="logo" src="http://northshoresoapworks.com/images/logo.png" alt="Logo" />
             </center>
 
             <div className='email-listing-form'>
@@ -96,7 +94,7 @@ function EmailListing() {
                 <button type="submit" className='email-form-submit' onClick={(event) => handleSubmit(event)}>Join Club</button>
 
                 <div className='email-form-bottom'>
-                    <img src="http://northshoresoapworks.com/images/gift-basket.png" alt="Gift Basket" />
+                    <img loading="lazy" src="http://northshoresoapworks.com/images/gift-basket.png" alt="Gift Basket" />
 
                     <div>
                         <p>Soapworks Club members will get periodical special announcements and  special discounts</p>
@@ -106,7 +104,7 @@ function EmailListing() {
                         </p>
                     </div>
 
-                    <img src="http://northshoresoapworks.com/images/soap.png" alt="Soap" />
+                    <img loading="lazy" src="http://northshoresoapworks.com/images/soap.png" alt="Soap" />
                 </div>
 
             </div>

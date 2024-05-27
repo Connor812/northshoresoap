@@ -112,26 +112,17 @@
 
 .checkout-cart-item-img {
     width: 150px;
-    margin-right: 50px;
+    margin-right: 10px;
     border-radius: 10px;
 }
 
-.checkout-cart-item-details {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    color: var(--mocha);
-}
-
 .remove-item-btn {
-    position: absolute;
-    bottom: 10px;
-    right: 0;
     fill: var(--mocha);
     cursor: pointer;
     background: none;
     border: none;
     transition: 200ms;
+    margin-left: 20px;
 }
 
 .remove-item-btn:hover {
@@ -289,39 +280,6 @@
     background-color: var(--cypress);
 }
 
-@media screen and (max-width: 920px) {
-    .checkout-cart-item {
-        flex-direction: column;
-    }
-
-    .checkout-cart-item-img {
-        margin-right: 0px;
-    }
-
-    .checkout-cart-item-details {
-        flex-direction: column;
-    }
-
-    .checkout-cart-item-details h2 {
-        text-align: center;
-    }
-
-    .item-labels {
-        display: none !important;
-    }
-
-    .checkout-item-price {
-        text-align: center;
-    }
-
-    .checkout-quantity-wrapper {
-        display: flex;
-        justify-content: center;
-
-    }
-
-}
-
 @media screen and (max-width: 645px) {
     .continue-shopping-button {
         display: none;
@@ -332,17 +290,6 @@
     }
 }
 
-.checkout-item-name {
-    width: 43%;
-}
-
-.checkout-item-price {
-    width: 22%;
-}
-
-.checkout-quantity-wrapper {
-    width: 30%;
-}
 
 #startDate {
     background-color: var(--bone);
@@ -350,4 +297,34 @@
     border-bottom: 1px solid var(--mocha);
     border-radius: 0px !important;
     color: var(--mocha);
+}
+
+.checkout-item-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkout-quantity-wrapper {
+    display: flex;
+}
+
+.checkout-price {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .checkout-item-name {
+        flex-direction: column;
+    }
+
+    .checkout-quantity-wrapper {
+        justify-content: center;
+    }
+    .checkout-subtotal {
+        text-align: center;
+    }
+    .checkout-table-name {
+        display: none;
+    }
 }

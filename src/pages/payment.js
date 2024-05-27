@@ -14,10 +14,7 @@ function Payment({ data, shipmentMethod, subTotal }) {
         setError("No order found");
     }
 
-    console.log(order);
-
     const shipmentType = order.fulfillments[0].type;
-    console.log(shipmentType);
 
     let orderDetails;
 
@@ -92,11 +89,11 @@ function Payment({ data, shipmentMethod, subTotal }) {
             })
             .then((data) => {
                 if (data.errors) {
-                    console.log("error");
+                    
                     setError(data.errors.detail);
                     return;
                 }
-                console.log(data);
+                
                 localStorage.setItem("cartItems", JSON.stringify([]));
                 navigate("/thankyou", { state: { order: data } });
 

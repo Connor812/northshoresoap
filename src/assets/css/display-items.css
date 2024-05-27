@@ -10,7 +10,7 @@
 }
 
 .display-items-category-title {
-    margin-top: 18px !important;
+    margin-top: 10px !important;
     position: relative;
 }
 
@@ -28,13 +28,15 @@
     left: 20px;
     font-size: 16pt;
     background-color: var(--meadow);
-    padding: 10px 40px;
+    padding: 5px 20px;
     color: var(--white);
     text-decoration: none;
     display: flex;
     border-radius: 50px;
     border: 1px solid var(--mocha);
     transition: 200ms;
+    display: flex;
+    align-items: center;
 }
 
 .back-button svg {
@@ -56,43 +58,83 @@
     }
 }
 
-.categories-select-wrapper {
+/* This is the styles for the sub category nav bar */
+
+.categories-nav-wrapper {
     padding: 0 5%;
+    display: flex;
+    justify-content: center;
 }
 
-.categories-select-container {
-    width: 100%;
+@media screen and (max-width: 700px) {
+    .categories-nav-wrapper {
+        display: none;
+    }
+}
+
+.categories-nav-container {
+    width: 88%;
     padding: 10px 6%;
     background-color: var(--mocha);
     margin-bottom: 20px;
     border: 1px solid var(--walnut);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
 }
 
-.categories-select-container div {
+.categories-nav-container div {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
     line-height: 35%;
+    font-size: 16pt;
 }
 
-.categories-select-container button {
+.categories-nav-container button {
     background: none;
     border: none;
     color: var(--cream);
     transition: 200ms;
 }
 
-.categories-select-container button:hover {
+.categories-nav-container button:hover {
     color: var(--bone);
     scale: 1.1;
 }
 
-.categories-select-container hr {
+.categories-nav-container hr {
     width: 100%;
     border: 1px solid var(--cream) !important;
 
 }
+
+.categories-select-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 10px 0 0;
+    display: none;
+    margin-bottom: 10px;
+}
+
+.categories-select {
+    background-color: var(--cream);
+    border: 1px solid var(--mocha);
+    border-radius: 5px;
+    padding: 5px;
+    color: var(--mocha)
+}
+
+@media screen and (max-width: 700px) {
+    .categories-select-container {
+        display: flex;
+    }
+
+}
+
+/* These are the styles for the pagination */
 
 .pagination {
     width: 100%;
@@ -104,8 +146,22 @@
     margin-bottom: 20px;
 }
 
+@media screen and (max-width: 500px) {
+    .pagination img {
+        display: none;
+    }
+}
+
+.pagination div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px
+}
+
 .pagination-btn {
     width: 40px;
+    min-width: 40px;
     height: 40px;
     color: var(--mocha);
     background-color: var(--cream);
@@ -122,4 +178,51 @@
 
 .pagination-active {
     background-color: var(--bone);
+}
+
+.selected {
+    scale: 1.1;
+    color: var(--stone) !important;
+}
+
+/* $ Soap Carousel */
+
+.display-items-soap-carousel {
+    width: 100%;
+    max-width: 100%;
+    overflow-y: scroll;
+    height: 150px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.soap-carousel-images {
+    width: 242px;
+    height: 144px;
+    border-radius: 20px;
+}
+
+.display-items-carousel-btn-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.display-items-carousel-btn {
+    fill: var(--mocha);
+    background: none;
+    border: none;
+    transition: 200ms;
+}
+
+.display-items-carousel-btn:hover {
+    fill: var(--walnut);
+}
+
+@media screen and (max-width: 800px) {
+    .display-items-carousel-btn-container {
+        display: none;
+    }
+
 }

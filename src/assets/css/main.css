@@ -5,6 +5,7 @@
     --mocha: #A48371;
     --mocha-opacity: #a4837195;
     --meadow: #A0A168;
+    --meadow-light: #b6b775;
     --cypress: #717F66;
     --khaki: #625A3C;
     --walnut: #5F4438;
@@ -23,6 +24,11 @@
     font-family: 'Copperplate' !important;
     src: url('../fonts/OPTICopperplate-Heavy.otf') format('opentype');
     /* Additional font styles (e.g., font-weight, font-style) can be specified here */
+}
+
+.arial {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--medium);
 }
 
 body,
@@ -48,8 +54,37 @@ hr {
     width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 p{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 p {
     margin: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 !important;
+    font-family: 'Copperplate' !important;
+}
+
+h1 {
+    font-size: 2rem !important;
+    font-family: 'Copperplate' !important;
+}
+
+h3 {
+    font-size: var(--large);
+    font-family: 'Copperplate' !important;
+}
+
+p {
+    margin: 0px !important;
 }
 
 .cart-button {
@@ -73,10 +108,10 @@ h1, h2, h3, h4, h5, h6 p{
     position: relative;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
     .navbar-nav {
         position: relative;
-        z-index: 1;
+        z-index: 2;
         pointer-events: auto;
     }
 }
@@ -105,9 +140,6 @@ h1, h2, h3, h4, h5, h6 p{
         border-radius: 20px;
     }
 
-    .cart-button {
-        position: static;
-    }
 }
 
 .coming-soon {
@@ -118,4 +150,46 @@ h1, h2, h3, h4, h5, h6 p{
     justify-content: center;
     align-items: center;
     color: var(--mocha);
+}
+
+.image-placeholder {
+    background-color: var(--cypress);
+    border-radius: 20px;
+    animation: pulse 1s infinite;
+}
+
+.image-placeholder.fade-out {
+    opacity: 0;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: var(--meadow);
+    }
+
+    50% {
+        background-color: var(--meadow-light);
+    }
+
+    100% {
+        background-color: var(--meadow);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.image-loading {
+    opacity: 0;
+}
+
+.fade-in {
+    animation: fade-in 1s;
 }
