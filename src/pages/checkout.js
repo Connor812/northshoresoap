@@ -34,6 +34,12 @@ function Checkout() {
 
     function createOrder(e) {
         e.preventDefault();
+
+        if (cartItems.length === 0) {
+            setError("Your cart is empty");
+            return;
+        }
+
         let formId = "";
 
         if (shipmentMethod === "no-method") {
@@ -135,13 +141,15 @@ function Checkout() {
             )
             .then((data) => {
                 if (data.error || data.errors) {
-                    setError(data.errors[0].detail);
+                    console.log(data);
+                    setError(data.error);
                     paymentBtn.innerHTML = "Proceed to Payment";
                     paymentBtn.disabled = false;
                 } else {
                     paymentBtn.remove();
                     setError("");
-                    setStage(<Payment data={data} shipmentMethod={shipmentMethod} subTotal={subTotal} />);
+                    console.log(data);
+                    setStage(<Payment data={data} shipmentMethod={shipmentMethod} subTotal={subTotal} setError={setError} />);
                 }
             })
             .catch((err) => {

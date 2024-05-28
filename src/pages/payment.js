@@ -1,69 +1,51 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { PaymentForm, CreditCard } from "react-square-web-payments-sdk";
 import { useNavigate } from "react-router-dom";
+import Spinner from 'react-bootstrap/Spinner';
 
-const applicationId = "sq0idp-IPhH7gNDCRYpvM6bKYvb_g";
-const locationId = "LE3BRNS0JXRJF";
-
-function Payment({ data, shipmentMethod, subTotal }) {
-    const order = data.order
+function Payment({ data, shipmentMethod, subTotal, setError }) {
+    const order = data.order;
     const navigate = useNavigate();
-    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [applicationId, setApplication] = useState(null);
+    const [locationId, setLocationId] = useState(null);
 
-    if (!order) {
-        setError("No order found");
-    }
-
-    const shipmentType = order.fulfillments[0].type;
-
-    let orderDetails;
-
-    if (shipmentType === "SHIPMENT") {
-        const total = order.total_money.amount;
-        const orderId = order.id;
-        const customerId = order.customer_id;
-        const displayName = order.fulfillments[0].shipment_details.recipient.address.display_name;
-        const email = order.fulfillments[0].shipment_details.recipient.email_address;
-        const street = order.fulfillments[0].shipment_details.recipient.address.address_line_1;
-        const city = order.fulfillments[0].shipment_details.recipient.address.locality;
-        const province = order.fulfillments[0].shipment_details.recipient.address.administrative_district_level_1;
-        const postalCode = order.fulfillments[0].shipment_details.recipient.address.postal_code;
-        const country = order.fulfillments[0].shipment_details.recipient.address.country;
-
-        orderDetails = {
-            amount: total,
-            order_id: orderId,
-            customer_id: customerId,
-            display_name: displayName,
-            email: email,
-            street: street,
-            city: city,
-            province: province,
-            postal_code: postalCode,
-            country: country,
-            shipment_method: shipmentMethod,
-            sub_total: subTotal,
+    useEffect(() => {
+        if (!order) {
+            setError("No order found");
+            return;
         }
-    } else {
-        const total = order.total_money.amount;
-        const orderId = order.id;
-        const customerId = order.customer_id;
-        const displayName = order.fulfillments[0].pickup_details.recipient.display_name;
-        const email = order.fulfillments[0].pickup_details.recipient.email_address;
-        orderDetails = {
-            amount: total,
-            order_id: orderId,
-            customer_id: customerId,
-            display_name: displayName,
-            email: email,
-            shipment_method: shipmentMethod,
-            sub_total: subTotal,
-        }
-    }
+
+        fetch("http://northshoresoapworks.com/applicationId.php", {
+            method: "GET",
+            mode: 'cors',
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Failed to fetch application ID");
+                }
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data);
+                if (data && data.applicationId && data.locationId) {
+                    setApplication(data.applicationId);
+                    setLocationId(data.locationId);
+                } else {
+                    throw new Error("Invalid response format");
+                }
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error("Error:", error);
+                setError(error.message || "An error occurred");
+            });
+    }, [order]);
 
     const cardTokenizeResponseReceived = (tokenReceived) => {
-
-        // Handles if there is an error from the response
         if (tokenReceived.status !== "OK") {
             setError(tokenReceived.errors[0].detail);
             return;
@@ -71,8 +53,22 @@ function Payment({ data, shipmentMethod, subTotal }) {
 
         const token = tokenReceived.token;
 
-        orderDetails.token = "cnon:card-nonce-ok";
-        // Use fetch to send the nonce to the server
+        const orderDetails = {
+            amount: order.total_money.amount,
+            order_id: order.id,
+            customer_id: order.customer_id,
+            display_name: order.fulfillments[0]?.shipment_details?.recipient?.address?.display_name || order.fulfillments[0]?.pickup_details?.recipient?.display_name,
+            email: order.fulfillments[0]?.shipment_details?.recipient?.email_address || order.fulfillments[0]?.pickup_details?.recipient?.email_address,
+            street: order.fulfillments[0]?.shipment_details?.recipient?.address?.address_line_1,
+            city: order.fulfillments[0]?.shipment_details?.recipient?.address?.locality,
+            province: order.fulfillments[0]?.shipment_details?.recipient?.address?.administrative_district_level_1,
+            postal_code: order.fulfillments[0]?.shipment_details?.recipient?.address?.postal_code,
+            country: order.fulfillments[0]?.shipment_details?.recipient?.address?.country,
+            shipment_method: shipmentMethod,
+            sub_total: subTotal,
+            token: token,
+        };
+
         fetch("http://northshoresoapworks.com/payment.php", {
             method: "POST",
             mode: 'cors',
@@ -88,28 +84,31 @@ function Payment({ data, shipmentMethod, subTotal }) {
                 return response.json();
             })
             .then((data) => {
-                if (data.errors) {
-                    
-                    setError(data.errors.detail);
+                console.log(data);
+                if (data.error) {
+                    setError(data.error);
                     return;
                 }
-                
                 localStorage.setItem("cartItems", JSON.stringify([]));
                 navigate("/thankyou", { state: { order: data } });
-
             })
             .catch((error) => {
                 console.error("Error:", error);
+                setError("Failed to process payment");
             });
-
-
-    }
+    };
 
     return (
         <center className="payment">
-            <PaymentForm applicationId={applicationId} locationId={locationId} cardTokenizeResponseReceived={cardTokenizeResponseReceived} >
-                <CreditCard />
-            </PaymentForm>
+
+            {
+                loading ? <Spinner /> :
+                    <PaymentForm applicationId={applicationId} locationId={locationId} cardTokenizeResponseReceived={cardTokenizeResponseReceived}>
+                        <CreditCard />
+                    </PaymentForm>
+            }
+
+
         </center>
     );
 }

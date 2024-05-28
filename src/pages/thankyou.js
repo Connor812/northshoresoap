@@ -10,7 +10,9 @@ function Thankyou() {
 </svg>`);
 
     const location = useLocation();
-    const order = location.state.order;
+    const order = location.state.order.payment_status;
+    console.log(location);
+    console.log(order);
     const order_id = order.payment.id;
 
     const handleOrderIdClick = () => {

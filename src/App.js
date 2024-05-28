@@ -1,11 +1,11 @@
 import React, { useState, useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/header.js';
+import Footer from './components/footer.js';
 import Home from './pages/home.js';
 import About from './pages/about.js';
 import Soap from './pages/soap.js';
 import DisplayItems from './pages/displayItems.js';
-import Cart from './pages/cart.js';
 import Checkout from './pages/checkout.js';
 import Payment from './pages/payment.js';
 import Thankyou from './pages/thankyou.js';
@@ -41,7 +41,6 @@ function AppContent() {
   return (
     <>
       <Header updateCart={updateCart} />
-      <Cart />
       <Routes>
         <Route path="/*" element={<Home />} />
         <Route path="/" element={<Home />} />
@@ -53,6 +52,7 @@ function AppContent() {
         <Route path="/thankyou" element={<Thankyou />} />
         <Route path="/email_listing" element={<EmailListing />} />
       </Routes>
+      <Footer />
     </>
   );
 }
