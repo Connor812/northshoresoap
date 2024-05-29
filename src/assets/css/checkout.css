@@ -150,6 +150,10 @@
     padding: 20px;
     background-color: var(--white);
     border: 1px solid var(--mocha);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .address-form-wrapper {
@@ -321,10 +325,18 @@
     .checkout-quantity-wrapper {
         justify-content: center;
     }
+
     .checkout-subtotal {
         text-align: center;
     }
+
     .checkout-table-name {
         display: none;
     }
+}
+
+.suggested-products-list {
+    display: flex;
+    max-width: 100%;
+    overflow-x: auto;
 }

@@ -25,6 +25,7 @@
 
 .soap-card-soap-page {
     width: 100%;
+    max-width: 298px;
     height: auto;
     padding: 0px;
     margin: 0px;
@@ -71,7 +72,7 @@
     align-items: center;
     text-align: center;
     font-size: var(--small);
-    min-height: 40px !important;
+    min-height: 48.8px !important;
     width: 100%;
     background-color: var(--white);
     padding: 5px;

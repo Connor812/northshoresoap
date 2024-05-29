@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { DataContext } from "../hooks/dataContext.js";
 import Payment from "./payment.js";
@@ -7,10 +7,12 @@ import "../assets/css/checkout.css";
 import AddressForm from "../components/addressForm";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import HomeSoapCard from "../components/homeSoapCard.js";
 
 function Checkout() {
 
     const {
+        data,
         cartItems,
         setCartItems,
         subTotal,
@@ -200,6 +202,13 @@ function Checkout() {
         return null;
     }
 
+    function getRandomItems(arr, n) {
+        const shuffled = arr.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, n);
+    }
+
+    const randomItems = useMemo(() => getRandomItems(data.objects, 5), [data.objects]);
+
     return (
         <main className="checkout-wrapper">
             <div className="cart-contents">
@@ -263,6 +272,25 @@ function Checkout() {
                             </Link>
                         </div>
                     </div>
+                </div>
+                <div className="suggested-products">
+                    <h1>
+                        You might also like…
+                    </h1>
+
+                    <div className="suggested-products-list">
+                        {
+                            randomItems.map((item, index) => {
+                                return (
+                                    <div key={index}>
+                                        <HomeSoapCard soap={item} related_objects={data.related_objects} index={index}></HomeSoapCard>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+
+
                 </div>
             </div>
 
