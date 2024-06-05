@@ -10,7 +10,9 @@ import Checkout from './pages/checkout.js';
 import Payment from './pages/payment.js';
 import Thankyou from './pages/thankyou.js';
 import EmailListing from './pages/emailListing.js';
+import Search from './pages/search.js';
 
+import { Helmet } from 'react-helmet';
 import { DataProvider, DataContext } from './hooks/dataContext.js';
 import ScrollToTop from './utils/ScrollToTop.js';
 import "./assets/css/main.css";
@@ -40,6 +42,10 @@ function AppContent() {
 
   return (
     <>
+      <Helmet>
+        <title>North Shore Soap Works</title>
+        <meta name="description" content="Discover NorthShore Soapworks, your source for luxurious, all-natural homemade soaps. Our eco-friendly, chemical-free bars are crafted with nourishing ingredients for a gentle, effective cleanse. Perfect for sensitive skin and sustainable living." />
+      </Helmet>
       <Header updateCart={updateCart} />
       <Routes>
         <Route path="/*" element={<Home />} />
@@ -51,6 +57,7 @@ function AppContent() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/thankyou" element={<Thankyou />} />
         <Route path="/email_listing" element={<EmailListing />} />
+        <Route path="/search" element={<Search />} />
       </Routes>
       <Footer />
     </>

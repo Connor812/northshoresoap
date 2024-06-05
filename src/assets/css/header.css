@@ -28,3 +28,72 @@ nav ul {
     padding: 10px;
     z-index: 1;
 }
+
+.cart-button {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.cart-button svg {
+    fill: var(--stone);
+    transition: 300ms;
+}
+
+.cart-button svg:hover {
+    fill: var(--cream);
+}
+
+.navbar {
+    position: relative;
+}
+
+@media screen and (max-width: 992px) {
+    .navbar-nav {
+        position: relative;
+        z-index: 2;
+        pointer-events: auto;
+    }
+}
+
+.navbar .container {
+    margin-left: 0px !important;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: var(--stone);
+    transition: 200ms;
+}
+
+.nav-link a:hover {
+    color: var(--cream);
+}
+
+.navbar-nav {
+    background-color: var(--mocha);
+}
+
+@media screen and (max-width: 992px) {
+    .navbar-nav {
+        padding: 20px !important;
+        border-radius: 20px;
+    }
+
+}
+
+.search-icon svg {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 70px;
+    top: 12px;
+    color: var(--stone) !important;
+    transition: 200ms;
+}
+
+.search-icon svg:hover {
+    color: var(--cream) !important;
+}

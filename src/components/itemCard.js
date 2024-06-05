@@ -20,7 +20,7 @@ function ItemCard({ soap, related_objects, index }) {
         <div key={index}>
             <div className="soap-card-soap-page">
                 <button data-bs-toggle="modal" data-bs-target={`#${soapIndex}`} className="soap-card-btn">
-                    <ImageComponent src={imageUrl} alt={name} className="soap-card-image" height="144px" width="242px" />
+                    <ImageComponent src={imageUrl} alt={name} className="soap-card-image" height="161px" width="242px" />
                 </button>
 
                 <div className="soap-card-title">

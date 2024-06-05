@@ -18,7 +18,13 @@ const DataProvider = ({ children }) => {
             fetch('http://northshoresoapworks.com/getCategories.php')
         ])
             .then(async ([res1, res2]) => {
-                const data = await res1.json();
+                let data = await res1.json();
+                if (!data) {
+                    data = {
+                        "objects": [],
+                        "related_objects": [],
+                    }
+                }
                 const categories = await res2.json();
                 setData(data);
                 setCategories(categories);

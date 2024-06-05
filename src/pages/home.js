@@ -13,7 +13,7 @@ function Home() {
    const dataProvider = useContext(DataContext);
    const data = dataProvider.data;
    const categories = dataProvider.categories;
-   // const soap_category_id = categories.find(category => category.name === 'Soap').id;
+
    const soap_category_id = "OLETSRZV2TEPVL3SALMWIC6Y";
    const soaps = filterProducts(data, soap_category_id);
 

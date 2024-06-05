@@ -35,13 +35,13 @@ function ItemCardModal({ soap, related_objects, index }) {
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         <div className="left-side">
                             <img loading="lazy" src="http://northshoresoapworks.com/images/white_bg_logo.jpg" alt="logo" className="soap-logo" />
-                            <ImageComponent src={imageUrl} alt={name} className="soap-image" height="200px" width="300px" />
-                            <h6 className="natural-ingredients">
+                            <ImageComponent src={imageUrl} alt={name} className="soap-image-modal" height="auto" width="300px" />
+                            {/* <h6 className="natural-ingredients">
                                 <u>
                                     Natural Ingredients
-                                </u>
+                                </u>s
                             </h6>
-                            <p className="ingredients">These ingredients are designed to create lather and effectively remove dirt, oil, a</p>
+                            <p className="ingredients">These ingredients are designed to create lather and effectively remove dirt, oil, a</p> */}
                         </div>
                         <div className="right-side">
                             <div className="d-flex justify-content-between">

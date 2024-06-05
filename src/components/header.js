@@ -5,6 +5,7 @@ import { DataContext } from "../hooks/dataContext.js";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { TbSearch } from "react-icons/tb";
 
 function Header({ updateCart, cartItems, setCartItems }) {
   const location = useLocation();
@@ -43,6 +44,10 @@ function Header({ updateCart, cartItems, setCartItems }) {
               })}
             </Nav>
           </Navbar.Collapse>
+          <Link to="/search"
+            className="search-icon">
+            <TbSearch />
+          </Link>
           <Link onClick={() => {
             updateCart(JSON.parse(localStorage.getItem("cartItems")));
             setExpanded(false);

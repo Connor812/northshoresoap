@@ -47,21 +47,22 @@ function ImageComponent({ src, alt, className, height, width }) {
     }, [isLoaded]);
 
     return (
-        <div style={{ position: 'relative', minWidth: width, height: height }}>
-            <div
-                className="image-placeholder"
-                style={{ position: 'absolute', width: width, height: height, backgroundColor: '#ccc' }}
-            />
-            <img
-                alt={alt}
-                src={src}
-                className={`${className} ${isLoaded ? '' : 'image-loading'}`}
-                height={height}
-                width={width}
-                ref={imgRef}
-                style={{ position: 'absolute', top: 0, left: 0 }}
-                loading="lazy"
-            />
+        <div>
+            {!isLoaded ? (
+                <div
+                    className="image-placeholder"
+                    style={{ width: width, height: height, backgroundColor: '#ccc' }}
+                />
+            ) : (
+                <img
+                    alt={alt}
+                    src={src}
+                    className={`${className} ${isLoaded ? '' : 'image-loading'}`}
+                    ref={imgRef}
+                    loading="lazy"
+                    width={width}
+                    height={height}
+                />)}
         </div>
     );
 }
