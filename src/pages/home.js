@@ -1,10 +1,11 @@
-import React, { useRef, useState, useContext } from "react";
+import React, { useRef, useState, useContext, useEffect } from "react";
 import HomeSoapCard from "../components/homeSoapCard.js";
 import HomeCarousel from "../components/homeCarousel.js";
 import { DataContext } from "../hooks/dataContext.js";
 import "../assets/css/home.css";
 import { Link } from "react-router-dom";
 import { filterProducts } from "../utils/filterProducts.js";
+import Spinner from "react-bootstrap/Spinner";
 
 function Home() {
    const carouselRef = useRef(null);
@@ -12,10 +13,11 @@ function Home() {
    const [search, setSearch] = useState(''); // Search for soap by name
    const dataProvider = useContext(DataContext);
    const data = dataProvider.data;
+   const loading = dataProvider.loading;
    const categories = dataProvider.categories;
 
    const soap_category_id = "OLETSRZV2TEPVL3SALMWIC6Y";
-   const soaps = filterProducts(data, soap_category_id);
+   const soaps = loading ? [] : filterProducts(data, soap_category_id);
 
    const scrollLeft = () => {
       getImageWidth();
@@ -70,15 +72,21 @@ function Home() {
                      </svg>
                   </button>
                   <div className="carousel-content" ref={carouselRef} style={{ display: 'flex', overflowX: 'scroll' }}>
-
-                     {
-                        soaps.length === 0 ? <p className="text-center fs-3" style={{ width: '100%' }}>Error Getting Soaps</p> :
-                           soaps.map((soap, index) => {
-                              return (
-                                 <HomeSoapCard key={index} soap={soap} index={index} related_objects={data.related_objects} />
-                              )
-                           })}
-
+                     {loading ? (
+                        <div className="d-flex justify-content-center align-items-center" style={{ width: '100%' }}>
+                           <Spinner animation="border" role="status">
+                              <span className="visually-hidden">Loading...</span>
+                           </Spinner>
+                        </div>
+                     ) : (
+                        soaps.length === 0 ? (
+                           <p className="text-center fs-3" style={{ width: '100%' }}>Error Getting Soaps</p>
+                        ) : (
+                           soaps.map((soap, index) => (
+                              <HomeSoapCard key={index} soap={soap} index={index} related_objects={data.related_objects} />
+                           ))
+                        )
+                     )}
                   </div>
                   <button onClick={scrollLeft} className="arrow-btn">
                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" className="bi bi-caret-right-fill" viewBox="0 0 16 16">
@@ -104,28 +112,37 @@ function Home() {
             </center>
 
             <div className="soap-search-results">
+               {search !== '' && (
+                  <>
+                     {loading ? (
+                        <div className="d-flex justify-content-center align-items-center" style={{ width: '100%' }}>
+                           <Spinner animation="border" role="status" style={{ color: "var(--mocha)" }}>
+                              <span className="visually-hidden">Loading...</span>
+                           </Spinner>
+                        </div>
+                     ) : (
+                        data.length === 0 ? (
+                           <p>Error getting soaps.</p>
+                        ) : (
+                           (() => {
+                              const filteredSoaps = soaps.filter((soap) => {
+                                 const { name, description } = soap.item_data;
+                                 return name.toLowerCase().includes(search.toLowerCase()) ||
+                                    (description && description.toLowerCase().includes(search.toLowerCase()));
+                              });
 
-               {
-                  search !== '' && (
-                     <>
-                        {
-                           data.length === 0 ? <p>Error getting soaps.</p> :
-                              (() => {
-                                 const filteredSoaps = soaps.filter((soap) => {
-                                    const { name, description } = soap.item_data;
-                                    return name.toLowerCase().includes(search.toLowerCase()) ||
-                                       (description && description.toLowerCase().includes(search.toLowerCase()));
-                                 });
-
-                                 return filteredSoaps.length === 0 ? <p>No search results found.</p> :
-                                    filteredSoaps.map((soap, index) => (
-                                       <HomeSoapCard key={index} soap={soap} index={index} related_objects={data.related_objects} />
-                                    ));
-                              })()
-                        }
-                     </>
-                  )
-               }
+                              return filteredSoaps.length === 0 ? (
+                                 <p>No search results found.</p>
+                              ) : (
+                                 filteredSoaps.map((soap, index) => (
+                                    <HomeSoapCard key={index} soap={soap} index={index} related_objects={data.related_objects} />
+                                 ))
+                              );
+                           })()
+                        )
+                     )}
+                  </>
+               )}
             </div>
          </section>
 
@@ -137,7 +154,13 @@ function Home() {
 
          <section className="category-container">
             <center>
-               <HomeCarousel />
+               {loading ? (
+                  <Spinner animation="border" role="status" style={{ color: "var(--mocha)" }}>
+                     <span className="visually-hidden">Loading...</span>
+                  </Spinner>
+               ) : (
+                  <HomeCarousel />
+               )}
             </center>
 
             <h1 className="categories-header" id="categories">Categories</h1>
@@ -145,7 +168,13 @@ function Home() {
 
             <center>
                <div className="categories">
-                  {
+                  {loading ? (
+                     <div className="d-flex justify-content-center align-items-center" style={{ width: '100%' }}>
+                        <Spinner animation="border" role="status" style={{ color: "var(--mocha)" }}>
+                           <span className="visually-hidden">Loading...</span>
+                        </Spinner>
+                     </div>
+                  ) : (
                      categories.map(category => {
                         const image_id = category.image_id;
                         const category_name = category.name;
@@ -161,20 +190,12 @@ function Home() {
                            }
                         }
 
-                        const { url, image_name } = relatedObject.image_data;
-
-                        let path;
-
-                        if (category.name === 'Soap') {
-                           path = '/soap';
-                        } else {
-                           path = "/display_items";
-                        }
+                        const { url } = relatedObject.image_data;
 
                         return (
                            <Link key={category.id} to={`/display_items/${category_id}`}>
                               <div className="category">
-                                 <img loading="lazy" src={url} alt={image_name} className="category-img" />
+                                 <img loading="lazy" src={url} alt={category_name} className="category-img" />
                                  <div className="title-container">
                                     <h4>{category_name}</h4>
                                  </div>
@@ -182,12 +203,10 @@ function Home() {
                            </Link>
                         );
                      })
-                  }
-
+                  )}
                </div>
             </center>
          </section>
-
       </div>
    );
 }

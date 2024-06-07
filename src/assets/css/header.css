@@ -97,3 +97,48 @@ nav ul {
 .search-icon svg:hover {
     color: var(--cream) !important;
 }
+
+#basic-nav-dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.nav-dropdown-categories .dropdown-menu {
+    background-color: var(--mocha);
+    border: 1px solid var(--walnut);
+}
+
+.nav-dropdown-link {
+    color: var(--stone);
+    text-decoration: none;
+}
+
+.nav-dropdown-link:hover {
+    color: var(--cream);
+}
+
+.nav-dropdown-link-container {
+    background-color: var(--mocha) !important;
+}
+
+.nav-dropdown-link-container:hover {
+    background-color: var(--mocha) !important;
+}
+
+.logo-link {
+    width: 50px !important;
+    height: 100%;
+}
+
+.logo-link-img {
+    width: 50px !important;
+    height: auto;
+}
+
+.nav-container {
+    justify-content: start !important;
+}
+
+#basic-navbar-nav-btn {
+    margin-left: 20px;
+}

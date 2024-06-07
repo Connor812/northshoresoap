@@ -5,9 +5,9 @@ import { DataContext } from "../hooks/dataContext.js";
 import ItemCard from '../components/itemCard';
 import "../assets/css/display-items.css";
 import SoapCarousel from '../components/soapCarousel.js';
+import Spinner from 'react-bootstrap/Spinner';
 
 function DisplayItems() {
-
   // Set up the pages
   const itemsPerPage = 30;
   const [currentPage, setCurrentPage] = useState(1);
@@ -15,6 +15,7 @@ function DisplayItems() {
   // set up the data
   const dataProvider = useContext(DataContext);
   const data = dataProvider.data;
+  const loading = dataProvider.loading;
   const relatedObjects = data.related_objects;
   const categories = dataProvider.categories;
   const { categoryId } = useParams();
@@ -24,44 +25,46 @@ function DisplayItems() {
   const [childCategories, setChildCategories] = useState(category ? category.children_categories : []);
   const [selectedCategory, setSelectedCategory] = useState(null);
 
-  const [items, setItems] = useState(filterProducts(data, categoryId));
+  const [items, setItems] = useState([]);
 
   // Set up the rest of the pages
-  const [totalPages, setTotalPages] = useState(Math.ceil(items.length / itemsPerPage));
+  const [totalPages, setTotalPages] = useState(0);
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const [categoryItems, setCategoryItems] = useState(items);
-  const [currentItems, setCurrentItems] = useState(items.slice(startIndex, startIndex + itemsPerPage));
+  const [categoryItems, setCategoryItems] = useState([]);
+  const [currentItems, setCurrentItems] = useState([]);
 
   useEffect(() => {
-    const category = categories.find(category => category.id === categoryId);
-    if (category) {
-      setCategory(category);
-      setCategoryName(category.name);
-      setChildCategories(category.children_categories);
+    if (!loading) {
+      const category = categories.find(category => category.id === categoryId);
+      if (category) {
+        setCategory(category);
+        setCategoryName(category.name);
+        setChildCategories(category.children_categories);
 
-      const items = filterProducts(data, categoryId);
-      setItems(items);
+        const items = filterProducts(data, categoryId);
+        setItems(items);
 
-      setTotalPages(Math.ceil(items.length / itemsPerPage));
-      setCategoryItems(items);
-      setCurrentItems(items.slice(0, itemsPerPage));
-    } else {
-      setCategory(null);
-      setCategoryName('');
-      setChildCategories([]);
-      setItems([]);
-      setTotalPages(0);
-      setCategoryItems([]);
-      setCurrentItems([]);
+        setTotalPages(Math.ceil(items.length / itemsPerPage));
+        setCategoryItems(items);
+        setCurrentItems(items.slice(0, itemsPerPage));
+      } else {
+        setCategory(null);
+        setCategoryName('');
+        setChildCategories([]);
+        setItems([]);
+        setTotalPages(0);
+        setCategoryItems([]);
+        setCurrentItems([]);
+      }
     }
-  }, [categoryId]); // dependency array
+  }, [categoryId, loading, data, categories]); // dependency array
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
     const startIndex = (pageNumber - 1) * itemsPerPage;
     setCurrentItems(categoryItems.slice(startIndex, startIndex + itemsPerPage));
     window.scrollTo(0, 0);
-  }
+  };
 
   const handleCategoryChange = (newCategoryId) => {
     if (newCategoryId === "") {
@@ -79,6 +82,16 @@ function DisplayItems() {
     setCurrentPage(1);
     setTotalPages(Math.ceil(categoryItems.length / itemsPerPage));
     setCurrentItems(categoryItems.slice(0, itemsPerPage));
+  };
+
+  if (loading) {
+    return (
+      <div className="loading-spinner">
+        <Spinner animation="border" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
+      </div>
+    );
   }
 
   if (!category) {

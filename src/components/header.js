@@ -5,6 +5,7 @@ import { DataContext } from "../hooks/dataContext.js";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import { TbSearch } from "react-icons/tb";
 
 function Header({ updateCart, cartItems, setCartItems }) {
@@ -21,27 +22,32 @@ function Header({ updateCart, cartItems, setCartItems }) {
   return (
     <>
       <Navbar className="navbar" expand="lg" expanded={expanded}>
-        <Container>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
+        <Container className="nav-container">
+          <Nav.Link onClick={() => setExpanded(false)} style={{ width: "50px", margin: "0px", padding: "0px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <img src="http://northshoresoapworks.com/images/bird.png" alt="North Shore Soap Works" className="logo-link-img" width="100%" height="auto" />
+          </Nav.Link>
+          <Navbar.Toggle id="basic-navbar-nav-btn" aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
           <Navbar.Collapse id="basic-navbar-nav" className="navbar-collapse">
             <Nav className="me-auto">
+
               <Nav.Link onClick={() => setExpanded(false)}>
                 <Link to="/northshoresoap" className={isActiveLink("/northshoresoap") ? "active" : ""}>Home</Link>
               </Nav.Link>
               <Nav.Link onClick={() => setExpanded(false)}>
                 <Link to="/about" className={isActiveLink("/about") ? "active" : ""}>About Us</Link>
               </Nav.Link>
+              <NavDropdown title="Categories" className="nav-dropdown-categories" id="basic-nav-dropdown">
+                {categories.map(category => {
+                  const categoryName = category.name;
+                  const categoryId = category.id;
 
-              {categories.map(category => {
-                const categoryName = category.name;
-                const categoryId = category.id;
-
-                return (
-                  <Nav.Link key={categoryId} onClick={() => setExpanded(false)}>
-                    <Link to={`/display_items/${categoryId}`} className={isActiveLink(`/category/${categoryId}`) ? "active" : ""}>{categoryName}</Link>
-                  </Nav.Link>
-                );
-              })}
+                  return (
+                    <NavDropdown.Item key={categoryId} className="nav-dropdown-link-container" onClick={() => setExpanded(false)}>
+                      <Link to={`/display_items/${categoryId}`} className="nav-dropdown-link">{categoryName}</Link>
+                    </NavDropdown.Item>
+                  );
+                })}
+              </NavDropdown>
             </Nav>
           </Navbar.Collapse>
           <Link to="/search"

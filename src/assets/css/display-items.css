@@ -226,3 +226,14 @@
     }
 
 }
+
+.loading-spinner {
+    width: 100%;
+    background-image: url("http://northshoresoapworks.com/images/category_bg.png");
+    background-repeat: repeat;
+    
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

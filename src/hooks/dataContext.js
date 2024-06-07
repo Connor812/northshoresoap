@@ -36,18 +36,8 @@ const DataProvider = ({ children }) => {
             });
     }, []); // Empty dependency array ensures fetch is only done once
 
-    if (loading) {
-        return (
-            <div style={{ width: '100%', height: '100vh' }} className='d-flex justify-content-center align-items-center'>
-                <div className="spinner-border text-dark" style={{ width: '5rem', height: '5rem' }} role="status">
-                    <span className="visually-hidden">Loading...</span>
-                </div>
-            </div>
-        );
-    }
-
     return (
-        <DataContext.Provider value={{ data, categories, cartItems, setCartItems, subTotal, setSubtotal, hst, setHst, grandTotal, setGrandTotal }}>
+        <DataContext.Provider value={{ data, categories, cartItems, setCartItems, subTotal, setSubtotal, hst, setHst, grandTotal, setGrandTotal, loading }}>
             {children}
         </DataContext.Provider>
     );

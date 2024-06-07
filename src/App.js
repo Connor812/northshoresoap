@@ -45,6 +45,9 @@ function AppContent() {
       <Helmet>
         <title>North Shore Soap Works</title>
         <meta name="description" content="Discover NorthShore Soapworks, your source for luxurious, all-natural homemade soaps. Our eco-friendly, chemical-free bars are crafted with nourishing ingredients for a gentle, effective cleanse. Perfect for sensitive skin and sustainable living." />
+        <meta name="keywords" content="soap, handmade, natural, organic, eco-friendly, sustainable, sensitive skin, chemical-free, nourishing, cleanse, bath, body, beauty, skincare, North Shore Soap Works" />
+        <meta name="author" content="North Shore Soap Works" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
       <Header updateCart={updateCart} />
       <Routes>
