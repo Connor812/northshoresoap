@@ -4,17 +4,82 @@ import Col from 'react-bootstrap/Col';
 import { removeItem } from "../utils/removeItemFromCard.js";
 import { useUpdateQuantity } from "../utils/updateQuantity.js";
 
-function CheckoutCartItem({ index, item, cartItems, setCartItems, setSubtotal, setHst, setGrandTotal }) {
+function CheckoutCartItem({ index, item, cartItems, setCartItems, subTotal, setSubtotal, hst, setHst, setGrandTotal }) {
 
     const updateQuantity = useUpdateQuantity();
 
     const price = parseFloat((item.price / 100)).toFixed(2);
     const subTotalPrice = (price * item.quantity).toFixed(2);
 
+    function handleGiftWrap(e) {
+        const checked = e.target.checked;
+        const itemName = e.target.getAttribute("itemName");
+        const giftwrapId = "KS57CPHD3K43BWOKJFBS2KN4";
+        const giftwrapPrice = 600;
+        const giftwrapName = "Gift Wrap";
+
+        if (checked) {
+
+            const quantity = 1;
+
+            // Retrieve existing cart items from local storage or initialize an empty array
+            const existingCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            const newItem = {
+                id: giftwrapId,
+                name: giftwrapName,
+                quantity: quantity,
+                price: parseFloat(giftwrapPrice),
+                imageUrl: "No Image",
+                description: "Gift Wrap",
+                note: itemName
+            };
+
+            // Add the new item to the cart
+            existingCartItems.push(newItem);
+
+            // Log the updated cart items for debugging
+            console.log('Updated Cart Items:', existingCartItems);
+
+            // Update local storage with the new cart items
+            localStorage.setItem('cartItems', JSON.stringify(existingCartItems));
+
+            // Calculate the updated totals
+            const updatedSubTotal = existingCartItems.reduce((accumulator, item) => accumulator + item.price * item.quantity, 0).toFixed(2);
+            const updatedHst = (updatedSubTotal * 0.13).toFixed(2);
+            const updatedGrandTotal = (parseFloat(updatedSubTotal) + parseFloat(updatedHst)).toFixed(2);
+
+            // Log the updated totals for debugging
+            console.log('Updated Subtotal:', updatedSubTotal);
+            console.log('Updated HST:', updatedHst);
+            console.log('Updated Grand Total:', updatedGrandTotal);
+
+            // Update the state with the new cart items and totals
+            setCartItems(existingCartItems);
+            setSubtotal(updatedSubTotal);
+            setHst(updatedHst);
+            setGrandTotal(updatedGrandTotal);
+
+        } else {
+            const existingCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const filteredCartItems = existingCartItems.filter(item => item.id !== giftwrapId);
+            localStorage.setItem('cartItems', JSON.stringify(filteredCartItems));
+
+            const updatedSubTotal = filteredCartItems.reduce((accumulator, item) => (accumulator + item.price * item.quantity), 0).toFixed(2);
+            const updatedHst = (updatedSubTotal * 0.13).toFixed(2);
+            const updatedGrandTotal = (parseFloat(updatedSubTotal) + parseFloat(updatedHst)).toFixed(2);
+            setCartItems(filteredCartItems);
+            setSubtotal(updatedSubTotal);
+            setHst(updatedHst);
+            setGrandTotal(updatedGrandTotal);
+        }
+    }
+
     return (
         <Row className="checkout-cart-item">
 
             <Col sm={12} md={5} className="checkout-item-name">
+                <input type="checkbox" className="gift-wrap-checkbox" style={{ marginRight: "20px", width: "20px", height: "20px" }} itemName={item.name} onClick={(e) => handleGiftWrap(e)} />
                 <img loading="lazy" className="checkout-cart-item-img" src={item.imageUrl} alt={item.name} />
                 <h4>{item.name}</h4>
             </Col>

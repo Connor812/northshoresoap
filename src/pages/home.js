@@ -73,7 +73,7 @@ function Home() {
                   </button>
                   <div className="carousel-content" ref={carouselRef} style={{ display: 'flex', overflowX: 'scroll' }}>
                      {loading ? (
-                        <div className="d-flex justify-content-center align-items-center" style={{ width: '100%' }}>
+                        <div className="d-flex justify-content-center align-items-center" style={{ width: '100%', height: "248.4px", display: "flex", justifyContent: "center", alignItems: "center" }}>
                            <Spinner animation="border" role="status">
                               <span className="visually-hidden">Loading...</span>
                            </Spinner>
@@ -108,7 +108,7 @@ function Home() {
             </div>
             <center className="sent-search-container">
                <label htmlFor="sent-search">Search For Your Favorite Fragrance: </label>
-               <input type="text" className="fragrance-search" onInput={(event) => setSearch(event.target.value)} />
+               <input type="text" aria-label="Search For Soap" className="fragrance-search" onInput={(event) => setSearch(event.target.value)} />
             </center>
 
             <div className="soap-search-results">

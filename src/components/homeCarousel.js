@@ -40,7 +40,7 @@ function HomeCarousel() {
                 <Carousel>
                     {carouselImages.map((image, index) => (
                         <Carousel.Item key={index}>
-                            <img loading="lazy" src={image.src} alt={`Slide ${index + 1}`} />
+                            <img loading="lazy" src={image.src} alt={`Slide ${index + 1}`} style={{ width: "100%" }} />
                             <Carousel.Caption>
                                 <h3>{image.title}</h3>
                                 <p>{image.description}</p>

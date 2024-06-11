@@ -4,6 +4,7 @@ import { filterProducts } from '../utils/filterProducts';
 import { DataContext } from "../hooks/dataContext.js";
 import ItemCard from '../components/itemCard';
 import "../assets/css/display-items.css";
+import "../assets/css/soap.css";
 import SoapCarousel from '../components/soapCarousel.js';
 import Spinner from 'react-bootstrap/Spinner';
 

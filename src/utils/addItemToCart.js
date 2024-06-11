@@ -1,5 +1,6 @@
 // cartUtils.js
 export const addItemToCart = (id, name, soapIndex, price, imageUrl, description) => {
+
     let quantity = document.querySelector(`.${soapIndex}Input`).value;
     const cartBtn = document.getElementById(`soap-buy-btn-${soapIndex}`);
 

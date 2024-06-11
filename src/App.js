@@ -1,10 +1,9 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/header.js';
 import Footer from './components/footer.js';
 import Home from './pages/home.js';
 import About from './pages/about.js';
-import Soap from './pages/soap.js';
 import DisplayItems from './pages/displayItems.js';
 import Checkout from './pages/checkout.js';
 import Payment from './pages/payment.js';
@@ -31,7 +30,7 @@ function App() {
 }
 
 function AppContent() {
-  const { setCartItems, subTotal, setSubtotal, hst, setHst, grandTotal, setGrandTotal } = useContext(DataContext);
+  const { setCartItems, setSubtotal, setHst, setGrandTotal } = useContext(DataContext);
 
   function updateCart(cartItems) {
     setCartItems(cartItems);
@@ -54,7 +53,6 @@ function AppContent() {
         <Route path="/*" element={<Home />} />
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/soap" element={<Soap />} />
         <Route path="/display_items/:categoryId" element={<DisplayItems />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/payment" element={<Payment />} />

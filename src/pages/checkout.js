@@ -8,9 +8,9 @@ import AddressForm from "../components/addressForm";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomeSoapCard from "../components/homeSoapCard.js";
+import Spinner from 'react-bootstrap/Spinner';
 
 function Checkout() {
-
     const {
         data,
         cartItems,
@@ -19,7 +19,7 @@ function Checkout() {
         setSubtotal,
         hst,
         setHst,
-        grandTotal,
+        loading,
         setGrandTotal,
     } = useContext(DataContext);
     const [shipmentMethod, setShipmentMethod] = useState("no-method");
@@ -27,11 +27,10 @@ function Checkout() {
     const [discount, setDiscount] = useState(0);
     const [error, setError] = useState("");
     const [stage, setStage] = useState("address-form");
-    const [salesTax, setSalesTax] = useState(hst);
 
     function updateTax(shippingAmount) {
         const newHst = ((parseFloat(subTotal) + shippingAmount) * 0.13).toFixed(2);
-        setSalesTax(newHst);
+        setHst(newHst);
     }
 
     function createOrder(e) {
@@ -107,6 +106,16 @@ function Checkout() {
 
         // Generating the order items
         const lineItems = cartItems.map((item) => {
+
+            if (item.name === "Gift Wrap") {
+                return {
+                    catalog_object_id: item.id,
+                    quantity: item.quantity.toString(),
+                    item_type: "ITEM",
+                    note: item.note
+                }
+            }
+
             return {
                 catalog_object_id: item.id,
                 quantity: item.quantity.toString(),
@@ -116,8 +125,9 @@ function Checkout() {
 
         order.lineItems = lineItems;
 
-        // Make the button loading
+        console.log(order);
 
+        // Make the button loading
         const loadingSpinner = `<div class="spinner-border checkout-spinner" role="status">
         <span class="visually-hidden">Loading...</span>
         </div>`;
@@ -207,7 +217,10 @@ function Checkout() {
         return shuffled.slice(0, n);
     }
 
-    const randomItems = useMemo(() => getRandomItems(data.objects, 5), [data.objects]);
+    const randomItems = useMemo(() => {
+        if (loading || !data.objects) return [];
+        return getRandomItems(data.objects, 5);
+    }, [data.objects, loading]);
 
     return (
         <main className="checkout-wrapper">
@@ -228,8 +241,8 @@ function Checkout() {
                         </div>
                     </div>
 
-                    <Row className="fs-5">
-                        <Col sm={5}>Product</Col>
+                    <Row className="fs-6">
+                        <Col sm={5}>Check box for gift wrap +$6.00</Col>
                         <Col className="checkout-table-name text-center" sm={3}>Price</Col>
                         <Col className="checkout-table-name" sm={2}>Quantity</Col>
                         <Col className="checkout-table-name text-end" sm={2}>SubTotal</Col>
@@ -237,6 +250,9 @@ function Checkout() {
                     <hr />
                     <div className="checkout-cart-list">
                         {cartItems.map((item, index) => {
+                            if (item.name === "Gift Wrap") {
+                                return null;
+                            }
                             return (
                                 <CheckoutCartItem
                                     key={index}
@@ -244,7 +260,9 @@ function Checkout() {
                                     item={item}
                                     cartItems={cartItems}
                                     setCartItems={setCartItems}
+                                    subTotal={subTotal}
                                     setSubtotal={setSubtotal}
+                                    hst={hst}
                                     setHst={setHst}
                                     setGrandTotal={setGrandTotal}
                                 />
@@ -265,7 +283,7 @@ function Checkout() {
                         </div>
                         <div>
                             <Link
-                                to="/soap"
+                                to="/home"
                                 className="button continue-shopping-button"
                             >
                                 Continue Shopping
@@ -280,17 +298,21 @@ function Checkout() {
 
                     <div className="suggested-products-list">
                         {
-                            randomItems.map((item, index) => {
-                                return (
-                                    <div key={index}>
-                                        <HomeSoapCard soap={item} related_objects={data.related_objects} index={index}></HomeSoapCard>
-                                    </div>
-                                )
-                            })
+                            loading ? (
+                                <Spinner animation="border" role="status">
+                                    <span className="visually-hidden">Loading...</span>
+                                </Spinner>
+                            ) : (
+                                randomItems.map((item, index) => {
+                                    return (
+                                        <div key={index}>
+                                            <HomeSoapCard soap={item} related_objects={data.related_objects} index={index}></HomeSoapCard>
+                                        </div>
+                                    )
+                                })
+                            )
                         }
                     </div>
-
-
                 </div>
             </div>
 
@@ -326,7 +348,7 @@ function Checkout() {
                         )}
                         <div style={{ width: '100%', fontSize: '18pt' }}>
                             <hr />
-                            HST: ${(salesTax / 100).toFixed(2)}
+                            HST: ${(hst / 100).toFixed(2)}
                             <br />
                             Shipping: ${(shippingCost / 100).toFixed(2)}
                             <br />

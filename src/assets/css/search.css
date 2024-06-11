@@ -2,10 +2,6 @@
     color: var(--mocha);
     text-align: center;
     flex: 1;
-    background-image: url("http://northshoresoapworks.com/images/category_bg.png");
-    background-repeat: repeat;
-    background-position: center;
-    background-size: contain;
 }
 
 .search-heading {

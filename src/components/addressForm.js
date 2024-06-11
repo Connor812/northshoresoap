@@ -18,6 +18,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                     <input
                         type="checkbox"
                         id="shipping-checkbox"
+                        aria-label="Shipment or Pickup"
                         onChange={() => {
                             setShippingOpen(!shippingOpen);
                             setPickupOpen(false);
@@ -49,6 +50,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                     className="checkout-input"
                                     placeholder="First Name"
                                     name="first-name"
+                                    aria-label="First Name"
                                 />
                             </div>
 
@@ -60,6 +62,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                     className="checkout-input"
                                     placeholder="Last Name"
                                     name="last-name"
+                                    aria-label="Last Name"
                                 />
                             </div>
                         </div>
@@ -72,6 +75,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                 className="checkout-input"
                                 placeholder="Email"
                                 name="email"
+                                aria-label="Email"
                             />
                         </div>
 
@@ -83,6 +87,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                 className="checkout-input"
                                 placeholder="Phone"
                                 name="phone"
+                                aria-label="Phone Number"
                             />
                         </div>
 
@@ -94,6 +99,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                 className="checkout-input"
                                 placeholder="street"
                                 name="street"
+                                aria-label="Street Address"
                             />
                         </div>
                         <div className="input-container">
@@ -103,6 +109,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                 className="checkout-input"
                                 placeholder="Apt / Suite / Unit (optional)"
                                 name="apt"
+                                aria-label="Apt / Suite / Unit (optional)"
                             />
                         </div>
                         <div className="row">
@@ -114,6 +121,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                     className="checkout-input"
                                     placeholder="city"
                                     name="city"
+                                    aria-label="City"
                                 />
                             </div>
 
@@ -124,6 +132,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                     className="checkout-input"
                                     id="country_id"
                                     defaultValue=""
+                                    aria-label="Country"
                                 >
                                     <option
                                         value=""
@@ -405,6 +414,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                     className="checkout-input"
                                     placeholder="postal code"
                                     name="postal-code"
+                                    aria-label="Postal Code"
                                 />
                             </div>
                             <div className="input-container col-6">
@@ -415,6 +425,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                     className="checkout-input"
                                     placeholder="Province/State"
                                     name="province"
+                                    aria-label="Province/State"
                                 />
                             </div>
                         </div>
@@ -430,6 +441,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                     <input
                         type="checkbox"
                         id="shipping-checkbox"
+                        aria-label="Shipment or Pickup"
                         onChange={() => {
                             setPickupOpen(!pickupOpen);
                             setShippingOpen(false);
@@ -460,6 +472,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                     className="checkout-input"
                                     placeholder="First Name"
                                     name="first-name"
+                                    aria-label="First Name"
                                 />
                             </div>
 
@@ -472,6 +485,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                     className="checkout-input"
                                     placeholder="Last Name"
                                     name="last-name"
+                                    aria-label="Last Name"
                                 />
                             </div>
                         </div>
@@ -484,6 +498,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                 className="checkout-input"
                                 placeholder="Email"
                                 name="email"
+                                aria-label="Email"
                             />
                         </div>
 
@@ -495,6 +510,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                 className="checkout-input"
                                 placeholder="Phone"
                                 name="phone"
+                                aria-label="Phone Number"
                             />
                         </div>
 
@@ -512,6 +528,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                 type="date"
                                 name="startDate"
                                 min={dateString}
+                                aria-label="Pick Up Date"
                             />
                         </div>
                     </div>
