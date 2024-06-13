@@ -15,6 +15,7 @@
 }
 
 .display-item-container {
+    max-width: 1980px;
     display: flex;
     flex-wrap: wrap;
     flex: 1;

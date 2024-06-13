@@ -18,12 +18,6 @@ const DataProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-        const filteredCartItems = cartItems.filter(item => item.id !== 'XPCZVPUZZWATLMP2ANE6NL2C');
-        localStorage.setItem("cartItems", JSON.stringify(filteredCartItems));
-    }, [])
-
-    useEffect(() => {
         // Fetch data when component mounts
         Promise.all([
             fetch('http://northshoresoapworks.com/getItems.php'),

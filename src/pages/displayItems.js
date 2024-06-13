@@ -179,15 +179,17 @@ function DisplayItems() {
       </div>
 
       <hr />
-      <div className="display-item-container">
-        {currentItems.length === 0
-          ? <h2>No items found</h2>
-          : currentItems.map((soap, index) => {
-            return (
-              <ItemCard key={index} soap={soap} related_objects={relatedObjects} index={index} />
-            );
-          })}
-      </div>
+      <center>
+        <div className="display-item-container">
+          {currentItems.length === 0
+            ? <h2>No items found</h2>
+            : currentItems.map((soap, index) => {
+              return (
+                <ItemCard key={index} soap={soap} related_objects={relatedObjects} index={index} />
+              );
+            })}
+        </div>
+      </center>
 
       <div className="pagination">
         <img loading="lazy" src="http://www.northshoresoapworks.com/images/small-arrow-left.png" alt="small arrow" />

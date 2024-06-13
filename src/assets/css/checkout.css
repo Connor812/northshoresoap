@@ -11,6 +11,7 @@
     min-width: 150px;
     transition: 200ms;
     text-decoration: none;
+    fill: var(--white);
 }
 
 .button:hover {
@@ -66,7 +67,7 @@
 .checkout-cart-list {
     margin: 0px;
     padding: 0px;
-    max-height: 260px;
+    max-height: 400px;
     overflow-y: scroll;
 }
 
@@ -87,7 +88,7 @@
     border-left: none;
     padding: 0px;
     height: 40px;
-    width: 118px;
+    width: auto;
     display: flex;
     align-items: center;
 }
@@ -285,7 +286,7 @@
 }
 
 @media screen and (max-width: 645px) {
-    .continue-shopping-button {
+    .add-gift-wrap-btn {
         display: none;
     }
 

@@ -3,10 +3,6 @@
     height: 100%;;
     text-align: center;
     color: var(--black);
-    background-image: url("http://northshoresoapworks.com/images/email-listing.png");
-    background-position: center;
-    background-repeat: repeat;
-    background-size: cover;
 }
 
 .email-listing-form {

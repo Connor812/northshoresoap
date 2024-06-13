@@ -35,11 +35,12 @@ function Footer() {
                                 categories.map((category, index) => {
 
                                     return (
-                                        <div>
-                                            <Link to={`/display_items/${category.id}`} className='footer-link'>
+                                        <>
+                                            <Link key={index} to={`/display_items/${category.id}`} className='footer-link'>
                                                 {category.name}
                                             </Link>
-                                        </div>
+                                            <br />
+                                        </>
 
                                     )
 
@@ -68,7 +69,7 @@ function Footer() {
                     </Col>
                     <Col md={3} className='footer-right-section d-flex align-items-center'>
                         <div className='join-club-section'>
-                            <h4>NorthShore Soap WorksClub</h4>
+                            <h4>North Shore SoapWorks Club</h4>
                             <div className='mb-2'>
                                 Special members offers and discounts
                                 <br />

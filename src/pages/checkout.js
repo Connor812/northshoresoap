@@ -1,5 +1,4 @@
 import React, { useState, useContext, useMemo } from "react";
-import { Link } from "react-router-dom";
 import { DataContext } from "../hooks/dataContext.js";
 import Payment from "./payment.js";
 import CheckoutCartItem from "../components/checkoutCartItem.js";
@@ -27,6 +26,7 @@ function Checkout() {
     const [discount, setDiscount] = useState(0);
     const [error, setError] = useState("");
     const [stage, setStage] = useState("address-form");
+    const [billingAddress, setBillingAddress] = useState(false);
 
     function updateTax(shippingAmount) {
         const newHst = ((parseFloat(subTotal) + shippingAmount) * 0.13).toFixed(2);
@@ -35,6 +35,7 @@ function Checkout() {
 
     function createOrder(e) {
         e.preventDefault();
+        setError("");
 
         if (cartItems.length === 0) {
             setError("Your cart is empty");
@@ -89,20 +90,63 @@ function Checkout() {
             email: formData.get("email"),
             phone: formData.get("phone"),
             shipmentMethod: shipmentMethod,
+            address: {}
         };
 
         if (shipmentMethod === "PICKUP") {
             order.startDate = formData.get("startDate");
+            order.address.street = formData.get("street");
+            order.address.apt = formData.get("apt");
+            order.address.city = formData.get("city");
+            order.address.country = formData.get("country");
+            order.address.postalCode = formData.get("postal-code");
+            order.address.province = formData.get("province");
         }
 
         if (shipmentMethod === "SHIPMENT") {
-            order.street = formData.get("street");
-            order.apt = formData.get("apt");
-            order.city = formData.get("city");
-            order.country = formData.get("country");
-            order.postalCode = formData.get("postal-code");
-            order.province = formData.get("province");
+            order.address.street = formData.get("street");
+            order.address.apt = formData.get("apt");
+            order.address.city = formData.get("city");
+            order.address.country = formData.get("country");
+            order.address.postalCode = formData.get("postal-code");
+            order.address.province = formData.get("province");
+
+            if (billingAddress) {
+                const billingAddressForm = document.getElementById("billing-address");
+                const billingAddressFormData = new FormData(billingAddressForm);
+
+                // This checks for empty form fields
+                for (let [key, value] of billingAddressFormData.entries()) {
+                    document.querySelector(`[name="${key}"]`).classList.remove("error");
+                    if (
+                        !value &&
+                        document.querySelector(`[name="${key}"]`).hasAttribute("required")
+                    ) {
+                        document.querySelector(`[name="${key}"]`).classList.add("error");
+                        setError("Please fill out all fields");
+                        return;
+                    }
+                }
+
+                const invalidField = validateBillingFormData(billingAddressFormData);
+
+                if (invalidField) {
+                    setError(`Please check your ${invalidField}`);
+                    return;
+                }
+                console.log(billingAddressFormData);
+
+                order.billingAddress = {
+                    street: billingAddressFormData.get("billing-address-street"),
+                    apt: billingAddressFormData.get("billing-address-apt"),
+                    city: billingAddressFormData.get("billing-address-city"),
+                    country: billingAddressFormData.get("billing-address-country"),
+                    postalCode: billingAddressFormData.get("billing-address-postal-code"),
+                    province: billingAddressFormData.get("billing-address-province"),
+                };
+            }
         }
+
 
         // Generating the order items
         const lineItems = cartItems.map((item) => {
@@ -169,8 +213,8 @@ function Checkout() {
                 paymentBtn.innerHTML = "Proceed to Payment";
                 paymentBtn.disabled = false;
             });
-    }
 
+    }
     function validateShippingFormData(formData) {
         const fields = {
             "first-name": /^[a-zA-Z]+$/,
@@ -200,6 +244,12 @@ function Checkout() {
             "last-name": /^[a-zA-Z]+$/,
             "email": /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
             "phone": /^(1\s?)?(\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/,
+            "street": /^[a-zA-Z0-9\s]+$/,
+            "apt": /^[a-zA-Z0-9\s\W]*$/,
+            "city": /^[a-zA-Z\s]+$/,
+            "country": /^[a-zA-Z\s]+$/,
+            "postal-code": /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$|^\d{5}$/i,
+            "province": /^[a-zA-Z\s]+$/,
             "startDate": /^\d{4}-\d{2}-\d{2}$/,
         };
 
@@ -212,6 +262,26 @@ function Checkout() {
         return null;
     }
 
+    function validateBillingFormData(formData) {
+        const fields = {
+            "billing-address-street": /^[a-zA-Z0-9\s]+$/,
+            "billing-address-apt": /^[a-zA-Z0-9\s\W]*$/,
+            "billing-address-city": /^[a-zA-Z\s]+$/,
+            "billing-address-country": /^[a-zA-Z\s]+$/,
+            "billing-address-postal-code": /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$|^\d{5}$/i,
+            "billing-address-province": /^[a-zA-Z\s]+$/
+        }
+
+        for (let field in fields) {
+            if (!fields[field].test(formData.get(field))) {
+                return field;
+            }
+        }
+
+        return null;
+
+    }
+
     function getRandomItems(arr, n) {
         const shuffled = arr.sort(() => 0.5 - Math.random());
         return shuffled.slice(0, n);
@@ -221,6 +291,50 @@ function Checkout() {
         if (loading || !data.objects) return [];
         return getRandomItems(data.objects, 5);
     }, [data.objects, loading]);
+
+    function addGiftWrap() {
+        const giftWrap = {
+            id: "KS57CPHD3K43BWOKJFBS2KN4",
+            name: "Gift Wrap",
+            quantity: 1,
+            price: 600,
+            imageUrl: "https://media.karousell.com/media/photos/products/2021/12/6/handmade_soap_gift_box_1638796621_1e124c32.jpg",
+            description: "Add a gift wrap to your order"
+        };
+
+        const existingCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        const existingItemIndex = existingCartItems.findIndex(item => item.id === giftWrap.id);
+
+        if (existingItemIndex === -1) {
+            const newCartItems = [...cartItems, giftWrap];
+            setCartItems(newCartItems);
+            localStorage.setItem('cartItems', JSON.stringify(newCartItems));
+
+            // Update Price
+            const newSubTotal = parseInt(subTotal) + giftWrap.price;
+            setSubtotal(newSubTotal);
+            const newHst = ((newSubTotal + shippingCost) * 0.13).toFixed(2);
+            setHst(newHst);
+
+            const addedToCartBtn = `<svg width="30" height="30" viewBox="0 0 16 16">
+                                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
+                                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                    </svg>`;
+
+            const cartBtn = document.getElementById("add-gift-wrap-btn");
+            cartBtn.innerHTML = addedToCartBtn;
+            setTimeout(() => {
+                cartBtn.innerHTML = "Add Gift Wrap +$6.00";
+            }, 4000);
+        } else {
+            const cartBtn = document.getElementById("add-gift-wrap-btn");
+            cartBtn.innerHTML = "Already Added";
+            setTimeout(() => {
+                cartBtn.innerHTML = "Add Gift Wrap +$6.00";
+            }, 4000);
+            return;
+        }
+    }
 
     return (
         <main className="checkout-wrapper">
@@ -242,7 +356,7 @@ function Checkout() {
                     </div>
 
                     <Row className="fs-6">
-                        <Col sm={5}>Check box for gift wrap +$6.00</Col>
+                        <Col sm={5}>Products</Col>
                         <Col className="checkout-table-name text-center" sm={3}>Price</Col>
                         <Col className="checkout-table-name" sm={2}>Quantity</Col>
                         <Col className="checkout-table-name text-end" sm={2}>SubTotal</Col>
@@ -250,9 +364,6 @@ function Checkout() {
                     <hr />
                     <div className="checkout-cart-list">
                         {cartItems.map((item, index) => {
-                            if (item.name === "Gift Wrap") {
-                                return null;
-                            }
                             return (
                                 <CheckoutCartItem
                                     key={index}
@@ -282,12 +393,12 @@ function Checkout() {
                             <button className="button">Apply</button>
                         </div>
                         <div>
-                            <Link
-                                to="/home"
-                                className="button continue-shopping-button"
+                            <button id="add-gift-wrap-btn"
+                                className="button add-gift-wrap-btn"
+                                onClick={() => addGiftWrap()}
                             >
-                                Continue Shopping
-                            </Link>
+                                Add Gift Wrap +$6.00
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -342,6 +453,8 @@ function Checkout() {
                                 setShipmentMethod={setShipmentMethod}
                                 setShippingCost={setShippingCost}
                                 updateTax={updateTax}
+                                billingAddress={billingAddress}
+                                setBillingAddress={setBillingAddress}
                             />
                         ) : (
                             stage

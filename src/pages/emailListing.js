@@ -60,9 +60,26 @@ function EmailListing() {
     return (
         <div className='email-listing'>
 
-            <center>
-                <img loading="lazy" className="logo" src="http://northshoresoapworks.com/images/logo.png" alt="Logo" />
-            </center>
+            <div className="logo-container">
+                <img
+                    loading="lazy"
+                    src="http://northshoresoapworks.com/images/bird.png"
+                    className="bird-img bird-1"
+                    alt=""
+                />
+                <img
+                    loading="lazy"
+                    src="http://northshoresoapworks.com/images/logo.png"
+                    className="aboutus-logo"
+                    alt=""
+                />
+                <img
+                    loading="lazy"
+                    src="http://northshoresoapworks.com/images/bird.png"
+                    className="bird-img"
+                    alt=""
+                />
+            </div>
 
             <div className='email-listing-form'>
 
@@ -99,7 +116,7 @@ function EmailListing() {
                     <div>
                         <p>Soapworks Club members will get periodical special announcements and  special discounts</p>
 
-                        <p className='white'>
+                        <p>
                             You can cancel anytime
                         </p>
                     </div>

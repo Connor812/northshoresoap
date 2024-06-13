@@ -51,15 +51,32 @@ function Home() {
    return (
       <div>
          <section className="soap-search-wrapper">
-            <center>
-               <img loading="lazy" className="logo" src="http://northshoresoapworks.com/images/logo.png" alt="Logo" />
-            </center>
+            <div className="logo-container">
+               <img
+                  loading="lazy"
+                  src="http://northshoresoapworks.com/images/bird.png"
+                  className="bird-img bird-1"
+                  alt="Bird"
+               />
+               <img
+                  loading="lazy"
+                  src="http://northshoresoapworks.com/images/logo.png"
+                  className="aboutus-logo"
+                  width="1018"
+                  height="255"
+                  alt="Logo"
+               />
+               <img
+                  loading="lazy"
+                  src="http://northshoresoapworks.com/images/bird.png"
+                  className="bird-img"
+                  alt="Bird"
+               />
+            </div>
             <center className="gallery">
                <h3>HAND MADE SOAP GALLERY</h3>
                <p className="arial">
-                  Our soap is prized for its moisturizing properties
-                  <br />
-                  The presence of glycerine which helps to maintain the skin's natural hydration levels.
+                  Our soap is prized for its moisturizing properties due to the presence of glycerin which helps to maintain the skin’s natural hydration levels
                </p>
                <hr />
                <h5>
@@ -155,9 +172,11 @@ function Home() {
          <section className="category-container">
             <center>
                {loading ? (
-                  <Spinner animation="border" role="status" style={{ color: "var(--mocha)" }}>
-                     <span className="visually-hidden">Loading...</span>
-                  </Spinner>
+                  <div className="home-carousel-placeholder">
+                     <Spinner animation="border" role="status" style={{ color: "var(--mocha)" }}>
+                        <span className="visually-hidden">Loading...</span>
+                     </Spinner>
+                  </div>
                ) : (
                   <HomeCarousel />
                )}
@@ -177,9 +196,11 @@ function Home() {
                   ) : (
                      categories.map(category => {
                         const image_id = category.image_id;
+                        console.log(image_id);
                         const category_name = category.name;
                         const category_id = category.id;
                         let relatedObject = data.related_objects.find(obj => obj.type === 'IMAGE' && obj.id === image_id);
+                        console.log(relatedObject);
 
                         if (!relatedObject) {
                            relatedObject = {
