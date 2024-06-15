@@ -76,7 +76,8 @@ function Home() {
             <center className="gallery">
                <h3>HAND MADE SOAP GALLERY</h3>
                <p className="arial">
-                  Our soap is prized for its moisturizing properties due to the presence of glycerin which helps to maintain the skin’s natural hydration levels
+                  At North Shore Soapworks we specialize in handcrafted artesian soap made on site with high-quality, ethically, sourced and sustainable ingredients. We offer a unique selection of specialty soaps along with a large selection of complementary bath and body products for both men and women as well as children and pets. We also curate a variety of gift sets to treat yourself or someone special.
+
                </p>
                <hr />
                <h5>

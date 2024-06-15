@@ -62,7 +62,6 @@
 /* This is the styles for the sub category nav bar */
 
 .categories-nav-wrapper {
-    padding: 0 5%;
     display: flex;
     justify-content: center;
 }
@@ -74,10 +73,11 @@
 }
 
 .categories-nav-container {
-    width: 88%;
+    width: 100%;
+    max-width: 1200px;
     padding: 10px 6%;
     background-color: var(--mocha);
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     border: 1px solid var(--walnut);
     border-radius: 10px;
     display: flex;
@@ -125,7 +125,9 @@
     border: 1px solid var(--mocha);
     border-radius: 5px;
     padding: 5px;
-    color: var(--mocha)
+    color: var(--mocha);
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 @media screen and (max-width: 700px) {
@@ -232,9 +234,24 @@
     width: 100%;
     background-image: url("http://northshoresoapworks.com/images/category_bg.png");
     background-repeat: repeat;
-    
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.display-items-soap-description {
+    max-width: 1200px;
+    border: 1px solid var(--mocha);
+    padding: 1% 5%;
+    font-size: 14pt;
+    border-radius: 20px;
+    font-family: arial;
+    background-color: #f2f1f0;
+    margin-bottom: 20px !important;
+    text-align: left;
+}
+
+.display-items-soap-title {
+    margin: 10px 0 !important;
 }

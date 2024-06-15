@@ -298,7 +298,7 @@ function Checkout() {
             name: "Gift Wrap",
             quantity: 1,
             price: 600,
-            imageUrl: "https://media.karousell.com/media/photos/products/2021/12/6/handmade_soap_gift_box_1638796621_1e124c32.jpg",
+            imageUrl: "http://northshoresoapworks.com/images/gift-wrap.jpg",
             description: "Add a gift wrap to your order"
         };
 
@@ -461,9 +461,9 @@ function Checkout() {
                         )}
                         <div style={{ width: '100%', fontSize: '18pt' }}>
                             <hr />
-                            HST: ${(hst / 100).toFixed(2)}
-                            <br />
                             Shipping: ${(shippingCost / 100).toFixed(2)}
+                            <br />
+                            HST: ${(hst / 100).toFixed(2)}
                             <br />
                             Discount: -${discount.toFixed(2)}
                             <hr />

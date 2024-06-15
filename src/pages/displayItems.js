@@ -116,27 +116,22 @@ function DisplayItems() {
   return (
     <div className="display-items-wrapper">
       {categoryName === 'Soap' ?
-        <center>
-          <SoapCarousel />
-          <h1 className='display-items-category-title'>
-            <Link className="back-button" to="/">
-              <svg width="20" height="20" viewBox="0 0 16 16">
-                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
-              </svg>
-              Back
-            </Link>
-            {categoryName}
+        <center style={{ padding: "10px" }}>
+          <h1 className="display-items-soap-title">
+            North Shore SoapWorks Artisan Soaps
           </h1>
+          <p className="display-items-soap-description">
+            All of our artesian made soaps at North Shore Soapworks are made right here in the factory by our soap maker. We use a glycerine soap base which is 100% vegetable based making them biodegradable and free of animal testing. This formula results in a smooth creamy texture as well as offering a skin nourishing lather that is highly moisturizing. Each soap has a PH between 9.5 and 10.5, each is safe for use on all skin types, and each is said to leave a thin humectant film of glycerine on the skin after it has been rinsed off. This beneficial layer helps to attract moisture from the air to the skin, maintaining the look and feel of skin that is healthy and supple.
+            Essential oils and/or fragrance oils as well as natural mineral pigments and mica or food and cosmetic grade dye maybe added to some soaps to enhance their cosmetic appeal and truly make them a work of art.
+          </p>
+          <h1 className='display-items-category-title'>
+            {categoryName === 'Soap' ? null : categoryName}
+          </h1>
+          <SoapCarousel />
         </center>
         :
         <center>
           <h1 className='display-items-category-title'>
-            <Link className="back-button" to="/">
-              <svg width="20" height="20" viewBox="0 0 16 16">
-                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
-              </svg>
-              Back
-            </Link>
             {categoryName}
           </h1>
         </center>}
@@ -178,7 +173,8 @@ function DisplayItems() {
         </select>
       </div>
 
-      <hr />
+      {categoryName === "soap" ? <hr /> : null}
+
       <center>
         <div className="display-item-container">
           {currentItems.length === 0
