@@ -16,7 +16,7 @@ function Payment({ data, shipmentMethod, subTotal, setError }) {
             return;
         }
 
-        fetch("http://northshoresoapworks.com/applicationId.php", {
+        fetch("https://northshoresoapworks.com/applicationId.php", {
             method: "GET",
             mode: 'cors',
             headers: {
@@ -69,7 +69,7 @@ function Payment({ data, shipmentMethod, subTotal, setError }) {
             token: token,
         };
 
-        fetch("http://northshoresoapworks.com/payment.php", {
+        fetch("https://northshoresoapworks.com/payment.php", {
             method: "POST",
             mode: 'cors',
             headers: {

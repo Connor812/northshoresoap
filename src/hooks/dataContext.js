@@ -20,8 +20,8 @@ const DataProvider = ({ children }) => {
     useEffect(() => {
         // Fetch data when component mounts
         Promise.all([
-            fetch('http://northshoresoapworks.com/getItems.php'),
-            fetch('http://northshoresoapworks.com/getCategories.php')
+            fetch('https://northshoresoapworks.com/getItems.php'),
+            fetch('https://northshoresoapworks.com/getCategories.php')
         ])
             .then(async ([res1, res2]) => {
                 let data = await res1.json();

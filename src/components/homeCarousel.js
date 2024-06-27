@@ -8,7 +8,7 @@ function HomeCarousel() {
 
     useEffect(() => {
         setLoading(true); // Set loading state to true before fetching data
-        fetch("http://northshoresoapworks.com/getCarouselImages.php", {
+        fetch("https://northshoresoapworks.com/getCarouselImages.php", {
             method: "GET",
             headers: {
                 "Accept": "application/json", // Indicate that the client expects a JSON response

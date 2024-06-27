@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
 import { DataContext } from "../hooks/dataContext.js";
 import ItemCard from "../components/itemCard";
+
 import "../assets/css/search.css";
 
 function Search() {
-
+    
     const [searchTerm, setSearchTerm] = useState("");
     const dataContext = useContext(DataContext);
     const data = dataContext.data;

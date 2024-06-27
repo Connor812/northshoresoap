@@ -1,27 +1,27 @@
-import React from "react";
-import { Helmet } from "react-helmet";
+import React, { useEffect } from "react";
 import "../assets/css/aboutus.css";
 
 function About() {
+
    return (
       <main>
          <section className="aboutus-wrapper">
             <div className="logo-container">
                <img
                   loading="lazy"
-                  src="http://northshoresoapworks.com/images/bird.png"
+                  src="https://northshoresoapworks.com/images/bird.png"
                   className="bird-img bird-1"
                   alt=""
                />
                <img
                   loading="lazy"
-                  src="http://northshoresoapworks.com/images/logo.png"
+                  src="https://northshoresoapworks.com/images/logo.png"
                   className="aboutus-logo"
                   alt=""
                />
                <img
                   loading="lazy"
-                  src="http://northshoresoapworks.com/images/bird.png"
+                  src="https://northshoresoapworks.com/images/bird.png"
                   className="bird-img"
                   alt=""
                />
@@ -31,7 +31,7 @@ function About() {
                <p>
                   <img
                      loading="lazy"
-                     src="http://northshoresoapworks.com/assets/staff_images/group-img.jpg"
+                     src="https://northshoresoapworks.com/assets/staff_images/group-img.jpg"
                      className="shop-img"
                      alt=""
                   />
@@ -67,7 +67,7 @@ function About() {
                         <img
                            loading="lazy"
                            className="worker-img"
-                           src="http://northshoresoapworks.com/assets/staff_images/stephanie.jpg"
+                           src="https://northshoresoapworks.com/assets/staff_images/stephanie.jpg"
                            alt="Worker"
                         />
                         <h4 className="worker-name">STEPHANIE MISNER</h4>
@@ -92,7 +92,7 @@ function About() {
                   <div className="worker-description">
                      <img
                         loading="lazy"
-                        src="http://northshoresoapworks.com/assets/staff_images/trish.jpg"
+                        src="https://northshoresoapworks.com/assets/staff_images/trish.jpg"
                         alt="Worker"
                      />
                      <h4 className="worker-name">Trish</h4>
@@ -118,7 +118,7 @@ function About() {
                   <div className="worker-description">
                      <img
                         loading="lazy"
-                        src="http://northshoresoapworks.com/assets/staff_images/sarah.jpg"
+                        src="https://northshoresoapworks.com/assets/staff_images/sarah.jpg"
                         alt="Worker"
                      />
                      <h4 className="worker-name">Sarah</h4>
@@ -141,7 +141,7 @@ function About() {
                   <div className="worker-description">
                      <img
                         loading="lazy"
-                        src="http://northshoresoapworks.com/assets/staff_images/haley.jpg"
+                        src="https://northshoresoapworks.com/assets/staff_images/haley.jpg"
                         alt="Worker"
                      />
                      <h4 className="worker-name">Hayley</h4>
@@ -168,7 +168,7 @@ function About() {
                   <div className="worker-description">
                      <img
                         loading="lazy"
-                        src="http://northshoresoapworks.com/assets/staff_images/rachelle.jpg"
+                        src="https://northshoresoapworks.com/assets/staff_images/rachelle.jpg"
                         alt="Worker"
                      />
                      <h4 className="worker-name">Rachelle</h4>
@@ -194,7 +194,7 @@ function About() {
                   <div className="worker-description">
                      <img
                         loading="lazy"
-                        src="http://northshoresoapworks.com/assets/staff_images/emily.jpg"
+                        src="https://northshoresoapworks.com/assets/staff_images/emily.jpg"
                         alt="Worker"
                      />
                      <h4 className="worker-name">Emily</h4>
@@ -215,7 +215,7 @@ function About() {
                   <div className="worker-description">
                      <img
                         loading="lazy"
-                        src="http://northshoresoapworks.com/assets/staff_images/daisy.jpg"
+                        src="https://northshoresoapworks.com/assets/staff_images/daisy.jpg"
                         alt="Worker"
                      />
                      <h4 className="worker-name">Daisy</h4>

@@ -24,7 +24,7 @@ function ItemCardModal({ soap, related_objects, index }) {
         const imageObject = related_objects.find(obj => obj.id === imageId);
         imageUrl = imageObject.image_data.url;
     } else {
-        imageUrl = "http://northshoresoapworks.com/images/replacement-image.png";
+        imageUrl = "https://northshoresoapworks.com/images/replacement-image.png";
     }
 
     return (
@@ -34,7 +34,7 @@ function ItemCardModal({ soap, related_objects, index }) {
                     <div className="modal-body soap-display">
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         <div className="left-side">
-                            <img loading="lazy" src="http://northshoresoapworks.com/images/white_bg_logo.jpg" alt="logo" className="soap-logo" />
+                            <img loading="lazy" src="https://northshoresoapworks.com/images/white_bg_logo.jpg" alt="logo" className="soap-logo" />
                             <ImageComponent src={imageUrl} alt={name} className="soap-image-modal" height="auto" width="300px" />
                             {/* <h6 className="natural-ingredients">
                                 <u>

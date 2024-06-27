@@ -1,13 +1,15 @@
-import React, { useRef, useState, useContext, useEffect } from "react";
+import React, { useRef, useState, useContext } from "react";
 import HomeSoapCard from "../components/homeSoapCard.js";
 import HomeCarousel from "../components/homeCarousel.js";
 import { DataContext } from "../hooks/dataContext.js";
-import "../assets/css/home.css";
 import { Link } from "react-router-dom";
 import { filterProducts } from "../utils/filterProducts.js";
 import Spinner from "react-bootstrap/Spinner";
 
+import "../assets/css/home.css";
+
 function Home() {
+   
    const carouselRef = useRef(null);
    const [itemWidth, setItemWidth] = useState(300); // Initial width, adjust as needed
    const [search, setSearch] = useState(''); // Search for soap by name
@@ -54,13 +56,13 @@ function Home() {
             <div className="logo-container">
                <img
                   loading="lazy"
-                  src="http://northshoresoapworks.com/images/bird.png"
+                  src="https://northshoresoapworks.com/images/bird.png"
                   className="bird-img bird-1"
                   alt="Bird"
                />
                <img
                   loading="lazy"
-                  src="http://northshoresoapworks.com/images/logo.png"
+                  src="https://northshoresoapworks.com/images/logo.webp"
                   className="aboutus-logo"
                   width="1018"
                   height="255"
@@ -68,7 +70,7 @@ function Home() {
                />
                <img
                   loading="lazy"
-                  src="http://northshoresoapworks.com/images/bird.png"
+                  src="https://northshoresoapworks.com/images/bird.png"
                   className="bird-img"
                   alt="Bird"
                />
@@ -197,16 +199,14 @@ function Home() {
                   ) : (
                      categories.map(category => {
                         const image_id = category.image_id;
-                        console.log(image_id);
                         const category_name = category.name;
                         const category_id = category.id;
                         let relatedObject = data.related_objects.find(obj => obj.type === 'IMAGE' && obj.id === image_id);
-                        console.log(relatedObject);
 
                         if (!relatedObject) {
                            relatedObject = {
                               "image_data": {
-                                 "url": "http://northshoresoapworks.com/images/fancy_soap.webp",
+                                 "url": "https://northshoresoapworks.com/images/fancy_soap.webp",
                                  "name": "Fancy Soap"
                               }
                            }

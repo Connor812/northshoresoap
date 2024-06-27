@@ -24,7 +24,7 @@ function Header({ updateCart, cartItems, setCartItems }) {
       <Navbar className="navbar" expand="lg" expanded={expanded}>
         <Container className="nav-container">
           <Nav.Link onClick={() => setExpanded(false)} style={{ width: "50px", margin: "0px", padding: "0px", display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <img src="http://northshoresoapworks.com/images/bird.png" alt="North Shore Soap Works" className="logo-link-img" width="100%" height="auto" />
+            <img src="https://northshoresoapworks.com/images/bird.png" alt="North Shore Soap Works" className="logo-link-img" width="100%" height="auto" />
           </Nav.Link>
           <Navbar.Toggle id="basic-navbar-nav-btn" aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
           <Navbar.Collapse id="basic-navbar-nav" className="navbar-collapse">

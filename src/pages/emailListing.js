@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../assets/css/email-listing.css';
 
 function EmailListing() {
+
     const [email, setEmail] = useState('');
     const [name, setName] = useState('');
     const [error, setError] = useState('');
@@ -27,7 +28,7 @@ function EmailListing() {
 
         setError('');
 
-        fetch('http://northshoresoapworks.com/add_email_listing.php', {
+        fetch('https://northshoresoapworks.com/add_email_listing.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -63,19 +64,19 @@ function EmailListing() {
             <div className="logo-container">
                 <img
                     loading="lazy"
-                    src="http://northshoresoapworks.com/images/bird.png"
+                    src="https://northshoresoapworks.com/images/bird.png"
                     className="bird-img bird-1"
                     alt=""
                 />
                 <img
                     loading="lazy"
-                    src="http://northshoresoapworks.com/images/logo.png"
+                    src="https://northshoresoapworks.com/images/logo.png"
                     className="aboutus-logo"
                     alt=""
                 />
                 <img
                     loading="lazy"
-                    src="http://northshoresoapworks.com/images/bird.png"
+                    src="https://northshoresoapworks.com/images/bird.png"
                     className="bird-img"
                     alt=""
                 />
@@ -111,7 +112,7 @@ function EmailListing() {
                 <button type="submit" className='email-form-submit' onClick={(event) => handleSubmit(event)}>Join Club</button>
 
                 <div className='email-form-bottom'>
-                    <img loading="lazy" src="http://northshoresoapworks.com/images/gift-basket.png" alt="Gift Basket" />
+                    <img loading="lazy" src="https://northshoresoapworks.com/images/gift-basket.png" alt="Gift Basket" />
 
                     <div>
                         <p>Soapworks Club members will get periodical special announcements and  special discounts</p>
@@ -121,7 +122,7 @@ function EmailListing() {
                         </p>
                     </div>
 
-                    <img loading="lazy" src="http://northshoresoapworks.com/images/soap.png" alt="Soap" />
+                    <img loading="lazy" src="https://northshoresoapworks.com/images/soap.png" alt="Soap" />
                 </div>
 
             </div>

@@ -3,10 +3,11 @@ import { Link, useParams } from 'react-router-dom';
 import { filterProducts } from '../utils/filterProducts';
 import { DataContext } from "../hooks/dataContext.js";
 import ItemCard from '../components/itemCard';
-import "../assets/css/display-items.css";
-import "../assets/css/soap.css";
 import SoapCarousel from '../components/soapCarousel.js';
 import Spinner from 'react-bootstrap/Spinner';
+
+import "../assets/css/display-items.css";
+import "../assets/css/soap.css";
 
 function DisplayItems() {
   // Set up the pages
@@ -30,7 +31,6 @@ function DisplayItems() {
 
   // Set up the rest of the pages
   const [totalPages, setTotalPages] = useState(0);
-  const startIndex = (currentPage - 1) * itemsPerPage;
   const [categoryItems, setCategoryItems] = useState([]);
   const [currentItems, setCurrentItems] = useState([]);
 

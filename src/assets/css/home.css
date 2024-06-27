@@ -1,3 +1,5 @@
+/* Home.css */
+
 .soap-search-wrapper {
     background-color: var(--cream);
     padding: 2% 5%;
@@ -53,7 +55,7 @@
     width: 100%;
     max-width: 210px;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 3px;
     border-radius: 10px;
     box-shadow: 0px 0px 5px 0px var(--mocha);
 }
@@ -79,6 +81,8 @@
 
 .soap-card h6 {
     margin-top: 10px !important;
+    text-align: center !important;
+    width: 100%;
 }
 
 .soap-card:hover {
@@ -152,7 +156,7 @@
 }
 
 .category-container {
-    background-image: url("http://northshoresoapworks.com/images/category_bg.png");
+    background-image: url("https://northshoresoapworks.com/images/category_bg.png");
     background-repeat: repeat;
     background-size: contain;
 }

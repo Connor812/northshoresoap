@@ -1,57 +1,57 @@
 :root {
-    --white: white;
-    --cream: #EEE7D5;
-    --stone: #DABDA5;
-    --mocha: #A48371;
-    --mocha-opacity: #a4837195;
-    --meadow: #A0A168;
-    --meadow-light: #b6b775;
-    --cypress: #717F66;
-    --khaki: #625A3C;
-    --walnut: #5F4438;
-    --bone: #E2D9C4;
-    --bone-opacity: #e2d9c485;
-    --black: #1a1a1a;
-    --black-opacity: #1a1a1a3e;
-    --grey: #D6D6D6;
-    --red: #842029;
-    --small: 12pt;
-    --medium: 14pt;
-    --large: 24pt;
+  --white: white;
+  --cream: #eee7d5;
+  --stone: #dabda5;
+  --mocha: #a48371;
+  --mocha-opacity: #a4837195;
+  --meadow: #a0a168;
+  --meadow-light: #b6b775;
+  --cypress: #717f66;
+  --khaki: #625a3c;
+  --walnut: #5f4438;
+  --bone: #e2d9c4;
+  --bone-opacity: #e2d9c485;
+  --black: #1a1a1a;
+  --black-opacity: #1a1a1a3e;
+  --grey: #d6d6d6;
+  --red: #842029;
+  --small: 12pt;
+  --medium: 14pt;
+  --large: 24pt;
 }
 
 @font-face {
-    font-family: 'Copperplate' !important;
-    src: url('../fonts/OPTICopperplate-Heavy.otf') format('opentype');
-    /* Additional font styles (e.g., font-weight, font-style) can be specified here */
+  font-family: "Copperplate" !important;
+  src: url("../fonts/OPTICopperplate-Heavy.otf") format("opentype");
+  /* Additional font styles (e.g., font-weight, font-style) can be specified here */
 }
 
 .arial {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: var(--medium);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: var(--medium);
 }
 
 body,
 html {
-    background-color: var(--cream) !important;
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Copperplate' !important;
+  background-color: var(--cream) !important;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Copperplate" !important;
 }
 
 #root {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 hr {
-    border: 1px solid var(--mocha) !important;
-    width: 100%;
+  border: 1px solid var(--mocha) !important;
+  width: 100%;
 }
 
 h1,
@@ -60,7 +60,7 @@ h3,
 h4,
 h5,
 h6 p {
-    margin: 0 !important;
+  margin: 0 !important;
 }
 
 h1,
@@ -69,72 +69,127 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0 !important;
-    font-family: 'Copperplate' !important;
+  margin: 0 !important;
+  font-family: "Copperplate" !important;
 }
 
 h1 {
-    font-size: 2rem !important;
-    font-family: 'Copperplate' !important;
+  font-size: 2rem !important;
+  font-family: "Copperplate" !important;
 }
 
 h3 {
-    font-size: var(--large);
-    font-family: 'Copperplate' !important;
+  font-size: var(--large);
+  font-family: "Copperplate" !important;
 }
 
 p {
-    margin: 0px !important;
+  margin: 0px !important;
 }
 
 .coming-soon {
-    width: 100%;
-    font-size: var(--large);
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--mocha);
+  width: 100%;
+  font-size: var(--large);
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--mocha);
 }
 
 .image-placeholder {
-    background-color: var(--cypress);
-    border-radius: 20px;
-    animation: pulse 1s infinite;
+  background-color: var(--cypress);
+  border-radius: 20px;
+  animation: pulse 1s infinite;
 }
 
 .image-placeholder.fade-out {
-    opacity: 0;
+  opacity: 0;
 }
 
 @keyframes pulse {
-    0% {
-        background-color: var(--meadow);
-    }
+  0% {
+    background-color: var(--meadow);
+  }
 
-    50% {
-        background-color: var(--meadow-light);
-    }
+  50% {
+    background-color: var(--meadow-light);
+  }
 
-    100% {
-        background-color: var(--meadow);
-    }
+  100% {
+    background-color: var(--meadow);
+  }
 }
 
 @keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 .image-loading {
-    opacity: 0;
+  opacity: 0;
 }
 
 .fade-in {
-    animation: fade-in 1s;
+  animation: fade-in 1s;
+}
+
+/* Logo */
+
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+.bird-1 {
+  transform: scaleX(-1);
+}
+
+.aboutus-logo {
+  aspect-ratio: 1018 / 255;
+  width: 100%;
+  height: auto;
+  max-width: 60%;
+  border-radius: 10px;
+}
+
+.bird-img {
+  width: 150px;
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .bird-img {
+    display: none;
+  }
+
+  .logo-container {
+    justify-content: center;
+  }
+}
+
+.main-loading {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black-opacity);
+  z-index: 100;
+  top: 0;
+  left: 0;
+  cursor: not-allowed;
+}
+
+.initial-modal .modal-content{
+  background-color: var(--cream);
+  color: var(--mocha);
 }

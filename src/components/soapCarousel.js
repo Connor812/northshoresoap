@@ -26,14 +26,14 @@ function SoapCarousel() {
                 </button>
             </div>
             <div className='display-items-soap-carousel' ref={carouselRef} style={{ overflowX: 'auto', display: 'flex', whiteSpace: 'nowrap' }}>
-                <ImageComponent src="http://northshoresoapworks.com/images/makingsoap/factory.png" alt="Soap Factory. This is where the soaps made." className="soap-carousel-images" width="242px" height="144px" />
-                <ImageComponent src="http://northshoresoapworks.com/images/makingsoap/stir.png" alt="This is the mixing of the soap ingredients" className="soap-carousel-images" width="242px" height="144px" />
-                <ImageComponent src="http://northshoresoapworks.com/images/makingsoap/Pour.png" alt="This is how we pour out soap into the soap molds" className="soap-carousel-images" width="242px" height="144px" />
-                <ImageComponent src="http://northshoresoapworks.com/images/makingsoap/Scent.png" alt="This is the adding of the scents to the soap" className="soap-carousel-images" width="242px" height="144px" />
-                <ImageComponent src="http://northshoresoapworks.com/images/makingsoap/decorate.png" alt="This is how our professional soap makers decorate the soap" className="soap-carousel-images" width="242px" height="144px" />
-                <ImageComponent src="http://northshoresoapworks.com/images/makingsoap/cut.png" alt="Next is cutting the soap into pieces" className="soap-carousel-images" width="242px" height="144px" />
-                <ImageComponent src="http://northshoresoapworks.com/images/makingsoap/stano.png" alt="If the soap calls for it, we can stamp it with our logo, or name of the soap" className="soap-carousel-images" width="242px" height="144px" />
-                <ImageComponent src="http://northshoresoapworks.com/images/makingsoap/cutsoap.jpg" alt="finally the end result!" className="soap-carousel-images" width="242px" height="144px" />
+                <ImageComponent src="https://northshoresoapworks.com/images/makingsoap/factory.png" alt="Soap Factory. This is where the soaps made." className="soap-carousel-images" width="242px" height="144px" />
+                <ImageComponent src="https://northshoresoapworks.com/images/makingsoap/stir.png" alt="This is the mixing of the soap ingredients" className="soap-carousel-images" width="242px" height="144px" />
+                <ImageComponent src="https://northshoresoapworks.com/images/makingsoap/Pour.png" alt="This is how we pour out soap into the soap molds" className="soap-carousel-images" width="242px" height="144px" />
+                <ImageComponent src="https://northshoresoapworks.com/images/makingsoap/Scent.png" alt="This is the adding of the scents to the soap" className="soap-carousel-images" width="242px" height="144px" />
+                <ImageComponent src="https://northshoresoapworks.com/images/makingsoap/decorate.png" alt="This is how our professional soap makers decorate the soap" className="soap-carousel-images" width="242px" height="144px" />
+                <ImageComponent src="https://northshoresoapworks.com/images/makingsoap/cut.png" alt="Next is cutting the soap into pieces" className="soap-carousel-images" width="242px" height="144px" />
+                <ImageComponent src="https://northshoresoapworks.com/images/makingsoap/stano.png" alt="If the soap calls for it, we can stamp it with our logo, or name of the soap" className="soap-carousel-images" width="242px" height="144px" />
+                <ImageComponent src="https://northshoresoapworks.com/images/makingsoap/cutsoap.jpg" alt="finally the end result!" className="soap-carousel-images" width="242px" height="144px" />
             </div>
             <div className="display-items-carousel-btn-container">
                 <button className='display-items-carousel-btn' onClick={scrollRight}>

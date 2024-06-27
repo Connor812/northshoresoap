@@ -40,55 +40,55 @@
         ],
         "items": [
           {
-            "url": "http://northshoresoapworks.com/getItems.php",
+            "url": "https://northshoresoapworks.com/getItems.php",
             "resolution": "Allowed"
           },
           {
-            "url": "http://northshoresoapworks.com/getCategories.php",
+            "url": "https://northshoresoapworks.com/getCategories.php",
             "resolution": "Allowed"
           },
           {
-            "url": "http://northshoresoapworks.com/images/bird.png",
+            "url": "https://northshoresoapworks.com/images/bird.png",
             "resolution": "Allowed"
           },
           {
-            "url": "http://northshoresoapworks.com/images/white_bg_logo.jpg",
+            "url": "https://northshoresoapworks.com/images/white_bg_logo.jpg",
             "resolution": "Allowed"
           },
           {
-            "url": "http://northshoresoapworks.com/images/category_bg.png",
+            "url": "https://northshoresoapworks.com/images/category_bg.png",
             "resolution": "Allowed"
           },
           {
-            "url": "http://northshoresoapworks.com/images/makingsoap/factory.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/factory.png",
             "resolution": "Allowed"
           },
           {
-            "url": "http://northshoresoapworks.com/images/makingsoap/stir.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/stir.png",
             "resolution": "Allowed"
           },
           {
-            "url": "http://northshoresoapworks.com/images/makingsoap/Pour.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/Pour.png",
             "resolution": "Allowed"
           },
           {
-            "url": "http://northshoresoapworks.com/images/makingsoap/Scent.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/Scent.png",
             "resolution": "Allowed"
           },
           {
-            "url": "http://northshoresoapworks.com/images/makingsoap/decorate.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/decorate.png",
             "resolution": "Allowed"
           },
           {
-            "url": "http://northshoresoapworks.com/images/makingsoap/cut.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/cut.png",
             "resolution": "Allowed"
           },
           {
-            "url": "http://northshoresoapworks.com/images/makingsoap/stano.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/stano.png",
             "resolution": "Allowed"
           },
           {
-            "url": "http://northshoresoapworks.com/images/makingsoap/cutsoap.jpg",
+            "url": "https://northshoresoapworks.com/images/makingsoap/cutsoap.jpg",
             "resolution": "Allowed"
           }
         ]
@@ -1433,7 +1433,7 @@
         ],
         "items": [
           {
-            "url": "http://northshoresoapworks.com",
+            "url": "https://northshoresoapworks.com",
             "wastedMs": 162.96495
           }
         ],
@@ -1586,7 +1586,7 @@
             "entity": "localhost"
           },
           {
-            "url": "http://northshoresoapworks.com/getItems.php",
+            "url": "https://northshoresoapworks.com/getItems.php",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1122.3950000405312,
@@ -1603,7 +1603,7 @@
             "entity": "northshoresoapworks.com"
           },
           {
-            "url": "http://northshoresoapworks.com/getCategories.php",
+            "url": "https://northshoresoapworks.com/getCategories.php",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1125.1630000472069,
@@ -1620,7 +1620,7 @@
             "entity": "northshoresoapworks.com"
           },
           {
-            "url": "http://northshoresoapworks.com/getItems.php",
+            "url": "https://northshoresoapworks.com/getItems.php",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1127.0600000023842,
@@ -1637,7 +1637,7 @@
             "entity": "northshoresoapworks.com"
           },
           {
-            "url": "http://northshoresoapworks.com/getCategories.php",
+            "url": "https://northshoresoapworks.com/getCategories.php",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1130.033999979496,
@@ -1654,7 +1654,7 @@
             "entity": "northshoresoapworks.com"
           },
           {
-            "url": "http://northshoresoapworks.com/images/bird.png",
+            "url": "https://northshoresoapworks.com/images/bird.png",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1138.2250000238419,
@@ -1671,7 +1671,7 @@
             "entity": "northshoresoapworks.com"
           },
           {
-            "url": "http://northshoresoapworks.com/images/white_bg_logo.jpg",
+            "url": "https://northshoresoapworks.com/images/white_bg_logo.jpg",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1139.0159999728203,
@@ -1704,7 +1704,7 @@
             "experimentalFromMainFrame": true
           },
           {
-            "url": "http://northshoresoapworks.com/images/category_bg.png",
+            "url": "https://northshoresoapworks.com/images/category_bg.png",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1153,
@@ -1772,7 +1772,7 @@
             "entity": "localhost"
           },
           {
-            "url": "http://northshoresoapworks.com/images/makingsoap/factory.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/factory.png",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1622.9959999918938,
@@ -1789,7 +1789,7 @@
             "entity": "northshoresoapworks.com"
           },
           {
-            "url": "http://northshoresoapworks.com/images/makingsoap/stir.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/stir.png",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1623.2020000219345,
@@ -1806,7 +1806,7 @@
             "entity": "northshoresoapworks.com"
           },
           {
-            "url": "http://northshoresoapworks.com/images/makingsoap/Pour.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/Pour.png",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1623.4279999732971,
@@ -1823,7 +1823,7 @@
             "entity": "northshoresoapworks.com"
           },
           {
-            "url": "http://northshoresoapworks.com/images/makingsoap/Scent.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/Scent.png",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1623.589999973774,
@@ -1840,7 +1840,7 @@
             "entity": "northshoresoapworks.com"
           },
           {
-            "url": "http://northshoresoapworks.com/images/makingsoap/decorate.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/decorate.png",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1624.1280000209808,
@@ -1857,7 +1857,7 @@
             "entity": "northshoresoapworks.com"
           },
           {
-            "url": "http://northshoresoapworks.com/images/makingsoap/cut.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/cut.png",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1624.2849999666214,
@@ -1874,7 +1874,7 @@
             "entity": "northshoresoapworks.com"
           },
           {
-            "url": "http://northshoresoapworks.com/images/makingsoap/stano.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/stano.png",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1624.6700000166893,
@@ -1891,7 +1891,7 @@
             "entity": "northshoresoapworks.com"
           },
           {
-            "url": "http://northshoresoapworks.com/images/makingsoap/cutsoap.jpg",
+            "url": "https://northshoresoapworks.com/images/makingsoap/cutsoap.jpg",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1625.1520000100136,
@@ -2454,7 +2454,7 @@
             "rtt": 69.972
           },
           {
-            "origin": "http://northshoresoapworks.com",
+            "origin": "https://northshoresoapworks.com",
             "rtt": 13.056
           },
           {
@@ -2501,7 +2501,7 @@
             "serverResponseTime": 13.66295
           },
           {
-            "origin": "http://northshoresoapworks.com",
+            "origin": "https://northshoresoapworks.com",
             "serverResponseTime": 7.455999999999998
           }
         ],
@@ -3094,91 +3094,91 @@
               "type": "subitems",
               "items": [
                 {
-                  "url": "http://northshoresoapworks.com/getItems.php",
+                  "url": "https://northshoresoapworks.com/getItems.php",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 409132,
                   "tbtImpact": 0
                 },
                 {
-                  "url": "http://northshoresoapworks.com/images/makingsoap/factory.png",
+                  "url": "https://northshoresoapworks.com/images/makingsoap/factory.png",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 344905,
                   "tbtImpact": 0
                 },
                 {
-                  "url": "http://northshoresoapworks.com/images/makingsoap/decorate.png",
+                  "url": "https://northshoresoapworks.com/images/makingsoap/decorate.png",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 296856,
                   "tbtImpact": 0
                 },
                 {
-                  "url": "http://northshoresoapworks.com/images/makingsoap/Scent.png",
+                  "url": "https://northshoresoapworks.com/images/makingsoap/Scent.png",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 294583,
                   "tbtImpact": 0
                 },
                 {
-                  "url": "http://northshoresoapworks.com/images/makingsoap/stir.png",
+                  "url": "https://northshoresoapworks.com/images/makingsoap/stir.png",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 292701,
                   "tbtImpact": 0
                 },
                 {
-                  "url": "http://northshoresoapworks.com/images/makingsoap/Pour.png",
+                  "url": "https://northshoresoapworks.com/images/makingsoap/Pour.png",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 283980,
                   "tbtImpact": 0
                 },
                 {
-                  "url": "http://northshoresoapworks.com/images/makingsoap/stano.png",
+                  "url": "https://northshoresoapworks.com/images/makingsoap/stano.png",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 268641,
                   "tbtImpact": 0
                 },
                 {
-                  "url": "http://northshoresoapworks.com/images/makingsoap/cut.png",
+                  "url": "https://northshoresoapworks.com/images/makingsoap/cut.png",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 244105,
                   "tbtImpact": 0
                 },
                 {
-                  "url": "http://northshoresoapworks.com/images/white_bg_logo.jpg",
+                  "url": "https://northshoresoapworks.com/images/white_bg_logo.jpg",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 213520,
                   "tbtImpact": 0
                 },
                 {
-                  "url": "http://northshoresoapworks.com/images/category_bg.png",
+                  "url": "https://northshoresoapworks.com/images/category_bg.png",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 68870,
                   "tbtImpact": 0
                 },
                 {
-                  "url": "http://northshoresoapworks.com/images/makingsoap/cutsoap.jpg",
+                  "url": "https://northshoresoapworks.com/images/makingsoap/cutsoap.jpg",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 58384,
                   "tbtImpact": 0
                 },
                 {
-                  "url": "http://northshoresoapworks.com/images/bird.png",
+                  "url": "https://northshoresoapworks.com/images/bird.png",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 16095,
                   "tbtImpact": 0
                 },
                 {
-                  "url": "http://northshoresoapworks.com/getCategories.php",
+                  "url": "https://northshoresoapworks.com/getCategories.php",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 4608,
@@ -3595,7 +3595,7 @@
         ],
         "items": [
           {
-            "url": "http://northshoresoapworks.com/images/white_bg_logo.jpg",
+            "url": "https://northshoresoapworks.com/images/white_bg_logo.jpg",
             "node": {
               "type": "node",
               "lhId": "1-195-IMG",
@@ -3609,12 +3609,12 @@
                 "width": 334,
                 "height": 84
               },
-              "snippet": "<img src=\"http://northshoresoapworks.com/images/white_bg_logo.jpg\" alt=\"Northshore logo\" class=\"footer-logo\">",
+              "snippet": "<img src=\"https://northshoresoapworks.com/images/white_bg_logo.jpg\" alt=\"Northshore logo\" class=\"footer-logo\">",
               "nodeLabel": "Northshore logo"
             }
           },
           {
-            "url": "http://northshoresoapworks.com/images/bird.png",
+            "url": "https://northshoresoapworks.com/images/bird.png",
             "node": {
               "type": "node",
               "lhId": "1-94-IMG",
@@ -3628,7 +3628,7 @@
                 "width": 50,
                 "height": 32
               },
-              "snippet": "<img src=\"http://northshoresoapworks.com/images/bird.png\" alt=\"North Shore Soap Works\" class=\"logo-link-img\" width=\"100%\" height=\"auto\">",
+              "snippet": "<img src=\"https://northshoresoapworks.com/images/bird.png\" alt=\"North Shore Soap Works\" class=\"logo-link-img\" width=\"100%\" height=\"auto\">",
               "nodeLabel": "North Shore Soap Works"
             }
           }
@@ -3699,7 +3699,7 @@
           "type": "debugdata",
           "initiatorPath": [
             {
-              "url": "http://northshoresoapworks.com/images/category_bg.png",
+              "url": "https://northshoresoapworks.com/images/category_bg.png",
               "initiatorType": "fallbackToMain"
             },
             {
@@ -8526,7 +8526,7 @@
             "totalBytes": 348876
           },
           {
-            "url": "http://northshoresoapworks.com/images/makingsoap/factory.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/factory.png",
             "totalBytes": 344905
           },
           {
@@ -8609,10 +8609,10 @@
                 "width": 334,
                 "height": 84
               },
-              "snippet": "<img src=\"http://northshoresoapworks.com/images/white_bg_logo.jpg\" alt=\"Northshore logo\" class=\"footer-logo\">",
+              "snippet": "<img src=\"https://northshoresoapworks.com/images/white_bg_logo.jpg\" alt=\"Northshore logo\" class=\"footer-logo\">",
               "nodeLabel": "Northshore logo"
             },
-            "url": "http://northshoresoapworks.com/images/white_bg_logo.jpg",
+            "url": "https://northshoresoapworks.com/images/white_bg_logo.jpg",
             "requestStartTime": 302477507.247,
             "totalBytes": 212978,
             "wastedBytes": 212978,
@@ -8980,10 +8980,10 @@
                 "width": 242,
                 "height": 144
               },
-              "snippet": "<img alt=\"Soap Factory. This is where the soaps made.\" src=\"http://northshoresoapworks.com/images/makingsoap/factory.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
+              "snippet": "<img alt=\"Soap Factory. This is where the soaps made.\" src=\"https://northshoresoapworks.com/images/makingsoap/factory.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
               "nodeLabel": "Soap Factory. This is where the soaps made."
             },
-            "url": "http://northshoresoapworks.com/images/makingsoap/factory.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/factory.png",
             "fromProtocol": true,
             "isCrossOrigin": true,
             "totalBytes": 344364,
@@ -9004,10 +9004,10 @@
                 "width": 242,
                 "height": 144
               },
-              "snippet": "<img alt=\"This is how our professional soap makers decorate the soap\" src=\"http://northshoresoapworks.com/images/makingsoap/decorate.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
+              "snippet": "<img alt=\"This is how our professional soap makers decorate the soap\" src=\"https://northshoresoapworks.com/images/makingsoap/decorate.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
               "nodeLabel": "This is how our professional soap makers decorate the soap"
             },
-            "url": "http://northshoresoapworks.com/images/makingsoap/decorate.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/decorate.png",
             "fromProtocol": false,
             "isCrossOrigin": true,
             "totalBytes": 296315,
@@ -9028,10 +9028,10 @@
                 "width": 242,
                 "height": 144
               },
-              "snippet": "<img alt=\"This is the adding of the scents to the soap\" src=\"http://northshoresoapworks.com/images/makingsoap/Scent.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
+              "snippet": "<img alt=\"This is the adding of the scents to the soap\" src=\"https://northshoresoapworks.com/images/makingsoap/Scent.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
               "nodeLabel": "This is the adding of the scents to the soap"
             },
-            "url": "http://northshoresoapworks.com/images/makingsoap/Scent.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/Scent.png",
             "fromProtocol": false,
             "isCrossOrigin": true,
             "totalBytes": 294042,
@@ -9052,10 +9052,10 @@
                 "width": 242,
                 "height": 144
               },
-              "snippet": "<img alt=\"This is the mixing of the soap ingredients\" src=\"http://northshoresoapworks.com/images/makingsoap/stir.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
+              "snippet": "<img alt=\"This is the mixing of the soap ingredients\" src=\"https://northshoresoapworks.com/images/makingsoap/stir.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
               "nodeLabel": "This is the mixing of the soap ingredients"
             },
-            "url": "http://northshoresoapworks.com/images/makingsoap/stir.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/stir.png",
             "fromProtocol": false,
             "isCrossOrigin": true,
             "totalBytes": 292160,
@@ -9076,10 +9076,10 @@
                 "width": 242,
                 "height": 144
               },
-              "snippet": "<img alt=\"This is how we pour out soap into the soap molds\" src=\"http://northshoresoapworks.com/images/makingsoap/Pour.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
+              "snippet": "<img alt=\"This is how we pour out soap into the soap molds\" src=\"https://northshoresoapworks.com/images/makingsoap/Pour.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
               "nodeLabel": "This is how we pour out soap into the soap molds"
             },
-            "url": "http://northshoresoapworks.com/images/makingsoap/Pour.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/Pour.png",
             "fromProtocol": false,
             "isCrossOrigin": true,
             "totalBytes": 283439,
@@ -9148,10 +9148,10 @@
                 "width": 242,
                 "height": 144
               },
-              "snippet": "<img alt=\"If the soap calls for it, we can stamp it with our logo, or name of the so…\" src=\"http://northshoresoapworks.com/images/makingsoap/stano.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
+              "snippet": "<img alt=\"If the soap calls for it, we can stamp it with our logo, or name of the so…\" src=\"https://northshoresoapworks.com/images/makingsoap/stano.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
               "nodeLabel": "If the soap calls for it, we can stamp it with our logo, or name of the soap"
             },
-            "url": "http://northshoresoapworks.com/images/makingsoap/stano.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/stano.png",
             "fromProtocol": false,
             "isCrossOrigin": true,
             "totalBytes": 268100,
@@ -9412,10 +9412,10 @@
                 "width": 242,
                 "height": 144
               },
-              "snippet": "<img alt=\"Next is cutting the soap into pieces\" src=\"http://northshoresoapworks.com/images/makingsoap/cut.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
+              "snippet": "<img alt=\"Next is cutting the soap into pieces\" src=\"https://northshoresoapworks.com/images/makingsoap/cut.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
               "nodeLabel": "Next is cutting the soap into pieces"
             },
-            "url": "http://northshoresoapworks.com/images/makingsoap/cut.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/cut.png",
             "fromProtocol": false,
             "isCrossOrigin": true,
             "totalBytes": 243564,
@@ -9508,10 +9508,10 @@
                 "width": 242,
                 "height": 144
               },
-              "snippet": "<img alt=\"finally the end result!\" src=\"http://northshoresoapworks.com/images/makingsoap/cutsoap.jpg\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
+              "snippet": "<img alt=\"finally the end result!\" src=\"https://northshoresoapworks.com/images/makingsoap/cutsoap.jpg\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
               "nodeLabel": "finally the end result!"
             },
-            "url": "http://northshoresoapworks.com/images/makingsoap/cutsoap.jpg",
+            "url": "https://northshoresoapworks.com/images/makingsoap/cutsoap.jpg",
             "fromProtocol": false,
             "isCrossOrigin": true,
             "totalBytes": 57844,
@@ -9532,10 +9532,10 @@
                 "width": 334,
                 "height": 84
               },
-              "snippet": "<img src=\"http://northshoresoapworks.com/images/white_bg_logo.jpg\" alt=\"Northshore logo\" class=\"footer-logo\">",
+              "snippet": "<img src=\"https://northshoresoapworks.com/images/white_bg_logo.jpg\" alt=\"Northshore logo\" class=\"footer-logo\">",
               "nodeLabel": "Northshore logo"
             },
-            "url": "http://northshoresoapworks.com/images/white_bg_logo.jpg",
+            "url": "https://northshoresoapworks.com/images/white_bg_logo.jpg",
             "fromProtocol": false,
             "isCrossOrigin": true,
             "totalBytes": 212978,
@@ -9956,10 +9956,10 @@
                 "width": 242,
                 "height": 144
               },
-              "snippet": "<img alt=\"finally the end result!\" src=\"http://northshoresoapworks.com/images/makingsoap/cutsoap.jpg\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
+              "snippet": "<img alt=\"finally the end result!\" src=\"https://northshoresoapworks.com/images/makingsoap/cutsoap.jpg\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
               "nodeLabel": "finally the end result!"
             },
-            "url": "http://northshoresoapworks.com/images/makingsoap/cutsoap.jpg",
+            "url": "https://northshoresoapworks.com/images/makingsoap/cutsoap.jpg",
             "fromProtocol": false,
             "isCrossOrigin": true,
             "totalBytes": 57844,
@@ -10725,10 +10725,10 @@
                 "width": 242,
                 "height": 144
               },
-              "snippet": "<img alt=\"Soap Factory. This is where the soaps made.\" src=\"http://northshoresoapworks.com/images/makingsoap/factory.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
+              "snippet": "<img alt=\"Soap Factory. This is where the soaps made.\" src=\"https://northshoresoapworks.com/images/makingsoap/factory.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
               "nodeLabel": "Soap Factory. This is where the soaps made."
             },
-            "url": "http://northshoresoapworks.com/images/makingsoap/factory.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/factory.png",
             "totalBytes": 344364,
             "wastedBytes": 99356,
             "wastedPercent": 28.852
@@ -10747,10 +10747,10 @@
                 "width": 242,
                 "height": 144
               },
-              "snippet": "<img alt=\"This is how our professional soap makers decorate the soap\" src=\"http://northshoresoapworks.com/images/makingsoap/decorate.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
+              "snippet": "<img alt=\"This is how our professional soap makers decorate the soap\" src=\"https://northshoresoapworks.com/images/makingsoap/decorate.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
               "nodeLabel": "This is how our professional soap makers decorate the soap"
             },
-            "url": "http://northshoresoapworks.com/images/makingsoap/decorate.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/decorate.png",
             "totalBytes": 296315,
             "wastedBytes": 85493,
             "wastedPercent": 28.852
@@ -10769,10 +10769,10 @@
                 "width": 242,
                 "height": 144
               },
-              "snippet": "<img alt=\"This is the adding of the scents to the soap\" src=\"http://northshoresoapworks.com/images/makingsoap/Scent.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
+              "snippet": "<img alt=\"This is the adding of the scents to the soap\" src=\"https://northshoresoapworks.com/images/makingsoap/Scent.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
               "nodeLabel": "This is the adding of the scents to the soap"
             },
-            "url": "http://northshoresoapworks.com/images/makingsoap/Scent.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/Scent.png",
             "totalBytes": 294042,
             "wastedBytes": 84837,
             "wastedPercent": 28.852
@@ -10791,10 +10791,10 @@
                 "width": 242,
                 "height": 144
               },
-              "snippet": "<img alt=\"This is the mixing of the soap ingredients\" src=\"http://northshoresoapworks.com/images/makingsoap/stir.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
+              "snippet": "<img alt=\"This is the mixing of the soap ingredients\" src=\"https://northshoresoapworks.com/images/makingsoap/stir.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
               "nodeLabel": "This is the mixing of the soap ingredients"
             },
-            "url": "http://northshoresoapworks.com/images/makingsoap/stir.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/stir.png",
             "totalBytes": 292160,
             "wastedBytes": 84294,
             "wastedPercent": 28.852
@@ -10813,10 +10813,10 @@
                 "width": 242,
                 "height": 144
               },
-              "snippet": "<img alt=\"This is how we pour out soap into the soap molds\" src=\"http://northshoresoapworks.com/images/makingsoap/Pour.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
+              "snippet": "<img alt=\"This is how we pour out soap into the soap molds\" src=\"https://northshoresoapworks.com/images/makingsoap/Pour.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
               "nodeLabel": "This is how we pour out soap into the soap molds"
             },
-            "url": "http://northshoresoapworks.com/images/makingsoap/Pour.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/Pour.png",
             "totalBytes": 283439,
             "wastedBytes": 81778,
             "wastedPercent": 28.852
@@ -10835,10 +10835,10 @@
                 "width": 242,
                 "height": 144
               },
-              "snippet": "<img alt=\"If the soap calls for it, we can stamp it with our logo, or name of the so…\" src=\"http://northshoresoapworks.com/images/makingsoap/stano.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
+              "snippet": "<img alt=\"If the soap calls for it, we can stamp it with our logo, or name of the so…\" src=\"https://northshoresoapworks.com/images/makingsoap/stano.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
               "nodeLabel": "If the soap calls for it, we can stamp it with our logo, or name of the soap"
             },
-            "url": "http://northshoresoapworks.com/images/makingsoap/stano.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/stano.png",
             "totalBytes": 268100,
             "wastedBytes": 77352,
             "wastedPercent": 28.852
@@ -10857,10 +10857,10 @@
                 "width": 242,
                 "height": 144
               },
-              "snippet": "<img alt=\"Next is cutting the soap into pieces\" src=\"http://northshoresoapworks.com/images/makingsoap/cut.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
+              "snippet": "<img alt=\"Next is cutting the soap into pieces\" src=\"https://northshoresoapworks.com/images/makingsoap/cut.png\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
               "nodeLabel": "Next is cutting the soap into pieces"
             },
-            "url": "http://northshoresoapworks.com/images/makingsoap/cut.png",
+            "url": "https://northshoresoapworks.com/images/makingsoap/cut.png",
             "totalBytes": 243564,
             "wastedBytes": 70273,
             "wastedPercent": 28.852
@@ -10879,10 +10879,10 @@
                 "width": 242,
                 "height": 144
               },
-              "snippet": "<img alt=\"finally the end result!\" src=\"http://northshoresoapworks.com/images/makingsoap/cutsoap.jpg\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
+              "snippet": "<img alt=\"finally the end result!\" src=\"https://northshoresoapworks.com/images/makingsoap/cutsoap.jpg\" class=\"soap-carousel-images \" loading=\"lazy\" width=\"242px\" height=\"144px\">",
               "nodeLabel": "finally the end result!"
             },
-            "url": "http://northshoresoapworks.com/images/makingsoap/cutsoap.jpg",
+            "url": "https://northshoresoapworks.com/images/makingsoap/cutsoap.jpg",
             "totalBytes": 57844,
             "wastedBytes": 16689,
             "wastedPercent": 28.852
@@ -10901,10 +10901,10 @@
                 "width": 50,
                 "height": 32
               },
-              "snippet": "<img src=\"http://northshoresoapworks.com/images/bird.png\" alt=\"North Shore Soap Works\" class=\"logo-link-img\" width=\"100%\" height=\"auto\">",
+              "snippet": "<img src=\"https://northshoresoapworks.com/images/bird.png\" alt=\"North Shore Soap Works\" class=\"logo-link-img\" width=\"100%\" height=\"auto\">",
               "nodeLabel": "North Shore Soap Works"
             },
-            "url": "http://northshoresoapworks.com/images/bird.png",
+            "url": "https://northshoresoapworks.com/images/bird.png",
             "totalBytes": 15556,
             "wastedBytes": 14844,
             "wastedPercent": 95.42569081404034
@@ -11312,55 +11312,55 @@
         "items": [
           {
             "protocol": "http/1.1",
-            "url": "http://northshoresoapworks.com/getItems.php"
+            "url": "https://northshoresoapworks.com/getItems.php"
           },
           {
             "protocol": "http/1.1",
-            "url": "http://northshoresoapworks.com/getCategories.php"
+            "url": "https://northshoresoapworks.com/getCategories.php"
           },
           {
             "protocol": "http/1.1",
-            "url": "http://northshoresoapworks.com/images/bird.png"
+            "url": "https://northshoresoapworks.com/images/bird.png"
           },
           {
             "protocol": "http/1.1",
-            "url": "http://northshoresoapworks.com/images/white_bg_logo.jpg"
+            "url": "https://northshoresoapworks.com/images/white_bg_logo.jpg"
           },
           {
             "protocol": "http/1.1",
-            "url": "http://northshoresoapworks.com/images/category_bg.png"
+            "url": "https://northshoresoapworks.com/images/category_bg.png"
           },
           {
             "protocol": "http/1.1",
-            "url": "http://northshoresoapworks.com/images/makingsoap/factory.png"
+            "url": "https://northshoresoapworks.com/images/makingsoap/factory.png"
           },
           {
             "protocol": "http/1.1",
-            "url": "http://northshoresoapworks.com/images/makingsoap/stir.png"
+            "url": "https://northshoresoapworks.com/images/makingsoap/stir.png"
           },
           {
             "protocol": "http/1.1",
-            "url": "http://northshoresoapworks.com/images/makingsoap/Pour.png"
+            "url": "https://northshoresoapworks.com/images/makingsoap/Pour.png"
           },
           {
             "protocol": "http/1.1",
-            "url": "http://northshoresoapworks.com/images/makingsoap/Scent.png"
+            "url": "https://northshoresoapworks.com/images/makingsoap/Scent.png"
           },
           {
             "protocol": "http/1.1",
-            "url": "http://northshoresoapworks.com/images/makingsoap/decorate.png"
+            "url": "https://northshoresoapworks.com/images/makingsoap/decorate.png"
           },
           {
             "protocol": "http/1.1",
-            "url": "http://northshoresoapworks.com/images/makingsoap/cut.png"
+            "url": "https://northshoresoapworks.com/images/makingsoap/cut.png"
           },
           {
             "protocol": "http/1.1",
-            "url": "http://northshoresoapworks.com/images/makingsoap/stano.png"
+            "url": "https://northshoresoapworks.com/images/makingsoap/stano.png"
           },
           {
             "protocol": "http/1.1",
-            "url": "http://northshoresoapworks.com/images/makingsoap/cutsoap.jpg"
+            "url": "https://northshoresoapworks.com/images/makingsoap/cutsoap.jpg"
           },
           {
             "protocol": "http/1.1",
@@ -12655,7 +12655,7 @@
     {
       "name": "northshoresoapworks.com",
       "origins": [
-        "http://northshoresoapworks.com"
+        "https://northshoresoapworks.com"
       ],
       "isUnrecognized": true
     },

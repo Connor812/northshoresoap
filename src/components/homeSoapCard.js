@@ -13,7 +13,7 @@ function HomeSoapCard({ soap, related_objects, index }) {
         const imageObject = related_objects.find(obj => obj.id === imageId);
         imageUrl = imageObject.image_data.url;
     } else {
-        imageUrl = "http://northshoresoapworks.com/images/replacement-image.png";
+        imageUrl = "https://northshoresoapworks.com/images/replacement-image.png";
     }
 
     return (

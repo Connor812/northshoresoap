@@ -1,6 +1,6 @@
 .display-items-wrapper {
     width: 100%;
-    background-image: url("http://northshoresoapworks.com/images/category_bg.png");
+    background-image: url("https://northshoresoapworks.com/images/category_bg.png");
     background-repeat: repeat;
     color: var(--mocha);
     flex: 1;
@@ -232,7 +232,7 @@
 
 .loading-spinner {
     width: 100%;
-    background-image: url("http://northshoresoapworks.com/images/category_bg.png");
+    background-image: url("https://northshoresoapworks.com/images/category_bg.png");
     background-repeat: repeat;
     flex: 1;
     display: flex;

@@ -40,31 +40,31 @@
         ],
         "items": [
           {
-            "url": "http://northshoresoapworks.com/getItems.php",
+            "url": "https://northshoresoapworks.com/getItems.php",
             "resolution": "Allowed"
           },
           {
-            "url": "http://northshoresoapworks.com/getCategories.php",
+            "url": "https://northshoresoapworks.com/getCategories.php",
             "resolution": "Allowed"
           },
           {
-            "url": "http://northshoresoapworks.com/images/bird.png",
+            "url": "https://northshoresoapworks.com/images/bird.png",
             "resolution": "Allowed"
           },
           {
-            "url": "http://northshoresoapworks.com/images/white_bg_logo.jpg",
+            "url": "https://northshoresoapworks.com/images/white_bg_logo.jpg",
             "resolution": "Allowed"
           },
           {
-            "url": "http://northshoresoapworks.com/images/category_bg.png",
+            "url": "https://northshoresoapworks.com/images/category_bg.png",
             "resolution": "Allowed"
           },
           {
-            "url": "http://northshoresoapworks.com/images/logo-black.jpg",
+            "url": "https://northshoresoapworks.com/images/logo-black.jpg",
             "resolution": "Allowed"
           },
           {
-            "url": "http://northshoresoapworks.com/images/replacement-image.png",
+            "url": "https://northshoresoapworks.com/images/replacement-image.png",
             "resolution": "Allowed"
           }
         ]
@@ -646,7 +646,7 @@
             "doRatiosMatch": false
           },
           {
-            "url": "http://northshoresoapworks.com/images/replacement-image.png",
+            "url": "https://northshoresoapworks.com/images/replacement-image.png",
             "node": {
               "type": "node",
               "lhId": "1-77-IMG",
@@ -660,7 +660,7 @@
                 "width": 0,
                 "height": 0
               },
-              "snippet": "<img alt=\"Lovefresh Vanilla and Orange Everyday Wash\" src=\"http://northshoresoapworks.com/images/replacement-image.png\" class=\"soap-image-modal\" loading=\"lazy\" width=\"300px\" height=\"auto\">",
+              "snippet": "<img alt=\"Lovefresh Vanilla and Orange Everyday Wash\" src=\"https://northshoresoapworks.com/images/replacement-image.png\" class=\"soap-image-modal\" loading=\"lazy\" width=\"300px\" height=\"auto\">",
               "nodeLabel": "Lovefresh Vanilla and Orange Everyday Wash"
             },
             "displayedAspectRatio": "300 x 161\n        (1.86)",
@@ -874,7 +874,7 @@
         ],
         "items": [
           {
-            "url": "http://northshoresoapworks.com",
+            "url": "https://northshoresoapworks.com",
             "wastedMs": 162.39525
           }
         ],
@@ -1027,7 +1027,7 @@
             "entity": "localhost"
           },
           {
-            "url": "http://northshoresoapworks.com/getItems.php",
+            "url": "https://northshoresoapworks.com/getItems.php",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1791.8449999690056,
@@ -1044,7 +1044,7 @@
             "entity": "northshoresoapworks.com"
           },
           {
-            "url": "http://northshoresoapworks.com/getCategories.php",
+            "url": "https://northshoresoapworks.com/getCategories.php",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1792.4390000104904,
@@ -1061,7 +1061,7 @@
             "entity": "northshoresoapworks.com"
           },
           {
-            "url": "http://northshoresoapworks.com/getItems.php",
+            "url": "https://northshoresoapworks.com/getItems.php",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1795.436999976635,
@@ -1078,7 +1078,7 @@
             "entity": "northshoresoapworks.com"
           },
           {
-            "url": "http://northshoresoapworks.com/getCategories.php",
+            "url": "https://northshoresoapworks.com/getCategories.php",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1795.9169999957085,
@@ -1095,7 +1095,7 @@
             "entity": "northshoresoapworks.com"
           },
           {
-            "url": "http://northshoresoapworks.com/images/bird.png",
+            "url": "https://northshoresoapworks.com/images/bird.png",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1800.1420000195503,
@@ -1112,7 +1112,7 @@
             "entity": "northshoresoapworks.com"
           },
           {
-            "url": "http://northshoresoapworks.com/images/white_bg_logo.jpg",
+            "url": "https://northshoresoapworks.com/images/white_bg_logo.jpg",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1800.57800000906,
@@ -1145,7 +1145,7 @@
             "experimentalFromMainFrame": true
           },
           {
-            "url": "http://northshoresoapworks.com/images/category_bg.png",
+            "url": "https://northshoresoapworks.com/images/category_bg.png",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1807.598000049591,
@@ -1162,7 +1162,7 @@
             "entity": "northshoresoapworks.com"
           },
           {
-            "url": "http://northshoresoapworks.com/images/logo-black.jpg",
+            "url": "https://northshoresoapworks.com/images/logo-black.jpg",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 1822.2469999790192,
@@ -1281,7 +1281,7 @@
             "entity": "Amazon Web Services"
           },
           {
-            "url": "http://northshoresoapworks.com/images/replacement-image.png",
+            "url": "https://northshoresoapworks.com/images/replacement-image.png",
             "sessionTargetType": "page",
             "protocol": "http/1.1",
             "rendererStartTime": 2423.400000035763,
@@ -1419,7 +1419,7 @@
             "rtt": 72.56400000000001
           },
           {
-            "origin": "http://northshoresoapworks.com",
+            "origin": "https://northshoresoapworks.com",
             "rtt": 12.471
           },
           {
@@ -1462,7 +1462,7 @@
             "serverResponseTime": 84.602
           },
           {
-            "origin": "http://northshoresoapworks.com",
+            "origin": "https://northshoresoapworks.com",
             "serverResponseTime": 7.533000000000001
           },
           {
@@ -1841,49 +1841,49 @@
               "type": "subitems",
               "items": [
                 {
-                  "url": "http://northshoresoapworks.com/getItems.php",
+                  "url": "https://northshoresoapworks.com/getItems.php",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 409016,
                   "tbtImpact": 0
                 },
                 {
-                  "url": "http://northshoresoapworks.com/images/white_bg_logo.jpg",
+                  "url": "https://northshoresoapworks.com/images/white_bg_logo.jpg",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 213520,
                   "tbtImpact": 0
                 },
                 {
-                  "url": "http://northshoresoapworks.com/images/category_bg.png",
+                  "url": "https://northshoresoapworks.com/images/category_bg.png",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 68870,
                   "tbtImpact": 0
                 },
                 {
-                  "url": "http://northshoresoapworks.com/images/logo-black.jpg",
+                  "url": "https://northshoresoapworks.com/images/logo-black.jpg",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 35932,
                   "tbtImpact": 0
                 },
                 {
-                  "url": "http://northshoresoapworks.com/images/bird.png",
+                  "url": "https://northshoresoapworks.com/images/bird.png",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 16095,
                   "tbtImpact": 0
                 },
                 {
-                  "url": "http://northshoresoapworks.com/images/replacement-image.png",
+                  "url": "https://northshoresoapworks.com/images/replacement-image.png",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 11891,
                   "tbtImpact": 0
                 },
                 {
-                  "url": "http://northshoresoapworks.com/getCategories.php",
+                  "url": "https://northshoresoapworks.com/getCategories.php",
                   "mainThreadTime": 0,
                   "blockingTime": 0,
                   "transferSize": 4608,
@@ -2311,7 +2311,7 @@
         ],
         "items": [
           {
-            "url": "http://northshoresoapworks.com/images/white_bg_logo.jpg",
+            "url": "https://northshoresoapworks.com/images/white_bg_logo.jpg",
             "node": {
               "type": "node",
               "lhId": "1-87-IMG",
@@ -2325,12 +2325,12 @@
                 "width": 334,
                 "height": 84
               },
-              "snippet": "<img src=\"http://northshoresoapworks.com/images/white_bg_logo.jpg\" alt=\"Northshore logo\" class=\"footer-logo\">",
+              "snippet": "<img src=\"https://northshoresoapworks.com/images/white_bg_logo.jpg\" alt=\"Northshore logo\" class=\"footer-logo\">",
               "nodeLabel": "Northshore logo"
             }
           },
           {
-            "url": "http://northshoresoapworks.com/images/bird.png",
+            "url": "https://northshoresoapworks.com/images/bird.png",
             "node": {
               "type": "node",
               "lhId": "1-74-IMG",
@@ -2344,12 +2344,12 @@
                 "width": 50,
                 "height": 32
               },
-              "snippet": "<img src=\"http://northshoresoapworks.com/images/bird.png\" alt=\"North Shore Soap Works\" class=\"logo-link-img\" width=\"100%\" height=\"auto\">",
+              "snippet": "<img src=\"https://northshoresoapworks.com/images/bird.png\" alt=\"North Shore Soap Works\" class=\"logo-link-img\" width=\"100%\" height=\"auto\">",
               "nodeLabel": "North Shore Soap Works"
             }
           },
           {
-            "url": "http://northshoresoapworks.com/images/logo-black.jpg",
+            "url": "https://northshoresoapworks.com/images/logo-black.jpg",
             "node": {
               "type": "node",
               "lhId": "1-86-IMG",
@@ -2363,7 +2363,7 @@
                 "width": 350,
                 "height": 69
               },
-              "snippet": "<img loading=\"lazy\" src=\"http://northshoresoapworks.com/images/logo-black.jpg\" class=\"checkout-logo\" alt=\"Logo\">",
+              "snippet": "<img loading=\"lazy\" src=\"https://northshoresoapworks.com/images/logo-black.jpg\" class=\"checkout-logo\" alt=\"Logo\">",
               "nodeLabel": "Logo"
             }
           }
@@ -2434,7 +2434,7 @@
           "type": "debugdata",
           "initiatorPath": [
             {
-              "url": "http://northshoresoapworks.com/images/category_bg.png",
+              "url": "https://northshoresoapworks.com/images/category_bg.png",
               "initiatorType": "fallbackToMain"
             },
             {
@@ -6587,7 +6587,7 @@
                 "width": 210,
                 "height": 140
               },
-              "snippet": "<img alt=\"Lovefresh Vanilla and Orange Everyday Wash\" src=\"http://northshoresoapworks.com/images/replacement-image.png\" class=\"soap-card-img \" loading=\"lazy\" width=\"210px\" height=\"140px\">",
+              "snippet": "<img alt=\"Lovefresh Vanilla and Orange Everyday Wash\" src=\"https://northshoresoapworks.com/images/replacement-image.png\" class=\"soap-card-img \" loading=\"lazy\" width=\"210px\" height=\"140px\">",
               "nodeLabel": "Lovefresh Vanilla and Orange Everyday Wash",
               "explanation": "Fix all of the following:\n  Element contains <img> element with alt text that duplicates existing text"
             }
@@ -7160,7 +7160,7 @@
             "totalBytes": 298905
           },
           {
-            "url": "http://northshoresoapworks.com/images/white_bg_logo.jpg",
+            "url": "https://northshoresoapworks.com/images/white_bg_logo.jpg",
             "totalBytes": 213520
           },
           {
@@ -7168,11 +7168,11 @@
             "totalBytes": 206614
           },
           {
-            "url": "http://northshoresoapworks.com/getItems.php",
+            "url": "https://northshoresoapworks.com/getItems.php",
             "totalBytes": 204508
           },
           {
-            "url": "http://northshoresoapworks.com/getItems.php",
+            "url": "https://northshoresoapworks.com/getItems.php",
             "totalBytes": 204508
           },
           {
@@ -7623,10 +7623,10 @@
                 "width": 334,
                 "height": 84
               },
-              "snippet": "<img src=\"http://northshoresoapworks.com/images/white_bg_logo.jpg\" alt=\"Northshore logo\" class=\"footer-logo\">",
+              "snippet": "<img src=\"https://northshoresoapworks.com/images/white_bg_logo.jpg\" alt=\"Northshore logo\" class=\"footer-logo\">",
               "nodeLabel": "Northshore logo"
             },
-            "url": "http://northshoresoapworks.com/images/white_bg_logo.jpg",
+            "url": "https://northshoresoapworks.com/images/white_bg_logo.jpg",
             "fromProtocol": true,
             "isCrossOrigin": true,
             "totalBytes": 212978,
@@ -7679,10 +7679,10 @@
                 "width": 350,
                 "height": 69
               },
-              "snippet": "<img loading=\"lazy\" src=\"http://northshoresoapworks.com/images/logo-black.jpg\" class=\"checkout-logo\" alt=\"Logo\">",
+              "snippet": "<img loading=\"lazy\" src=\"https://northshoresoapworks.com/images/logo-black.jpg\" class=\"checkout-logo\" alt=\"Logo\">",
               "nodeLabel": "Logo"
             },
-            "url": "http://northshoresoapworks.com/images/logo-black.jpg",
+            "url": "https://northshoresoapworks.com/images/logo-black.jpg",
             "fromProtocol": false,
             "isCrossOrigin": true,
             "totalBytes": 35392,
@@ -7768,10 +7768,10 @@
                 "width": 334,
                 "height": 84
               },
-              "snippet": "<img src=\"http://northshoresoapworks.com/images/white_bg_logo.jpg\" alt=\"Northshore logo\" class=\"footer-logo\">",
+              "snippet": "<img src=\"https://northshoresoapworks.com/images/white_bg_logo.jpg\" alt=\"Northshore logo\" class=\"footer-logo\">",
               "nodeLabel": "Northshore logo"
             },
-            "url": "http://northshoresoapworks.com/images/white_bg_logo.jpg",
+            "url": "https://northshoresoapworks.com/images/white_bg_logo.jpg",
             "fromProtocol": true,
             "isCrossOrigin": true,
             "totalBytes": 212978,
@@ -7844,10 +7844,10 @@
                 "width": 350,
                 "height": 69
               },
-              "snippet": "<img loading=\"lazy\" src=\"http://northshoresoapworks.com/images/logo-black.jpg\" class=\"checkout-logo\" alt=\"Logo\">",
+              "snippet": "<img loading=\"lazy\" src=\"https://northshoresoapworks.com/images/logo-black.jpg\" class=\"checkout-logo\" alt=\"Logo\">",
               "nodeLabel": "Logo"
             },
-            "url": "http://northshoresoapworks.com/images/logo-black.jpg",
+            "url": "https://northshoresoapworks.com/images/logo-black.jpg",
             "fromProtocol": false,
             "isCrossOrigin": true,
             "totalBytes": 35392,
@@ -8064,10 +8064,10 @@
                 "width": 50,
                 "height": 32
               },
-              "snippet": "<img src=\"http://northshoresoapworks.com/images/bird.png\" alt=\"North Shore Soap Works\" class=\"logo-link-img\" width=\"100%\" height=\"auto\">",
+              "snippet": "<img src=\"https://northshoresoapworks.com/images/bird.png\" alt=\"North Shore Soap Works\" class=\"logo-link-img\" width=\"100%\" height=\"auto\">",
               "nodeLabel": "North Shore Soap Works"
             },
-            "url": "http://northshoresoapworks.com/images/bird.png",
+            "url": "https://northshoresoapworks.com/images/bird.png",
             "totalBytes": 15556,
             "wastedBytes": 14844,
             "wastedPercent": 95.42569081404034
@@ -8086,10 +8086,10 @@
                 "width": 350,
                 "height": 69
               },
-              "snippet": "<img loading=\"lazy\" src=\"http://northshoresoapworks.com/images/logo-black.jpg\" class=\"checkout-logo\" alt=\"Logo\">",
+              "snippet": "<img loading=\"lazy\" src=\"https://northshoresoapworks.com/images/logo-black.jpg\" class=\"checkout-logo\" alt=\"Logo\">",
               "nodeLabel": "Logo"
             },
-            "url": "http://northshoresoapworks.com/images/logo-black.jpg",
+            "url": "https://northshoresoapworks.com/images/logo-black.jpg",
             "totalBytes": 35392,
             "wastedBytes": 7474,
             "wastedPercent": 21.11637443438914
@@ -9700,7 +9700,7 @@
     {
       "name": "northshoresoapworks.com",
       "origins": [
-        "http://northshoresoapworks.com"
+        "https://northshoresoapworks.com"
       ],
       "isUnrecognized": true
     },

@@ -2,12 +2,13 @@ import React, { useState, useContext, useMemo } from "react";
 import { DataContext } from "../hooks/dataContext.js";
 import Payment from "./payment.js";
 import CheckoutCartItem from "../components/checkoutCartItem.js";
-import "../assets/css/checkout.css";
 import AddressForm from "../components/addressForm";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomeSoapCard from "../components/homeSoapCard.js";
 import Spinner from 'react-bootstrap/Spinner';
+
+import "../assets/css/checkout.css";
 
 function Checkout() {
     const {
@@ -181,7 +182,7 @@ function Checkout() {
         paymentBtn.innerHTML = loadingSpinner;
         paymentBtn.disabled = true;
 
-        fetch("http://northshoresoapworks.com/createOrder.php", {
+        fetch("https://northshoresoapworks.com/createOrder.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -298,7 +299,7 @@ function Checkout() {
             name: "Gift Wrap",
             quantity: 1,
             price: 600,
-            imageUrl: "http://northshoresoapworks.com/images/gift-wrap.jpg",
+            imageUrl: "https://northshoresoapworks.com/images/gift-wrap.jpg",
             description: "Add a gift wrap to your order"
         };
 
@@ -347,7 +348,7 @@ function Checkout() {
                         </div>
                         <div>
                             <img loading="lazy"
-                                src="http://northshoresoapworks.com/images/bird.jpg"
+                                src="https://northshoresoapworks.com/images/bird.jpg"
                                 width="120px"
                                 alt="bird"
                                 className="checkout-bird-img"
@@ -363,22 +364,24 @@ function Checkout() {
                     </Row>
                     <hr />
                     <div className="checkout-cart-list">
-                        {cartItems.map((item, index) => {
-                            return (
-                                <CheckoutCartItem
-                                    key={index}
-                                    index={index}
-                                    item={item}
-                                    cartItems={cartItems}
-                                    setCartItems={setCartItems}
-                                    subTotal={subTotal}
-                                    setSubtotal={setSubtotal}
-                                    hst={hst}
-                                    setHst={setHst}
-                                    setGrandTotal={setGrandTotal}
-                                />
-                            );
-                        })}
+                        {cartItems.length == 0
+                            ? <center>No Items In Cart</center>
+                            : cartItems.map((item, index) => {
+                                return (
+                                    <CheckoutCartItem
+                                        key={index}
+                                        index={index}
+                                        item={item}
+                                        cartItems={cartItems}
+                                        setCartItems={setCartItems}
+                                        subTotal={subTotal}
+                                        setSubtotal={setSubtotal}
+                                        hst={hst}
+                                        setHst={setHst}
+                                        setGrandTotal={setGrandTotal}
+                                    />
+                                );
+                            })}
                     </div>
                     <hr className="coupon-separator" />
                 </div>
@@ -430,7 +433,7 @@ function Checkout() {
             <div className="address-form-wrapper">
                 <div className="white-background">
                     <img loading="lazy"
-                        src="http://northshoresoapworks.com/images/logo-black.jpg"
+                        src="https://northshoresoapworks.com/images/logo-black.jpg"
                         className="checkout-logo"
                         alt="Logo"
                     />

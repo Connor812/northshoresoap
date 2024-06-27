@@ -50,7 +50,7 @@ function Footer() {
                     </Col>
                     <Col md={6} className='footer-middle-section'>
                         <center>
-                            <img src="http://northshoresoapworks.com/images/white_bg_logo.jpg" alt="Northshore logo" className="footer-logo" />
+                            <img src="https://northshoresoapworks.com/images/white_bg_logo.jpg" alt="Northshore logo" className="footer-logo" />
                         </center>
                         <div className='footer-info-container'>
                             359 MAIN STREET
