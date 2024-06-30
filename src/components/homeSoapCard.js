@@ -19,7 +19,7 @@ function HomeSoapCard({ soap, related_objects, index }) {
     return (
         <React.Fragment key={index}>
             <button data-bs-toggle="modal" data-bs-target={`#${soapIndex}`} key={id} className="soap-card">
-                <ImageComponent src={imageUrl} alt={name} className="soap-card-img" height="140px" width="210px" />
+                <ImageComponent src={imageUrl} alt="Soap" className="soap-card-img" height="140px" width="210px" />
                 <h6>{name}</h6>
             </button>
 

@@ -189,7 +189,17 @@ p {
   cursor: not-allowed;
 }
 
-.initial-modal .modal-content{
+.initial-modal .modal-dialog {
+  max-width: 800px;
+}
+
+.initial-modal .modal-content {
   background-color: var(--cream);
   color: var(--mocha);
+}
+
+@media screen and (max-width: 665px) {
+  .initial-modal img {
+    display: none;
+  }
 }

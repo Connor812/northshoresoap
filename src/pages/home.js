@@ -76,15 +76,15 @@ function Home() {
                />
             </div>
             <center className="gallery">
-               <h3>HAND MADE SOAP GALLERY</h3>
+               <h1>HAND MADE SOAP GALLERY</h1>
                <p className="arial">
                   At North Shore Soapworks we specialize in handcrafted artesian soap made on site with high-quality, ethically, sourced and sustainable ingredients. We offer a unique selection of specialty soaps along with a large selection of complementary bath and body products for both men and women as well as children and pets. We also curate a variety of gift sets to treat yourself or someone special.
 
                </p>
                <hr />
-               <h5>
+               <h2>
                   Scroll To See Our Soap Collection
-               </h5>
+               </h2>
                <section className="soap-carousel">
                   <button onClick={scrollRight} className="arrow-btn">
                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" className="bi bi-caret-left-fill" viewBox="0 0 16 16">
@@ -167,9 +167,9 @@ function Home() {
          </section>
 
          <center className="category-header">
-            <h2>
+            <h3>
                We also have a wide range of household ideas, clothing and jewelry
-            </h2>
+            </h3>
          </center>
 
          <section className="category-container">

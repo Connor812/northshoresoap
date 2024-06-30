@@ -142,3 +142,7 @@ nav ul {
 #basic-navbar-nav-btn {
     margin-left: 20px;
 }
+
+.nav-dropdown-link-container {
+    color: var(--stone) !important;
+}
