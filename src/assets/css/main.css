@@ -203,3 +203,32 @@ p {
     display: none;
   }
 }
+
+.selection-container {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.item-modal-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  max-width: 100%;
+}
+
+.option-variation-btn button{
+  background-color: var(--mocha);
+  color: var(--cream);
+  border: none;
+}
+

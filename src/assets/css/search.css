@@ -28,3 +28,25 @@
     padding-top: 20px;
     padding-top: 0;
 }
+
+.search-button {
+    margin-left: 10px;
+    background-color: var(--mocha);
+    color: var(--cream);
+    font-size: large;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 3px 3px 1px 0.1px var(--walnut);
+    transition: 200ms;
+}
+
+.search-button:hover {
+    background-color: var(--walnut);
+}
+
+.search-button svg {
+    width: 25px;
+    height: 25px;
+}

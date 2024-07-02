@@ -1,79 +1,163 @@
-[
-  {
-    "type": "ITEM",
-    "id": "R3OGKM2URYFP3DY6XFPGIIFT",
-    "updated_at": "2024-05-30T17:47:05.052Z",
-    "created_at": "2024-05-06T20:49:32.817Z",
-    "version": 1717091225052,
-    "is_deleted": false,
-    "present_at_all_locations": true,
-    "item_data": {
-      "name": "Burmese Wood soap",
-      "description": "Inspired by Myanmar's rich heritage, this artisanal bar blends Thanaka and regional botanicals for a luxurious bathing experience. Its creamy lather cleanses and hydrates, leaving skin soft and delicately scented.",
-      "is_taxable": true,
-      "visibility": "PRIVATE",
-      "available_online": false,
-      "available_for_pickup": false,
-      "available_electronically": false,
-      "tax_ids": ["PUOWK7VWBN4V34BMG7MPUQJV", "T7EHQ3OVORLK7SXXCDD7JSO5"],
-      "variations": [
-        {
-          "type": "ITEM_VARIATION",
-          "id": "TJSPVFNPROUP6PKE73RS3LFK",
-          "updated_at": "2024-05-30T17:36:54.925Z",
-          "created_at": "2024-05-06T20:49:32.817Z",
-          "version": 1717090614925,
-          "is_deleted": false,
-          "present_at_all_locations": true,
-          "item_variation_data": {
-            "item_id": "R3OGKM2URYFP3DY6XFPGIIFT",
-            "name": "Regular",
-            "ordinal": 1,
-            "pricing_type": "FIXED_PRICING",
-            "price_money": {
-              "amount": 800,
-              "currency": "CAD"
-            },
-            "location_overrides": [
-              {
-                "location_id": "L1PBJNPB892SA",
-                "track_inventory": true
-              }
-            ],
-            "track_inventory": false,
-            "sellable": true,
-            "stockable": true,
-            "channels": ["CH_aKajDW8McbvYE6PQGqdpa8FtFisZ7fiXZ8vfYRlQuYC"]
+{
+  "type": "ITEM",
+  "id": "ILYVO4MIHTGUX6Q2Z3YME3IU",
+  "updated_at": "2024-06-17T15:52:33.813Z",
+  "created_at": "2024-05-14T02:46:06.497Z",
+  "version": 1718639553813,
+  "is_deleted": false,
+  "catalog_v1_ids": [
+    {
+      "catalog_v1_id": "GITPJ5VEFHOC4LUVCDIBJLEP",
+      "location_id": "L1GH1JKM322RM"
+    }
+  ],
+  "present_at_all_locations": false,
+  "present_at_location_ids": [
+    "L1GH1JKM322RM",
+    "L1PBJNPB892SA"
+  ],
+  "item_data": {
+    "name": "Venus Lotion",
+    "description": "Our hydrating lotion is formulated for luxurious plant-based skin care. With a light and velvet soft consistency, it sinks quickly into the skin without leaving behind a greasy residue. Enriched with pure Shea, Cocoa, and Tucuma Butters for intense moisturization and rejuvenation of dry skin.\nVenus Is a warm, in-house blend of patchouli, vanilla and sandalwood.\n120g",
+    "is_taxable": true,
+    "visibility": "PRIVATE",
+    "available_online": false,
+    "available_for_pickup": false,
+    "available_electronically": false,
+    "tax_ids": [
+      "PUOWK7VWBN4V34BMG7MPUQJV",
+      "T7EHQ3OVORLK7SXXCDD7JSO5"
+    ],
+    "variations": [
+      {
+        "type": "ITEM_VARIATION",
+        "id": "24IVF4LRIYO5L4OUM72T5YHA",
+        "updated_at": "2024-06-17T15:52:33.813Z",
+        "created_at": "2024-05-14T02:46:06.497Z",
+        "version": 1718639553813,
+        "is_deleted": false,
+        "catalog_v1_ids": [
+          {
+            "catalog_v1_id": "RRZ2OLLTDW2PAYFT6VNJWE5R",
+            "location_id": "L1GH1JKM322RM"
           }
+        ],
+        "present_at_all_locations": false,
+        "present_at_location_ids": [
+          "L1GH1JKM322RM",
+          "L1PBJNPB892SA"
+        ],
+        "item_variation_data": {
+          "item_id": "ILYVO4MIHTGUX6Q2Z3YME3IU",
+          "name": "120g",
+          "ordinal": 0,
+          "pricing_type": "FIXED_PRICING",
+          "price_money": {
+            "amount": 1300,
+            "currency": "CAD"
+          },
+          "location_overrides": [
+            {
+              "location_id": "L1GH1JKM322RM",
+              "track_inventory": false
+            },
+            {
+              "location_id": "L1PBJNPB892SA",
+              "track_inventory": false
+            }
+          ],
+          "inventory_alert_type": "NONE",
+          "item_option_values": [
+            {
+              "item_option_id": "U7TKQ37IGPN43LS5Q66HO3VJ",
+              "item_option_value_id": "XLEVRWT4A3WCZK7D7DOKBSU5"
+            }
+          ],
+          "sellable": true,
+          "stockable": true
         }
-      ],
-      "product_type": "REGULAR",
-      "skip_modifier_screen": false,
-      "ecom_available": false,
-      "ecom_visibility": "UNAVAILABLE",
-      "image_ids": ["5WEYGU4IURZB6PZWZ2GCHAPK"],
-      "categories": [
-        {
-          "id": "OLETSRZV2TEPVL3SALMWIC6Y",
-          "ordinal": -2251731094208512
-        },
-        {
-          "id": "UOJEDH6UESPJWSQXWCLLZDXI",
-          "ordinal": -2251731094208512
+      },
+      {
+        "type": "ITEM_VARIATION",
+        "id": "F76KXYNGBHZHXTNPMWQXB4EO",
+        "updated_at": "2024-06-17T15:52:33.813Z",
+        "created_at": "2024-05-28T19:02:20.399Z",
+        "version": 1718639553813,
+        "is_deleted": false,
+        "catalog_v1_ids": [
+          {
+            "catalog_v1_id": "5B8AE54C-0310-427C-AD85-A238ADFF6471",
+            "location_id": "L1GH1JKM322RM"
+          }
+        ],
+        "present_at_all_locations": false,
+        "present_at_location_ids": [
+          "L1GH1JKM322RM",
+          "L1PBJNPB892SA"
+        ],
+        "item_variation_data": {
+          "item_id": "ILYVO4MIHTGUX6Q2Z3YME3IU",
+          "name": "240g",
+          "ordinal": 1,
+          "pricing_type": "FIXED_PRICING",
+          "price_money": {
+            "amount": 2200,
+            "currency": "CAD"
+          },
+          "location_overrides": [
+            {
+              "location_id": "L1GH1JKM322RM",
+              "track_inventory": false
+            },
+            {
+              "location_id": "L1PBJNPB892SA",
+              "track_inventory": false
+            }
+          ],
+          "inventory_alert_type": "NONE",
+          "item_option_values": [
+            {
+              "item_option_id": "U7TKQ37IGPN43LS5Q66HO3VJ",
+              "item_option_value_id": "HU6NSE2JUWNGAGJS7G3MBEGH"
+            }
+          ],
+          "sellable": true,
+          "stockable": true
         }
-      ],
-      "pickup_fulfillment_preferences_id": "fprefs_127zqsqcb48mbeo6diijt3o4c",
-      "delivery_fulfillment_preferences_id": "fprefs_127zqsqca37qcfgw5e1f15ejg",
-      "description_html": "<p>Inspired by Myanmar&#39;s rich heritage, this artisanal bar blends Thanaka and regional botanicals for a luxurious bathing experience. Its creamy lather cleanses and hydrates, leaving skin soft and delicately scented.</p>",
-      "description_plaintext": "Inspired by Myanmar's rich heritage, this artisanal bar blends Thanaka and regional botanicals for a luxurious bathing experience. Its creamy lather cleanses and hydrates, leaving skin soft and delicately scented.",
-      "channels": ["CH_aKajDW8McbvYE6PQGqdpa8FtFisZ7fiXZ8vfYRlQuYC"],
-      "shipping_fulfillment_preferences_id": "fprefs_127zqsqcblqxeigh4fwa7fkrg",
-      "dine_in_fulfillment_preferences_id": "fprefs_127zqsqcalkdmz3eaygyvi2u4",
-      "is_archived": true,
-      "reporting_category": {
-        "id": "OLETSRZV2TEPVL3SALMWIC6Y",
-        "ordinal": -2251731094208512
       }
+    ],
+    "product_type": "REGULAR",
+    "skip_modifier_screen": false,
+    "item_options": [
+      {
+        "item_option_id": "U7TKQ37IGPN43LS5Q66HO3VJ"
+      }
+    ],
+    "ecom_available": false,
+    "ecom_visibility": "UNINDEXED",
+    "image_ids": [
+      "FWMEO7YHM4NOFZAILMKO3CB3"
+    ],
+    "categories": [
+      {
+        "id": "QUFWJ4SGZCCMF6WWSEF7UXEI",
+        "ordinal": -2247882803511296
+      },
+      {
+        "id": "6GRGFHUVYQP47STHWWCX3ALU",
+        "ordinal": -2250631582580736
+      }
+    ],
+    "pickup_fulfillment_preferences_id": "fprefs_128009cw7mka0wln3ofqv3jlf",
+    "delivery_fulfillment_preferences_id": "fprefs_128009cw69re2myqswwlo5pmb",
+    "description_html": "<p>Our hydrating lotion is formulated for luxurious plant-based skin care. With a light and velvet soft consistency, it sinks quickly into the skin without leaving behind a greasy residue. Enriched with pure Shea, Cocoa, and Tucuma Butters for intense moisturization and rejuvenation of dry skin.</p><p>Venus Is a warm, in-house blend of patchouli, vanilla and sandalwood.</p><p>120g</p>",
+    "description_plaintext": "Our hydrating lotion is formulated for luxurious plant-based skin care. With a light and velvet soft consistency, it sinks quickly into the skin without leaving behind a greasy residue. Enriched with pure Shea, Cocoa, and Tucuma Butters for intense moisturization and rejuvenation of dry skin.\nVenus Is a warm, in-house blend of patchouli, vanilla and sandalwood.\n120g",
+    "shipping_fulfillment_preferences_id": "fprefs_128009cw85uwds31c0sje2neb",
+    "dine_in_fulfillment_preferences_id": "fprefs_128009cw71r2rttwdf5mci4tv",
+    "is_archived": false,
+    "reporting_category": {
+      "id": "QUFWJ4SGZCCMF6WWSEF7UXEI",
+      "ordinal": -2247882803511296
     }
   }
-]
+},

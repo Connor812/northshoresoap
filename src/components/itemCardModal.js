@@ -1,60 +1,107 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { DataContext } from "../hooks/dataContext.js";
 import { addItemToCart } from "../utils/addItemToCart.js";
 import ImageComponent from "../utils/Image.js";
+import Carousel from "react-bootstrap/Carousel";
+import { Dropdown } from "react-bootstrap";
 
 function ItemCardModal({ soap, related_objects, index }) {
-    const id = soap.item_data.variations[0].id;  // This is set up for only 1 variation
+    const dataProvider = useContext(DataContext);
+    const options = dataProvider.options;
+    const [selectedVariant, setSelectedVariant] = useState(soap.item_data.variations[0]);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const id = selectedVariant.id;
     const soapIndex = `soap_${id}`;
     const name = soap.item_data.name;
     const description = soap.item_data.description;
+    const imageId = soap.item_data.image_ids && soap.item_data.image_ids.length > 0 ? soap.item_data.image_ids[0] : 'no_id';
+    const [imageUrl, setImageUrl] = useState(
+        (related_objects.find(obj => obj.id === imageId)?.image_data?.url) || "https://northshoresoapworks.com/images/replacement-image.png"
+    );
 
-    let priceInCents;
-    let price;
-    if (soap.item_data.variations[0].item_variation_data.price_money) {
-        priceInCents = soap.item_data.variations[0].item_variation_data.price_money.amount;
-        price = parseFloat(priceInCents / 100).toFixed(2);
-    } else {
-        priceInCents = 0;
-        price = parseFloat(priceInCents / 100).toFixed(2);
-    }
+    useEffect(() => {
+        setSelectedVariant(soap.item_data.variations[0]);
+    }, [soap]);
 
-    let imageUrl;
-    if (soap.item_data.image_ids) {
-        const imageId = soap.item_data.image_ids[0];
+    const priceInCents = selectedVariant.item_variation_data.price_money ? selectedVariant.item_variation_data.price_money.amount : 0;
+    const price = parseFloat(priceInCents / 100).toFixed(2);
+
+    const handleVariantChange = (variantId, imageId) => {
+        const variant = soap.item_data.variations.find(variant => variant.id === variantId);
+        const imageIndex = soap.item_data.image_ids.indexOf(imageId);
         const imageObject = related_objects.find(obj => obj.id === imageId);
-        imageUrl = imageObject.image_data.url;
-    } else {
-        imageUrl = "https://northshoresoapworks.com/images/replacement-image.png";
+        setImageUrl(imageObject.image_data.url);
+        if (imageIndex !== -1) {
+            setActiveIndex(imageIndex);
+        }
+        setSelectedVariant(variant);
+    };
+
+    const handleSelect = (selectedIndex) => {
+        setActiveIndex(selectedIndex);
+    };
+
+    // get option name from option id
+    let optionName = '';
+    if (soap.item_data.item_options) {
+        const optionId = soap.item_data.item_options[0].item_option_id;
+        optionName = options.find(option => option.id === optionId).name;
     }
 
     return (
-        <div key={index} className="modal fade" id={`${soapIndex}`} data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div key={index} className="modal fade" id={soapIndex} data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered soap-card-modal-dialog">
                 <div className="modal-content">
                     <div className="modal-body soap-display">
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         <div className="left-side">
-                            <img loading="lazy" src="https://northshoresoapworks.com/images/white_bg_logo.jpg" alt="logo" className="soap-logo" />
-                            <ImageComponent src={imageUrl} alt={name} className="soap-image-modal" height="auto" width="300px" />
-                            {/* <h6 className="natural-ingredients">
-                                <u>
-                                    Natural Ingredients
-                                </u>s
-                            </h6>
-                            <p className="ingredients">These ingredients are designed to create lather and effectively remove dirt, oil, a</p> */}
+                            <center style={{ width: '100%' }}>
+                                <img loading="lazy" src="https://northshoresoapworks.com/images/white_bg_logo.jpg" alt="logo" className="soap-logo" />
+                            </center>
+                            <Carousel activeIndex={activeIndex} onSelect={handleSelect} style={{ height: '330px', width: '330px' }}>
+                                {soap.item_data.image_ids?.length === 0 ? (
+                                    <Carousel.Item key={index}>
+                                        <ImageComponent src="https://northshoresoapworks.com/images/replacement-image.png" alt={name} className="soap-image-modal" height="auto" width="300px" />
+                                    </Carousel.Item>
+                                ) : (
+                                    soap.item_data.image_ids?.map((imageId, index) => {
+                                        const imageObject = related_objects.find(obj => obj.id === imageId);
+                                        return (
+                                            <Carousel.Item key={index} style={{ width: '310px', height: '310px' }}>
+                                                <ImageComponent src={imageObject.image_data.url} alt={name} className="item-modal-image" height="300px" width="300px" />
+                                            </Carousel.Item>
+                                        );
+                                    })
+                                )}
+                            </Carousel>
                         </div>
                         <div className="right-side">
                             <div className="d-flex justify-content-between">
-                                <h4>
-                                    {name}
-                                </h4>
-
+                                <h4>{name}</h4>
                             </div>
                             <div className="item-card-modal-description">
                                 {description}
                             </div>
-                            Price: ${price}
-                            <br />
+                            <div className="selection-container">
+                                <div>
+                                    Price: ${price}
+                                </div>
+                                {soap.item_data.variations.length > 1 && (
+                                    <div>
+                                        <Dropdown className="option-variation-btn">
+                                            <Dropdown.Toggle variant="dark" id="dropdown-basic">
+                                                {optionName}
+                                            </Dropdown.Toggle>
+
+                                            <Dropdown.Menu>
+                                                {soap.item_data.variations.map((variant, index) => (
+                                                    <Dropdown.Item key={index} onClick={() => handleVariantChange(variant.id, variant.item_variation_data.image_ids && variant.item_variation_data.image_ids.length > 0 ? variant.item_variation_data.image_ids[0] : 'no_id')}>{variant.item_variation_data.name}</Dropdown.Item>
+                                                ))}
+                                            </Dropdown.Menu>
+                                        </Dropdown>
+                                    </div>
+                                )}
+                            </div>
                             <div>
                                 Add <input type="number" min="1" placeholder="1" className={`${soapIndex}Input quantity`} /> To Cart
 
@@ -80,3 +127,4 @@ function ItemCardModal({ soap, related_objects, index }) {
 }
 
 export default ItemCardModal;
+

@@ -61,7 +61,7 @@ function AppContent() {
         <Route path="/email_listing" element={<EmailListing />} />
         <Route path="/search" element={<Search />} />
       </Routes>
-      <InitialModal />
+      {/* <InitialModal /> */}
       <Footer />
     </>
   );

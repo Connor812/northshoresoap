@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Modal } from 'react-bootstrap';
-
+import ImageComponent from '../utils/Image';
 
 function InitialModal() {
     const [show, setShow] = useState(false);
@@ -104,7 +104,7 @@ function InitialModal() {
                     <button type="submit" className='email-form-submit' onClick={(event) => handleSubmit(event)}>Join Club</button>
 
                     <div className='email-form-bottom'>
-                        <img loading="lazy" src="https://northshoresoapworks.com/images/gift-basket.png" alt="Gift Basket" />
+                        <ImageComponent src="https://northshoresoapworks.com/images/gift-basket.png" alt="Gift Basket" className="" height="204px" width="200px" />
 
                         <div>
                             <p>Soapworks Club members will get periodical special announcements and  special discounts</p>
@@ -114,7 +114,7 @@ function InitialModal() {
                             </p>
                         </div>
 
-                        <img loading="lazy" src="https://northshoresoapworks.com/images/soap.png" alt="Soap" />
+                        <ImageComponent src="https://northshoresoapworks.com/images/soap.png" alt="Soap" className="" height="204px" width="200px" />
                     </div>
 
                 </center>
