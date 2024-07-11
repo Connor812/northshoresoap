@@ -48,6 +48,30 @@ function ItemCardModal({ soap, related_objects, index }) {
         optionName = options.find(option => option.id === optionId).name;
     }
 
+    const isOutOfStock = (variant) => {
+        const { track_inventory, location_overrides } = variant.item_variation_data;
+
+        if (track_inventory === false) {
+            return false; // If track_inventory is false, the item is sellable
+        }
+
+        if (track_inventory) {
+            const locationOverride = location_overrides?.find(override => override.location_id === "L1PBJNPB892SA");
+            if (locationOverride && locationOverride.sold_out) {
+                return true; // If track_inventory is true and sold_out is true, the item is out of stock
+            }
+        }
+
+        if (typeof track_inventory === "undefined") {
+            const locationOverride = location_overrides?.find(override => override.location_id === "L1PBJNPB892SA");
+            if (locationOverride && locationOverride.sold_out) {
+                return true; // If track_inventory is undefined and sold_out is true, the item is out of stock
+            }
+        }
+
+        return false; // If none of the conditions above are met, the item is sellable
+    };
+
     return (
         <div key={index} className="modal fade" id={soapIndex} data-bs-backdrop="static" data-bs-keyboard="false" tabIndex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div className="modal-dialog modal-dialog-centered soap-card-modal-dialog">
@@ -105,17 +129,21 @@ function ItemCardModal({ soap, related_objects, index }) {
                             <div>
                                 Add <input type="number" min="1" placeholder="1" className={`${soapIndex}Input quantity`} /> To Cart
 
-                                {priceInCents === 0 ? (
+                                {isOutOfStock(selectedVariant) ? (
                                     <button className="buy-button" disabled>
                                         Out of Stock
                                     </button>
                                 ) : (
-                                    <button id={`soap-buy-btn-${soapIndex}`} className="buy-button" onClick={() => addItemToCart(id, name, soapIndex, priceInCents, imageUrl, description)}>
-                                        <svg width="25" height="25" viewBox="0 0 16 16">
-                                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z" />
-                                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
-                                        </svg>
-                                    </button>
+                                    soap.item_data.categories.some(category => category.id === "EP6LOPRSICPK4JBL2ER5DE34") ? (
+                                        <p className="mt-2">Not available for online order</p>
+                                    ) : (
+                                        <button id={`soap-buy-btn-${soapIndex}`} className="buy-button" onClick={() => addItemToCart(id, name, soapIndex, priceInCents, imageUrl, description)}>
+                                            <svg width="25" height="25" viewBox="0 0 16 16">
+                                                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z" />
+                                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                                            </svg>
+                                        </button>
+                                    )
                                 )}
                             </div>
                         </div>
@@ -127,4 +155,3 @@ function ItemCardModal({ soap, related_objects, index }) {
 }
 
 export default ItemCardModal;
-
