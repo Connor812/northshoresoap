@@ -20,6 +20,11 @@
   --large: 24pt;
 }
 
+* {
+  box-sizing: border-box;
+
+}
+
 @font-face {
   font-family: "Copperplate" !important;
   src: url("../fonts/OPTICopperplate-Heavy.otf") format("opentype");
@@ -145,7 +150,6 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2%;
 }
 
 .bird-1 {

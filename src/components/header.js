@@ -53,6 +53,15 @@ function Header({ updateCart, cartItems, setCartItems }) {
               >
                 About Us
               </Nav.Link>
+              <Nav.Link 
+                as={Link} 
+                to="/ingredients" 
+                aria-label="ingredients" 
+                className={isActiveLink("/ingredients") ? "active" : ""}
+                onClick={() => setExpanded(false)}
+              >
+                Ingredients
+              </Nav.Link>
               <NavDropdown title="Categories" className="nav-dropdown-categories" id="basic-nav-dropdown">
                 {categories.map(category => {
                   const categoryName = category.name;

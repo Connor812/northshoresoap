@@ -1,0 +1,55 @@
+.ingredients-wrapper {
+  padding: 2% 5%;
+}
+
+.stripe-flowers {
+  width: 100%;
+  aspect-ratio: 1156 / 58;
+  height: auto;
+}
+
+.ingredients-section {
+  background-image: url("https://northshoresoapworks.com/images/background-img.jpg");
+  background-size: cover;
+  background-position: center;
+  max-width: 100%;
+}
+
+.ingredient-side-img {
+  aspect-ratio: 344 / 300;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.ingredients-right,
+.ingredients-left {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.ingredient-header {
+  width: 100%;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--mocha);
+}
+
+.ingredients {
+    text-wrap: wrap;
+}
+
+@media screen and (max-width: 1110px) {
+  .ingredients-left {
+    display: none;
+  }
+  .ingredients-right {
+    display: none;
+  }
+  .ingredients-center {
+    width: 100% !important;
+  }
+}

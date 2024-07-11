@@ -10,7 +10,7 @@ import Payment from './pages/payment.js';
 import Thankyou from './pages/thankyou.js';
 import EmailListing from './pages/emailListing.js';
 import Search from './pages/search.js';
-import InitialModal from './components/inital-modal.js';
+import Ingredients from './pages/ingredients.js';
 
 import { Helmet } from 'react-helmet';
 import { DataProvider, DataContext } from './hooks/dataContext.js';
@@ -60,6 +60,7 @@ function AppContent() {
         <Route path="/thankyou" element={<Thankyou />} />
         <Route path="/email_listing" element={<EmailListing />} />
         <Route path="/search" element={<Search />} />
+        <Route path="/ingredients" element={<Ingredients />} />
       </Routes>
       {/* <InitialModal /> */}
       <Footer />
