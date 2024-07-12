@@ -13,7 +13,8 @@ function Search() {
     const products = data.objects;
     const related_objects = data.related_objects;
 
-    const handleSearch = () => {
+    const handleSearch = (e) => {
+        e.preventDefault();
         setSearchQuery(searchTerm);
     };
 
@@ -22,7 +23,7 @@ function Search() {
             <h1 className="search-heading">Search</h1>
             <hr />
 
-            <div className="search-input-container">
+            <form onSubmit={handleSearch} className="search-input-container">
                 <input
                     type="text"
                     className="search-input"
@@ -31,10 +32,10 @@ function Search() {
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
-                <button className="search-button" onClick={handleSearch}>
+                <button className="search-button" type="submit">
                     <TbSearch />
                 </button>
-            </div>
+            </form>
 
             <div className="search-item-display">
                 {searchQuery !== '' && (

@@ -1,52 +1,60 @@
 .search-container {
-    color: var(--mocha);
-    text-align: center;
-    flex: 1;
+  color: var(--mocha);
+  text-align: center;
+  flex: 1;
 }
 
 .search-heading {
-    margin-top: 10px !important;
+  margin-top: 10px !important;
+}
+
+.search-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-bottom: 40px;
+  padding: 0 10px;
 }
 
 .search-input {
-    width: 100%;
-    max-width: 700px;
-    font-size: large;
-    padding: 10px 20px;
-    border: 1px solid var(--mocha);
-    border-radius: 20px;
-    box-shadow: 3px 3px 1px 0.1px var(--mocha);
-    margin-bottom: 40px
+  width: 100%;
+  max-width: 700px;
+  font-size: large;
+  padding: 10px 20px;
+  border: 1px solid var(--mocha);
+  border-radius: 20px;
+  box-shadow: 3px 3px 1px 0.1px var(--mocha);
 }
 
 .search-item-display {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1 1;
-    justify-content: center;
-    padding: 20px 5%;
-    padding-top: 20px;
-    padding-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1;
+  justify-content: center;
+  padding: 20px 5%;
+  padding-top: 20px;
+  padding-top: 0;
 }
 
 .search-button {
-    margin-left: 10px;
-    background-color: var(--mocha);
-    color: var(--cream);
-    font-size: large;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    box-shadow: 3px 3px 1px 0.1px var(--walnut);
-    transition: 200ms;
+  margin-left: 10px;
+  background-color: var(--mocha);
+  color: var(--cream);
+  font-size: large;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 3px 3px 1px 0.1px var(--walnut);
+  transition: 200ms;
 }
 
 .search-button:hover {
-    background-color: var(--walnut);
+  background-color: var(--walnut);
 }
 
 .search-button svg {
-    width: 25px;
-    height: 25px;
+  width: 25px;
+  height: 25px;
 }

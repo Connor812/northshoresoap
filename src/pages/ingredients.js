@@ -33,7 +33,7 @@ function ingredients() {
             <img className="stripe-flowers" src="https://northshoresoapworks.com/images/stripe.png" alt="Strip flowers" />
 
             <div className="ingredients-section">
-                <Row className="m-0">
+                <Row className="m-0 py-4">
                     <Col md={2} className="ingredients-left">
                         <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/Pour.jpg" alt="Pour" />
                     </Col>
@@ -78,7 +78,7 @@ function ingredients() {
                     </Col>
                 </Row>
 
-                <Row className="m-0">
+                <Row className="m-0 py-4">
                     <Col md={2} className="ingredients-left">
                         <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/Pour.jpg" alt="Pour" />
                     </Col>
@@ -114,7 +114,7 @@ function ingredients() {
                         <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/Pour.jpg" alt="Pour" />
                     </Col>
                 </Row>
-                <Row className="m-0">
+                <Row className="m-0 py-4">
                     <Col md={2} className="ingredients-left">
                         <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/Pour.jpg" alt="Pour" />
                     </Col>
@@ -150,7 +150,7 @@ function ingredients() {
             </div>
             <img className="stripe-flowers" src="https://northshoresoapworks.com/images/stripe-2.png" alt="Strip flowers" />
             <div className="ingredients-section">
-                <Row className="m-0">
+                <Row className="m-0 py-4">
                     <Col md={2} className="ingredients-left">
                         <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/Pour.jpg" alt="Pour" />
                     </Col>
@@ -169,7 +169,7 @@ function ingredients() {
                         <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/Pour.jpg" alt="Pour" />
                     </Col>
                 </Row>
-                <Row className="m-0">
+                <Row className="m-0 py-4">
                     <Col md={2} className="ingredients-left">
                         <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/Pour.jpg" alt="Pour" />
                     </Col>
