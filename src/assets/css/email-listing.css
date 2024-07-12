@@ -1,6 +1,5 @@
 .email-listing {
     padding: 50px;
-    height: 100%;;
     text-align: center;
     color: var(--black);
 }
@@ -49,6 +48,12 @@
 .email-form-bottom img {
     width: 200px;
     height: auto;
+}
+
+@media screen and (max-width: 742px) {
+    .email-form-bottom img {
+        display: none;
+    }
 }
 
 .white {

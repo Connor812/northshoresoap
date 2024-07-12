@@ -74,13 +74,13 @@ function ingredients() {
 
                     </Col>
                     <Col md={2} className="ingredients-right">
-                        <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/Pour.jpg" alt="Pour" />
+                        <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/cut.jpg" alt="lotion" />
                     </Col>
                 </Row>
 
                 <Row className="m-0 py-4">
                     <Col md={2} className="ingredients-left">
-                        <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/Pour.jpg" alt="Pour" />
+                        <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/lotion-2.jpg" alt="Pour" />
                     </Col>
                     <Col md={8} className="ingredients-center">
 
@@ -111,12 +111,12 @@ function ingredients() {
                         </Row>
                     </Col>
                     <Col md={2} className="ingredients-right">
-                        <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/Pour.jpg" alt="Pour" />
+                        <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/lotion-3.jpg" alt="Pour" />
                     </Col>
                 </Row>
                 <Row className="m-0 py-4">
                     <Col md={2} className="ingredients-left">
-                        <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/Pour.jpg" alt="Pour" />
+                        <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/liquid-soap.jpg" alt="Pour" />
                     </Col>
                     <Col md={8} className="ingredients-center">
 
@@ -139,7 +139,7 @@ function ingredients() {
                         </Row>
                     </Col>
                     <Col md={2} className="ingredients-right">
-                        <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/Pour.jpg" alt="Pour" />
+                        <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/lotion.jpg" alt="Pour" />
                     </Col>
                 </Row>
                 <p className="text-center mt-4">
@@ -152,7 +152,7 @@ function ingredients() {
             <div className="ingredients-section">
                 <Row className="m-0 py-4">
                     <Col md={2} className="ingredients-left">
-                        <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/Pour.jpg" alt="Pour" />
+                        <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/oil-2.jpg" alt="Pour" />
                     </Col>
                     <Col md={8} className="ingredients-center">
 
@@ -166,12 +166,12 @@ function ingredients() {
 
                     </Col>
                     <Col md={2} className="ingredients-right">
-                        <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/Pour.jpg" alt="Pour" />
+                        <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/oil.jpg" alt="Pour" />
                     </Col>
                 </Row>
                 <Row className="m-0 py-4">
                     <Col md={2} className="ingredients-left">
-                        <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/Pour.jpg" alt="Pour" />
+                        <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/oil-3.jpg" alt="Pour" />
                     </Col>
                     <Col md={8} className="ingredients-center">
                         <h5 className="text-center my-2">Essential Oils/Fragrance Oils</h5>
@@ -182,7 +182,7 @@ function ingredients() {
 
                     </Col>
                     <Col md={2} className="ingredients-right">
-                        <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/Pour.jpg" alt="Pour" />
+                        <img className="ingredient-side-img" src="https://northshoresoapworks.com/images/oil-4.jpg" alt="Pour" />
                     </Col>
                 </Row>
             </div>
