@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../assets/css/aboutus.css";
 
 function About() {
@@ -35,7 +35,7 @@ function About() {
                      className="shop-img"
                      alt=""
                   />
-                  When you walk through the screen door at North Shore SoapWorks the first thing you
+                  When you walk through the screen door at North Shore Soapworks the first thing you
                   notice is the wonderful smell and you look around for where it could be coming from. That's when
                   you realize that you have just entered a special place unlike anywhere you have ever been before.
                   The beautiful aroma is the combination of handmade artisan soaps laid out like fancy
@@ -220,7 +220,7 @@ function About() {
                      />
                      <h4 className="worker-name">Daisy</h4>
                      <p>
-                        Meet Daisy -she’s a little girl with a big attitude! Daisy is an 8 year old Shih Tzu who can’t get enough of the “shop-dog life”-she lives for love, cuddles and treats (especially treats). Some believe that she is actually the owner of North Shore Soapworks and we all work for her!
+                        Meet Daisy -she’s a little girl with a big attitude! Daisy is an 9 year old Shih Tzu who can’t get enough of the “shop-dog life”-she lives for love, cuddles and treats (especially treats). Some believe that she is actually the owner of North Shore Soapworks and we all work for her!
                      </p>
                   </div>
                </div>

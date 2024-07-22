@@ -16,7 +16,7 @@ function CheckoutCartItem({ index, item, cartItems, setCartItems, setSubtotal, s
 
             <Col sm={12} md={5} className="checkout-item-name">
                 <img loading="lazy" className="checkout-cart-item-img" src={item.imageUrl} alt={item.name} />
-                <h4>{item.name}</h4>
+                <h6>{item.name}</h6>
             </Col>
 
 

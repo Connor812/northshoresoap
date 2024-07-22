@@ -30,8 +30,6 @@ function ingredients() {
             <p className="text-center mb-4">At North Shore Soapworks we use only premium high-quality ingredients
                 to create and customize our beautifully handcrafted masterpieces.</p>
 
-            <img className="stripe-flowers" src="https://northshoresoapworks.com/images/stripe.png" alt="Strip flowers" />
-
             <div className="ingredients-section">
                 <Row className="m-0 py-4">
                     <Col md={2} className="ingredients-left">
@@ -92,7 +90,7 @@ function ingredients() {
                                 Glycerine <br />
                                 Cereal Alcohol & Ceteareth-20 <br />
                                 Sunflower oil <br />
-                                Shea butte <br />
+                                Shea butter <br />
                             </Col>
                             <Col className="ingredients" sm={4}>
                                 Vitamin E <br />
@@ -145,10 +143,9 @@ function ingredients() {
                 <p className="text-center mt-4">
                     OUR SOAPS DO <b>NOT</b> CONTAIN: <br />
                     surfactants - propylene glycol - sodium laurel sulfate - sodium laureth sulphate. <br />
-                    Neutral pH of approximately 8.0 to 9.0.  - 100% vegetable based and biodegradable -  No animal testing - Vegan & kosher certified
+                    Neutral pH of approximately 8.0 to 9.0. - 100% vegetable based and biodegradable -  No animal testing - Vegan & kosher certified
                 </p>
             </div>
-            <img className="stripe-flowers" src="https://northshoresoapworks.com/images/stripe-2.png" alt="Strip flowers" />
             <div className="ingredients-section">
                 <Row className="m-0 py-4">
                     <Col md={2} className="ingredients-left">
@@ -159,7 +156,7 @@ function ingredients() {
                         <h1 className="ingredient-header">Oils</h1>
                         <h5 className="text-center my-2">Carrier Oils</h5>
                         <p>
-                            Carrier oils are also referred to as vegetable oils and base oils. They have extensive applications in aromatherapy because they are used to dilute essential oils or absolutes for safe topical application. They are also used in the manufacturing of cold process-soaps and for massages by licensed massage therapists. Each carrier oil has different properties, and the choice of a carrier oil can depend on the benefit being sought.
+                            Carrier oils are also referred to as "vegetable oils" and "base oils". They have extensive applications in aromatherapy because they are used to dilute essential oils or absolutes for safe topical application. They are also used in the manufacturing of cold-processed soaps and for massages by licensed massage therapists. Each carrier oil has different properties, and the choice of a carrier oil can depend on the benefit being sought.
                         </p>
                         <p>Despite also being referred to as vegetable oils, not all carrier oils are derived from vegetables. Some are pressed from seeds, nuts, or kernels. They have also earned the name “fixed oils” because they remain fixed on the skin. This means that, unlike essential oils, they do not quickly evaporate from the skin surface or have the strong natural scent of plants which makes them ideal for controlling essential oil, concentration, and reducing the strength of an essential oils aroma without altering cosmetic properties.</p>
 
@@ -178,7 +175,7 @@ function ingredients() {
                         <p>
                             Essential oils, also referred to as “aromatherapy oils”, are the highly concentrated, volatile, aromatic, natural essences of plants. The purest essential oils come from the carefully cultivated and wild, grown plants from climactic and geographic regions throughout the world. Essential oils are pure, undiluted, essences, extracted directly from a variety of flowers, fruits, leaves, barks, roots, herbs, and spices.
                         </p>
-                        <p>Fragrance oils are manufactured in a lab and are composed of different aromatic substances. Our fragrance oils are specifically formulated for both skin and hair formulations. The scents are extremely rich, complex and long lasting. Fragrance oils are synthetically compounded and should not be confused with 100% natural essential oils. All of our fragrance oils are paraben free and phthalate free which makes them safer for you and the environment. </p>
+                        <p>Fragrance oils are manufactured in a lab and are composed of different aromatic substances. Our fragrance oils are specifically formulated for both skin and hair formulations. The scents are extremely rich, complex and long lasting. Fragrance oils are synthetically compounded and should not be confused with 100% natural essential oils. All of our fragrance oils are paraben free and phthalate free which makes them safer for you and the environment. At North Shore Soapworks we use a combination of fragrance and essential  oils in the majority of our products. "Harmony", "lavender", "energy" use pure essential oils only. </p>
 
                     </Col>
                     <Col md={2} className="ingredients-right">
@@ -186,8 +183,6 @@ function ingredients() {
                     </Col>
                 </Row>
             </div>
-
-
         </div>
     );
 }

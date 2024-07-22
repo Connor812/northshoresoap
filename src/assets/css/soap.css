@@ -1,204 +1,200 @@
 .soap-page-wrapper {
-    width: 100%;
-    height: 100vh;
-    color: var(--mocha);
-    flex: 1;
+  width: 100%;
+  height: 100vh;
+  color: var(--mocha);
+  flex: 1;
 }
 
 .soap-heading {
-    padding: 10px;
+  padding: 10px;
 }
 
 .soap-page-wrapper-background {
-    background-image: url("https://northshoresoapworks.com/images/category_bg.png");
-    background-repeat: repeat;
+  background-image: url("https://northshoresoapworks.com/images/category_bg.png");
+  background-repeat: repeat;
 }
 
 .soap-page-soap-wrapper {
-    max-width: 1880px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px 5%;
-    padding-top: 0;
+  max-width: 1880px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 5%;
+  padding-top: 0;
 }
 
 .soap-card-soap-page {
-    width: 100%;
-    max-width: 298px;
-    height: auto;
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 15px;
+  width: 100%;
+  max-width: 298px;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
 }
 
 .soap-card-btn {
-    width: 250px;
-    height: 145px;
-    padding-bottom: 0;
-    background: none;
-    border: none;
-    border-radius: 20px;
-    transition: 200ms;
-    display: flex;
-    align-items: flex-end;
-    margin: 0 24px;
+  width: 250px;
+  height: 145px;
+  padding-bottom: 0;
+  background: none;
+  border: none;
+  border-radius: 20px;
+  transition: 200ms;
+  display: flex;
+  align-items: flex-end;
+  margin: 0 24px;
 }
 
 .soap-card-image {
-    position: relative;
-    z-index: 1;
-    margin-bottom: 10px;
-    object-fit: cover;
-    transition: 200ms;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px var(--mocha);
-    object-fit: contain;
+  background-color: var(--white);
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+  object-fit: cover;
+  transition: 200ms;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px var(--mocha);
+  object-fit: contain;
 }
 
 .soap-card-image:hover {
-    box-shadow: 0px 0px 10px 2px var(--walnut);
+  box-shadow: 0px 0px 10px 2px var(--walnut);
 }
 
 .soap-card-title {
-    line-height: 0.9;
-    color: var(--mocha);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: var(--small);
-    min-height: 48.8px !important;
-    width: 100%;
-    background-color: var(--white);
-    padding: 5px;
-    border-top: 1px solid var(--grey);
-    border-bottom: 9px solid var(--grey);
-    margin: 3px;
-    margin-top: auto;
-    margin-bottom: 12%;
+  line-height: 0.9;
+  color: var(--mocha);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: var(--small);
+  min-height: 48.8px !important;
+  width: 100%;
+  background-color: var(--white);
+  padding: 5px;
+  border-top: 1px solid var(--grey);
+  border-bottom: 9px solid var(--grey);
+  margin: 3px;
+  margin-top: auto;
+  margin-bottom: 12%;
 }
 
 .soap-page-side-col {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    gap: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 50px;
 }
 
 .soap-middle-column {
-    flex: 0 0 auto;
-    /* width: 66.66666667% !important; */
-    width: 100%;
+  flex: 0 0 auto;
+  /* width: 66.66666667% !important; */
+  width: 100%;
 }
 
 @media screen and (max-width: 1117px) {
-    .soap-page-side-col {
-        display: none !important;
-    }
+  .soap-page-side-col {
+    display: none !important;
+  }
 
-    .soap-middle-column {
-        flex: 0 0 auto;
-        width: 100% !important;
-    }
+  .soap-middle-column {
+    flex: 0 0 auto;
+    width: 100% !important;
+  }
 
-    .soap-page-wrapper-background {
-        padding: 0;
-        padding-top: 50px;
-    }
-
+  .soap-page-wrapper-background {
+    padding: 0;
+    padding-top: 50px;
+  }
 }
 
 /* & Soap Carousel */
 
 .carousel {
-    padding: 10px;
+  padding: 10px;
 }
 
 .carousel img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (max-width: 400px) {
-    .carousel-caption {
-        display: none;
-    }
-
+  .carousel-caption {
+    display: none;
+  }
 }
 
 .handmade-soap-header {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .links-to-categories-container {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    padding: 10px;
-    background-color: var(--mocha);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--mocha);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-
-
 .links-to-categories {
-    width: 200px;
-    height: auto;
-    color: var(--mocha);
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  width: 200px;
+  height: auto;
+  color: var(--mocha);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .links-to-categories a {
-    color: var(--cream);
-    text-decoration: none;
-    transition: 200ms;
+  color: var(--cream);
+  text-decoration: none;
+  transition: 200ms;
 }
 
 .links-to-categories a:hover {
-    color: var(--stone);
-    text-decoration: underline;
+  color: var(--stone);
+  text-decoration: underline;
 }
 
 .sticky {
-    position: fixed;
-    top: 0;
+  position: fixed;
+  top: 0;
 }
 
 .links-to-categories-container hr {
-    border: 1px solid var(--cream) !important;
-    width: 100%;
+  border: 1px solid var(--cream) !important;
+  width: 100%;
 }
 
 .sticky-padding {
-    padding-top: 78px;
+  padding-top: 78px;
 }
 
 @media screen and (max-width: 900px) {
-    .links-to-categories-container {
-        display: none;
-    }
+  .links-to-categories-container {
+    display: none;
+  }
 
-    .sticky-padding {
-        padding-top: 0;
-    }
-
+  .sticky-padding {
+    padding-top: 0;
+  }
 }
 
 .soap-image-modal {
-    box-shadow: 0px 0px 10px 0px var(--mocha);
-    border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px var(--mocha);
+  border-radius: 20px;
 }
 
 .soap-display {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }

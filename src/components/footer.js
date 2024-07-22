@@ -30,7 +30,7 @@ function Footer() {
             <section className='footer-main-section-container'>
                 <Row className="footer-main-section">
                     <Col md={3} className='footer-category-container'>
-                        <div className=''>
+                        <div className='footer-links'>
                             {
                                 categories.map((category, index) => {
 
@@ -41,9 +41,7 @@ function Footer() {
                                             </Link>
                                             <br />
                                         </>
-
                                     )
-
                                 })
                             }
                         </div>
