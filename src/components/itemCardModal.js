@@ -16,11 +16,11 @@ function ItemCardModal({ soap, related_objects, index }) {
     const handleVariantChange = (variantId, imageId) => {
         const variant = soap.item_data.variations.find(variant => variant.id === variantId);
         const newImageUrl = getImageUrlById(imageId, related_objects);
-        
+
         if (imageId && soap.item_data.image_ids.includes(imageId)) {
             setActiveIndex(soap.item_data.image_ids.indexOf(imageId));
         }
-        
+
         setImageUrl(newImageUrl);
         setSelectedVariant(variant);
     };
@@ -128,7 +128,8 @@ function renderVariantDropdown(soap, selectedVariant, handleVariantChange) {
     );
 }
 
-function renderAddToCartButton(selectedVariant, soap, addItemToCart, priceInCents, imageUrl) {
+function renderAddToCartButton(selectedVariant, soap, addItemToCart, price, imageUrl) {
+    const priceInCents = price * 100;
     const soapIndex = `soap_${selectedVariant.id}`;
     if (checkOutOfStock(selectedVariant)) {
         return <button className="buy-button" disabled>Out of Stock</button>;

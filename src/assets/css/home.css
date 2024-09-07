@@ -1,414 +1,353 @@
 /* Home.css */
 
 .soap-search-wrapper {
-    background-color: var(--cream);
-    padding: 2% 5%;
-    color: var(--mocha);
+  background-color: var(--cream);
+  padding: 2% 5%;
+  color: var(--mocha);
 }
 
 .logo {
-    max-width: 60%;
-    border-radius: 10px;
+  max-width: 60%;
+  border-radius: 10px;
 }
 
 .gallery {
-    padding: 1% 5%;
+  padding: 1% 5%;
 }
 
 .home-carousel {
-    max-width: 800px !important;
+  max-width: 800px !important;
 }
 
 .soap-carousel {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  gap: 10px;
 }
 
 .arrow-btn {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    z-index: 1;
-    fill: var(--mocha);
-    width: 50px;
-    height: 50px;
-    transition: 200ms;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  z-index: 1;
+  fill: var(--mocha);
+  width: 50px;
+  height: 50px;
+  transition: 200ms;
 }
 
 .arrow-btn:hover {
-    fill: var(--walnut);
-
+  fill: var(--walnut);
 }
 
 .carousel-content {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
 }
 
 .soap-card-img {
-    width: 100%;
-    max-width: 210px;
-    object-fit: cover;
-    margin-bottom: 3px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px 0px var(--mocha);
+  width: 100%;
+  max-width: 210px;
+  object-fit: cover;
+  margin-bottom: 3px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px var(--mocha);
 }
 
-.soap-carousel>div {
-    display: flex;
-    transition: transform 0.5s ease;
+.soap-carousel > div {
+  display: flex;
+  transition: transform 0.5s ease;
 }
 
 .soap-card {
-    background: none;
-    border: none;
-    min-width: 250px !important;
-    max-width: 250px;
-    padding: 20px;
-    color: var(--mocha);
-    transition: 200ms;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  background: none;
+  border: none;
+  min-width: 250px !important;
+  max-width: 250px;
+  padding: 20px;
+  color: var(--mocha);
+  transition: 200ms;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .soap-card h6 {
-    margin-top: 10px !important;
-    text-align: center !important;
-    width: 100%;
+  margin-top: 10px !important;
+  text-align: center !important;
+  width: 100%;
 }
 
 .soap-card:hover {
-    border-radius: 20px;
-    background-color: var(--bone);
+  border-radius: 20px;
+  background-color: var(--bone);
 }
 
 @media screen and (max-width: 1238.4px) {
-    .arrow-btn {
-        display: none;
-    }
+  .arrow-btn {
+    display: none;
+  }
 
-    .carousel-content {
-        width: 100%;
-        overflow-x: scroll !important;
-    }
+  .carousel-content {
+    width: 100%;
+    overflow-x: scroll !important;
+  }
 
-    .soap-card {
-        display: inline-block;
-    }
+  .soap-card {
+    display: inline-block;
+  }
 }
 
 .sent-btn-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 10px;
-    padding: 0 20px;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+  padding: 0 20px;
+  flex-wrap: wrap;
 }
 
 .sent-btn {
-    width: 100%;
-    max-width: 155px;
-    padding: 5px 20px;
-    background-color: var(--meadow);
-    color: var(--white);
-    border-radius: 20px;
-    border: 1px solid var(--khaki);
-    transition: 300ms;
+  width: 100%;
+  max-width: 155px;
+  padding: 5px 20px;
+  background-color: var(--meadow);
+  color: var(--white);
+  border-radius: 20px;
+  border: 1px solid var(--khaki);
+  transition: 300ms;
 }
 
 .sent-btn:hover {
-    background-color: var(--cypress);
-
+  background-color: var(--cypress);
 }
 
 .sent-search-container {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .fragrance-search {
-    margin-left: 20px;
-    background-color: var(--bone);
-    border: var(--khaki) 1px solid;
+  margin-left: 20px;
+  background-color: var(--bone);
+  border: var(--khaki) 1px solid;
 }
 
 /* ^ Category Section */
 
 .category-header {
-    width: 100%;
-    height: auto;
-    background-color: var(--white);
-    padding: 10px 10%;
-    color: var(--mocha);
+  width: 100%;
+  height: auto;
+  background-color: var(--white);
+  padding: 10px 10%;
+  color: var(--mocha);
 }
 
 .category-header h2 {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .category-container {
-    background-image: url("https://northshoresoapworks.com/images/category_bg.png");
-    background-repeat: repeat;
-    background-size: contain;
+  background-image: url("https://northshoresoapworks.com/images/category_bg.png");
+  background-repeat: repeat;
+  background-size: contain;
 }
 
 #category-carousel {
-    width: 70%;
-    padding: 30px;
-    min-width: 360px;
+  width: 70%;
+  padding: 30px;
+  min-width: 360px;
 }
 
 .categories {
-    padding: 50px 10px;
-    padding-top: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1200px;
+  padding: 50px 10px;
+  padding-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
 }
 
 .category {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 230px;
-    height: 230px;
-    background-position: center;
-    background-size: cover;
-    color: var(--white);
-    border: 1px solid transparent;
-    background-color: var(--black);
-    position: relative;
-    border-radius: 30px;
+  width: 240px;
+  padding: 5px;
+  background-color: var(--meadow);
+  color: var(--white);
+  border-radius: 20px;
+  border: 1px solid var(--khaki);
+  transition: 300ms;
+  text-decoration: none;
 }
 
-.category h4 {
-    margin: 0;
-    transition: 200ms;
-}
-
-.category-img {
-    width: 100%;
-    border-radius: 30px;
-    height: 100%;
-    object-fit: cover;
-    transition: 300ms;
-}
-
-.category:hover .category-img {
-    opacity: 0.7;
-}
-
-.category:hover h4 {
-    scale: 1.2;
-}
-
-.title-container {
-    background-color: var(--black-opacity);
-    padding: 20px;
-    border-radius: 30px;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.title-container button {
-    background-color: var(--meadow);
-    color: var(--white);
-    padding: 10px 20px;
-    border-radius: 30px;
-    border: none;
-    transition: 300ms;
-}
-
-.title-container button:hover {
-    background-color: var(--cypress);
-}
-
-@media screen and (max-width: 500px) {
-    .category {
-        width: 150px;
-        height: 150px;
-    }
-
+.category:hover {
+  background-color: var(--cypress);
 }
 
 /*  @ Soap Modal Display */
 
 .modal-content {
-    border-radius: 50px !important;
-    border: 2px solid var(--mocha);
+  border-radius: 50px !important;
+  border: 2px solid var(--mocha);
 }
 
 .soap-card-modal-dialog {
-    max-width: 1000px !important;
-    border-radius: 30px;
+  max-width: 1000px !important;
+  border-radius: 30px;
 }
 
 .soap-display {
-    display: flex;
-    padding: 15px 60px !important;
-    color: var(--mocha);
+  display: flex;
+  padding: 15px 60px !important;
+  color: var(--mocha);
 }
 
 @media screen and (max-width: 720px) {
-    .soap-display {
-        flex-direction: column;
-    }
+  .soap-display {
+    flex-direction: column;
+  }
 
-    .left-side {
-        width: 100%;
-        max-width: 100% !important;
-        margin-right: 0 !important;
-        justify-content: center !important;
-        align-items: center !important;
-    }
+  .left-side {
+    width: 100%;
+    max-width: 100% !important;
+    margin-right: 0 !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
 
-    .soap-image {
-        width: 100% !important;
-        max-width: 345px;
-        height: auto;
-    }
+  .soap-image {
+    width: 100% !important;
+    max-width: 345px;
+    height: auto;
+  }
 
-    .right-side {
-        text-align: center !important;
-        width: 100%;
-    }
+  .right-side {
+    text-align: center !important;
+    width: 100%;
+  }
 
-    .buy-button {
-        margin: 10px !important;
-    }
+  .buy-button {
+    margin: 10px !important;
+  }
 
-    .close-btn-container {
-        width: 100%;
-        display: flex;
-        justify-content: start;
-    }
+  .close-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+  }
 
-    .btn-close {
-        position: static !important;
-    }
+  .btn-close {
+    position: static !important;
+  }
 
-    .soap-display {
-        padding: 20px !important;
-    }
+  .soap-display {
+    padding: 20px !important;
+  }
 }
 
 .left-side {
-    max-width: 350px;
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    margin-right: 20px;
-    align-items: start;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-right: 20px;
+  align-items: start;
 }
 
 .ingredients {
-    text-align: start;
+  text-align: start;
 }
 
 .natural-ingredients {
-    text-align: start;
+  text-align: start;
 }
 
 .soap-logo {
-    width: 300px !important;
-    height: auto;
+  width: 300px !important;
+  height: auto;
 }
 
 .soap-image {
-    width: 300px;
-    height: 200px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px var(--mocha);
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px var(--mocha);
 }
 
 .right-side {
-    text-align: start;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .item-card-modal-description {
-    max-height: 120px;
-    overflow-y: scroll;
-    margin: 10px 0;
+  max-height: 120px;
+  overflow-y: scroll;
+  margin: 10px 0;
 }
 
 .quantity {
-    width: 50px;
-    height: auto;
-    border: 1px solid var(--mocha);
+  width: 50px;
+  height: auto;
+  border: 1px solid var(--mocha);
 }
 
 .buy-button {
-    background-color: var(--meadow);
-    fill: var(--white);
-    padding: 5px 50px;
-    border-radius: 30px;
-    border: none;
-    transition: 300ms;
-    margin: 0 20px;
-
+  background-color: var(--meadow);
+  fill: var(--white);
+  padding: 5px 50px;
+  border-radius: 30px;
+  border: none;
+  transition: 300ms;
+  margin: 0 20px;
 }
 
 .buy-button:hover {
-    background-color: var(--cypress);
-    fill: var(--white);
+  background-color: var(--cypress);
+  fill: var(--white);
 }
 
 .btn-close {
-    font-size: var(--small);
-    position: absolute;
-    top: 20px;
-    right: 30px;
+  font-size: var(--small);
+  position: absolute;
+  top: 20px;
+  right: 30px;
 }
 
 .soap-display br {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .soap-search-results {
-    margin-top: 20px;
-    padding: 0 2%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  margin-top: 20px;
+  padding: 0 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .categories-header {
-    color: var(--mocha);
-    text-align: center;
-    margin: 0 !important;
+  color: var(--mocha);
+  text-align: center;
+  margin: 0 !important;
 }
 
 .home-carousel-placeholder {
-    aspect-ratio: 4270px / 1147px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  aspect-ratio: 4270px / 1147px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel-indicators {
-    display: none !important;
+  display: none !important;
 }

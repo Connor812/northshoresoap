@@ -7,8 +7,11 @@ import { useUpdateQuantity } from "../utils/updateQuantity.js";
 function CheckoutCartItem({ index, item, cartItems, setCartItems, setSubtotal, setHst, setGrandTotal }) {
 
     const updateQuantity = useUpdateQuantity();
+    console.log("item", item);
 
-    const price = parseFloat((item.price / 100)).toFixed(2);
+    const price = parseFloat(item.price / 100).toFixed(2);
+    console.log("price", price);
+
     const subTotalPrice = (price * item.quantity).toFixed(2);
 
     return (

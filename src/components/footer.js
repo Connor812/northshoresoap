@@ -55,7 +55,7 @@ function Footer() {
                             <br />
                             PORT DOVER ONT CANADA N0A1N0
                             <br />
-                            <a href="mailto:stephanie@northshoresoapworks.ca" className='email-link'>
+                            <a href="mailto:stephanie@northshoresoapworks.com" className='email-link'>
                                 STEPHANIE@NORTHSHORESOAPWORKS.COM
                             </a>
                             <br />

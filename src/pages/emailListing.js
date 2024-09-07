@@ -84,15 +84,13 @@ function EmailListing() {
 
             <div className='email-listing-form'>
 
-                <h1>GRAND OPENING CELEBRATION</h1>
+                <h1>Become A Member Of Our Soapworks Club</h1>
 
-                <p>Become a member of the Soapworks Club
-                    Throughout our first week new members are eligible for our grand prize draw and soap giveaways.</p>
+                <p>
+                    Become a member of the Soapworks Club and get exclusive discounts and special announcements!
+                </p>
 
-                <h2>We will draw for a free gift daily
-                    Grand Price Valued at $150</h2>
-
-                <p>We will send you an email with more info</p>
+                <p className='mb-5'>We will send you an email with more info</p>
 
                 <div className='email-form-input-container'>
                     {error &&
@@ -116,22 +114,12 @@ function EmailListing() {
 
                     <div>
                         <p>Soapworks Club members will get periodical special announcements and  special discounts</p>
-
-                        <p>
-                            You can cancel anytime
-                        </p>
+                        <p>You can cancel anytime</p>
                     </div>
 
                     <img loading="lazy" src="https://northshoresoapworks.com/images/soap.png" alt="Soap" />
                 </div>
-
             </div>
-
-
-
-
-
-
         </div>
     )
 }

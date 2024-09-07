@@ -23,7 +23,7 @@ function Header({ updateCart, cartItems, setCartItems }) {
     <>
       <Navbar className="navbar" expand="lg" expanded={expanded}>
         <Container className="nav-container">
-          <Link 
+          <Link
             to="/"
             aria-label="North Shore Soap Works Home"
             className="logo-link"
@@ -35,32 +35,41 @@ function Header({ updateCart, cartItems, setCartItems }) {
           <Navbar.Toggle id="basic-navbar-nav-btn" aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
           <Navbar.Collapse id="basic-navbar-nav" className="navbar-collapse">
             <Nav className="me-auto">
-              <Nav.Link 
-                as={Link} 
-                to="/" 
-                aria-label="Home" 
+              <Nav.Link
+                as={Link}
+                to="/"
+                aria-label="Home"
                 className={isActiveLink("/northshoresoap") ? "active" : ""}
                 onClick={() => setExpanded(false)}
               >
                 Home
               </Nav.Link>
-              <Nav.Link 
-                as={Link} 
-                to="/about" 
-                aria-label="About Us" 
+              <Nav.Link
+                as={Link}
+                to="/about"
+                aria-label="About Us"
                 className={isActiveLink("/about") ? "active" : ""}
                 onClick={() => setExpanded(false)}
               >
                 About Us
               </Nav.Link>
-              <Nav.Link 
-                as={Link} 
-                to="/ingredients" 
-                aria-label="ingredients" 
+              <Nav.Link
+                as={Link}
+                to="/ingredients"
+                aria-label="ingredients"
                 className={isActiveLink("/ingredients") ? "active" : ""}
                 onClick={() => setExpanded(false)}
               >
                 Ingredients
+              </Nav.Link>
+              <Nav.Link
+                as={Link}
+                to="/hours"
+                aria-label="hours"
+                className={isActiveLink("/hours") ? "active" : ""}
+                onClick={() => setExpanded(false)}
+              >
+                Hours & Location
               </Nav.Link>
               <NavDropdown title="Categories" className="nav-dropdown-categories" id="basic-nav-dropdown">
                 {categories.map(category => {
@@ -68,12 +77,12 @@ function Header({ updateCart, cartItems, setCartItems }) {
                   const categoryId = category.id;
 
                   return (
-                    <NavDropdown.Item 
-                      as={Link} 
-                      to={`/display_items/${categoryId}`} 
-                      aria-label={categoryName} 
-                      key={categoryId} 
-                      className="nav-dropdown-link-container" 
+                    <NavDropdown.Item
+                      as={Link}
+                      to={`/display_items/${categoryId}`}
+                      aria-label={categoryName}
+                      key={categoryId}
+                      className="nav-dropdown-link-container"
                       onClick={() => setExpanded(false)}
                     >
                       {categoryName}
@@ -83,7 +92,7 @@ function Header({ updateCart, cartItems, setCartItems }) {
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
-          <Link 
+          <Link
             to="/search"
             aria-label="Search"
             className="search-icon"
@@ -91,7 +100,7 @@ function Header({ updateCart, cartItems, setCartItems }) {
           >
             <TbSearch />
           </Link>
-          <Link 
+          <Link
             to="/checkout"
             aria-label="Cart"
             className="cart-button"

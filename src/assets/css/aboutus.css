@@ -1,106 +1,129 @@
 .aboutus-wrapper {
-    padding: 2% 5%;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+  padding: 2% 5%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .aboutus-description {
-    display: flex;
-    width: 100%;
-    padding: 0px 5%;
-    margin-top: 2%;
+  display: flex;
+  width: 100%;
+  padding: 0px 5%;
+  margin-top: 2%;
 }
 
 @media screen and (max-width: 550px) {
-
-    .aboutus-description p {
-        width: 100% !important;
-        flex-direction: column;
-        align-items: center;
-    }
+  .aboutus-description p {
+    width: 100% !important;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .aboutus-description p {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .aboutus-description img {
-    width: 280px;
-    height: auto;
-    padding: 10px;
-    background-color: var(--white);
-    border: 1px solid var(--mocha);
-    margin-right: 20px;
-    float: left;
+  width: 280px;
+  height: auto;
+  padding: 10px;
+  background-color: var(--white);
+  border: 1px solid var(--mocha);
+  margin-right: 20px;
+  float: left;
 }
 
 .separator {
-    width: 100%;
-    padding: 10px 10%;
-    text-align: center;
-    background-color: white;
-    font-size: var(--large);
-    color: var(--mocha);
-    line-height: 32px;
+  width: 100%;
+  padding: 10px 10%;
+  text-align: center;
+  background-color: white;
+  font-size: var(--large);
+  color: var(--mocha);
+  line-height: 32px;
 }
 
 .worker-section {
-    width: 100%;
-    padding: 20px;
-    background-image: url("https://northshoresoapworks.com/images/category_bg.png");
+  width: 100%;
+  padding: 20px;
+  background-image: url("https://northshoresoapworks.com/images/category_bg.png");
 }
 
 .worker-container {
-    padding: 0px 5%;
-    height: 315px;
-    margin-bottom: 20px;
+  padding: 0px 5%;
+  height: 315px;
+  margin-bottom: 20px;
 }
 
 .worker {
-    width: 100%;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 850px) {
-    .worker-container {
-        height: auto;
-    }
+  .worker-container {
+    height: auto;
+  }
 
-    .worker {
-        flex-direction: column !important;
-    }
+  .worker {
+    flex-direction: column !important;
+  }
 }
 
 .worker img {
-    width: 250px;
-    height: auto;
-    padding-left: 0 !important;
-    float: left;
-    margin: 5px 10px 0px 0px;
+  width: 250px;
+  height: auto;
+  padding-left: 0 !important;
+  float: left;
+  margin: 5px 10px 0px 0px;
 }
 
 .worker-description {
-    background-color: var(--white);
-    box-shadow: 0 0 0px 1px var(--mocha),
-        0 0 0px 10px var(--bone),
-        0 0 0px 13px var(--mocha);
+  background-color: var(--white);
+  box-shadow: 0 0 0px 1px var(--mocha), 0 0 0px 10px var(--bone),
+    0 0 0px 13px var(--mocha);
 }
 
 .worker-description p {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .worker-description {
-    padding: 10px;
+  padding: 10px;
 }
 
 .worker-description h2 {
-    color: var(--mocha);
-    font-size: var(--large);
+  color: var(--mocha);
+  font-size: var(--large);
 }
 
 .worker-name {
-    color: var(--mocha);
+  color: var(--mocha);
+}
+
+.map-and-hours {
+  padding: 20px 50px;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 742px) {
+  .map-and-hours {
+    flex-direction: column-reverse;
+  }
+}
+
+.map-and-hours div {
+  flex: 1;
+}
+
+.map {
+  min-width: 300px;
+}
+
+.hours {
+  width: 100%;
 }

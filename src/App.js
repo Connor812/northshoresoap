@@ -11,6 +11,7 @@ import Thankyou from './pages/thankyou.js';
 import EmailListing from './pages/emailListing.js';
 import Search from './pages/search.js';
 import Ingredients from './pages/ingredients.js';
+import Hours from './pages/hours.js';
 
 import { Helmet } from 'react-helmet';
 import { DataProvider, DataContext } from './hooks/dataContext.js';
@@ -61,6 +62,7 @@ function AppContent() {
         <Route path="/email_listing" element={<EmailListing />} />
         <Route path="/search" element={<Search />} />
         <Route path="/ingredients" element={<Ingredients />} />
+        <Route path="/hours" element={<Hours />} />
       </Routes>
       {/* <InitialModal /> */}
       <Footer />

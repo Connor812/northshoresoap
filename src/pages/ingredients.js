@@ -83,7 +83,7 @@ function ingredients() {
                     <Col md={8} className="ingredients-center">
 
                         <h1 className="ingredient-header">LOTION INGREDIENTS</h1>
-                        <p className="text-center">Our glycerine soap base is made with all vegetable oil and contains no alcohol or harmful products to dry the skin.</p>
+                        <p className="text-center">All of our products are made using high quality ingredients.</p>
                         <Row className="m-0">
                             <Col className="ingredients" sm={4}>
                                 Water (Aqua) <br />

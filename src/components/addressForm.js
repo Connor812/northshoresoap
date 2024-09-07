@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Collapse } from "react-bootstrap";
 
-function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updateTax, billingAddress, setBillingAddress }) {
+function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updateTax, billingAddress, setBillingAddress, stage }) {
 
     const [shippingOpen, setShippingOpen] = useState(false);
     const [pickupOpen, setPickupOpen] = useState(false);
@@ -23,8 +23,8 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                             setShippingOpen(!shippingOpen);
                             setPickupOpen(false);
                             setShipmentMethod("SHIPMENT");
-                            setShippingCost(shippingOpen ? 0 : 2000);
-                            updateTax(shippingOpen ? 0 : 2000);
+                            setShippingCost(shippingOpen ? 0 : 2500);
+                            updateTax(shippingOpen ? 0 : 2500);
                         }}
                         aria-controls="address-form"
                         aria-expanded={shippingOpen}
@@ -32,7 +32,7 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                     />
                     <label htmlFor="shipping-checkbox">Shipping</label>
                 </div>
-                <div>$20.00</div>
+                <div>$25.00</div>
             </div>
 
             <Collapse in={shippingOpen}>

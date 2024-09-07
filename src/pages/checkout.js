@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import HomeSoapCard from "../components/homeSoapCard.js";
 import Spinner from 'react-bootstrap/Spinner';
-
+import { removeItem } from "../utils/removeItemFromCard.js";
 import "../assets/css/checkout.css";
 
 function Checkout() {
@@ -27,10 +27,11 @@ function Checkout() {
     const [discount, setDiscount] = useState(0);
     const [error, setError] = useState("");
     const [stage, setStage] = useState("address-form");
+    const [showGiftWrap, setShowGiftWrap] = useState(true);
     const [billingAddress, setBillingAddress] = useState(false);
 
     function updateTax(shippingAmount) {
-        const newHst = ((parseFloat(subTotal) + shippingAmount) * 0.13).toFixed(2);
+        const newHst = ((parseFloat(subTotal) + (shippingAmount)) * 0.13).toFixed(2);
         setHst(newHst);
     }
 
@@ -170,8 +171,6 @@ function Checkout() {
 
         order.lineItems = lineItems;
 
-        console.log(order);
-
         // Make the button loading
         const loadingSpinner = `<div class="spinner-border checkout-spinner" role="status">
         <span class="visually-hidden">Loading...</span>
@@ -198,14 +197,12 @@ function Checkout() {
             )
             .then((data) => {
                 if (data.error || data.errors) {
-                    console.log(data);
                     setError(data.error);
                     paymentBtn.innerHTML = "Proceed to Payment";
                     paymentBtn.disabled = false;
                 } else {
                     paymentBtn.remove();
                     setError("");
-                    console.log(data);
                     setStage(<Payment data={data} shipmentMethod={shipmentMethod} subTotal={subTotal} setError={setError} />);
                 }
             })
@@ -306,34 +303,26 @@ function Checkout() {
         const existingCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
         const existingItemIndex = existingCartItems.findIndex(item => item.id === giftWrap.id);
 
-        if (existingItemIndex === -1) {
-            const newCartItems = [...cartItems, giftWrap];
-            setCartItems(newCartItems);
-            localStorage.setItem('cartItems', JSON.stringify(newCartItems));
 
-            // Update Price
-            const newSubTotal = parseInt(subTotal) + giftWrap.price;
-            setSubtotal(newSubTotal);
-            const newHst = ((newSubTotal + shippingCost) * 0.13).toFixed(2);
-            setHst(newHst);
+        const newCartItems = [...cartItems, giftWrap];
+        setCartItems(newCartItems);
+        localStorage.setItem('cartItems', JSON.stringify(newCartItems));
 
-            const addedToCartBtn = `<svg width="30" height="30" viewBox="0 0 16 16">
-                                        <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
-                                        <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                                    </svg>`;
+        // Update Price
+        const newSubTotal = parseInt(subTotal) + giftWrap.price;
+        setSubtotal(newSubTotal);
+        const newHst = ((newSubTotal + shippingCost) * 0.13).toFixed(2);
+        setHst(newHst);
 
-            const cartBtn = document.getElementById("add-gift-wrap-btn");
-            cartBtn.innerHTML = addedToCartBtn;
-            setTimeout(() => {
-                cartBtn.innerHTML = "Add Gift Wrap +$6.00";
-            }, 4000);
-        } else {
-            const cartBtn = document.getElementById("add-gift-wrap-btn");
-            cartBtn.innerHTML = "Already Added";
-            setTimeout(() => {
-                cartBtn.innerHTML = "Add Gift Wrap +$6.00";
-            }, 4000);
-            return;
+    }
+
+    const handleGiftWrap = (e) => {
+        const checked = e.target.checked;
+        if (checked) {
+            addGiftWrap();
+        }
+        else {
+            removeItem(``, "KS57CPHD3K43BWOKJFBS2KN4", cartItems, setCartItems, setSubtotal, setHst, setGrandTotal);
         }
     }
 
@@ -344,7 +333,7 @@ function Checkout() {
                     <div className="p-3 d-flex justify-content-between align-items-center">
                         <div>
                             <h1 className="text-start">Checkout</h1>
-                            <p>Thanks For Shopping With Us and Don't Forget Your Flowers!</p>
+                            <p>Thanks For Shopping With Us and Don't Forget Your Gift Wrap!</p>
                         </div>
                         <div>
                             <img loading="lazy"
@@ -394,14 +383,6 @@ function Checkout() {
                                 type="text"
                             />
                             <button className="button">Apply</button>
-                        </div>
-                        <div>
-                            <button id="add-gift-wrap-btn"
-                                className="button add-gift-wrap-btn"
-                                onClick={() => addGiftWrap()}
-                            >
-                                Add Gift Wrap +$6.00
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -458,10 +439,31 @@ function Checkout() {
                                 updateTax={updateTax}
                                 billingAddress={billingAddress}
                                 setBillingAddress={setBillingAddress}
+                                stage={stage}
                             />
                         ) : (
                             stage
                         )}
+                        <div className="d-flex justify-content-between align-items-center w-100">
+                            <div>
+                                {stage !== "address-form" ? "" :
+                                    <>
+                                        <input
+                                            type="checkbox"
+                                            id="gift-wrap"
+                                            aria-label="Shipment or Pickup"
+                                            aria-controls="address-form"
+                                            style={{ marginRight: '10px', width: '20px', height: "20px" }}
+                                            onChange={(e) => handleGiftWrap(e)}
+                                        />
+                                        <label htmlFor="gift-wrap">Gift Wrap</label>
+                                    </>
+                                }
+                            </div>
+                            <div>
+                                $6.00
+                            </div>
+                        </div>
                         <div style={{ width: '100%', fontSize: '18pt' }}>
                             <hr />
                             Shipping: ${(shippingCost / 100).toFixed(2)}
@@ -470,7 +472,7 @@ function Checkout() {
                             <br />
                             Discount: -${discount.toFixed(2)}
                             <hr />
-                            Grand Total: ${((subTotal / 100 + shippingCost / 100 - discount) * 1.13).toFixed(2)}
+                            Grand Total: ${(((subTotal / 100) + (shippingCost / 100) - discount) * 1.13).toFixed(2)}
                             <div className="input-container">
                                 <button id="payment-btn" className="button" onClick={(e) => createOrder(e)} type="submit">Proceed To Payment</button>
                             </div>

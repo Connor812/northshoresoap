@@ -9,7 +9,7 @@ import Spinner from "react-bootstrap/Spinner";
 import "../assets/css/home.css";
 
 function Home() {
-   
+
    const carouselRef = useRef(null);
    const [itemWidth, setItemWidth] = useState(300); // Initial width, adjust as needed
    const [search, setSearch] = useState(''); // Search for soap by name
@@ -118,13 +118,13 @@ function Home() {
 
             <p className="text-center">SELECT A SOAP TO LEARN ABOUT ITS GOODNESS & YOU CAN MIX AND MATCH</p>
             <div className="sent-btn-container">
-               <button className="sent-btn" onClick={() => setSearch("Lavender")}>Lavender</button>
-               <button className="sent-btn" onClick={() => setSearch("Eucalyptus")}>Eucalyptus</button>
-               <button className="sent-btn" onClick={() => setSearch("Citrus")}>Citrus</button>
-               <button className="sent-btn" onClick={() => setSearch("Rose")}>Rose</button>
-               <button className="sent-btn" onClick={() => setSearch("Peppermint")}>Peppermint</button>
-               <button className="sent-btn" onClick={() => setSearch("Coconut")}>Coconut</button>
-               <button className="sent-btn" onClick={() => setSearch("Sandalwood")}>Sandalwood</button>
+               <button className="sent-btn" onClick={() => setSearch("lavender")}>Lavender</button>
+               <button className="sent-btn" onClick={() => setSearch("eucalyptus")}>Eucalyptus</button>
+               <button className="sent-btn" onClick={() => setSearch("citrus")}>Citrus</button>
+               <button className="sent-btn" onClick={() => setSearch("rose")}>Rose</button>
+               <button className="sent-btn" onClick={() => setSearch("peppermint")}>Peppermint</button>
+               <button className="sent-btn" onClick={() => setSearch("coconut")}>Coconut</button>
+               <button className="sent-btn" onClick={() => setSearch("sandalwood")}>Sandalwood</button>
             </div>
             <center className="sent-search-container">
                <label htmlFor="sent-search">Search For Your Favorite Fragrance: </label>
@@ -198,6 +198,8 @@ function Home() {
                      </div>
                   ) : (
                      categories.map(category => {
+                        console.log(category);
+
                         const image_id = category.image_id;
                         const category_name = category.name;
                         const category_id = category.id;
@@ -215,13 +217,8 @@ function Home() {
                         const { url } = relatedObject.image_data;
 
                         return (
-                           <Link key={category.id} to={`/display_items/${category_id}`}>
-                              <div className="category">
-                                 <img loading="lazy" src={url} alt={category_name} className="category-img" />
-                                 <div className="title-container">
-                                    <h4>{category_name}</h4>
-                                 </div>
-                              </div>
+                           <Link className="category" key={category.id} to={`/display_items/${category_id}`}>
+                              {category_name}
                            </Link>
                         );
                      })
