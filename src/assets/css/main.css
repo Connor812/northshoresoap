@@ -22,7 +22,6 @@
 
 * {
   box-sizing: border-box;
-
 }
 
 @font-face {
@@ -194,7 +193,7 @@ p {
 }
 
 .initial-modal .modal-dialog {
-  max-width: 800px;
+  max-width: 500px;
 }
 
 .initial-modal .modal-content {
@@ -202,11 +201,11 @@ p {
   color: var(--mocha);
 }
 
-@media screen and (max-width: 665px) {
-  .initial-modal img {
-    display: none;
-  }
-}
+/* @media screen and (max-width: 665px) { */
+  /* .initial-modal img { */
+    /* display: none; */
+  /* } */
+/* } */
 
 .selection-container {
   display: flex;
@@ -230,9 +229,8 @@ p {
   max-width: 100%;
 }
 
-.option-variation-btn button{
+.option-variation-btn button {
   background-color: var(--mocha);
   color: var(--cream);
   border: none;
 }
-

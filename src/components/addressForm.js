@@ -107,9 +107,9 @@ function AddressForm({ shipmentMethod, setShipmentMethod, setShippingCost, updat
                                 type="text"
                                 id="Apt / Suite / Unit"
                                 className="checkout-input"
-                                placeholder="Apt / Suite / Unit (optional)"
+                                placeholder="Apt / Suite / Unit"
                                 name="apt"
-                                aria-label="Apt / Suite / Unit (optional)"
+                                aria-label="Apt / Suite / Unit"
                             />
                         </div>
                         <div className="row">

@@ -12,6 +12,7 @@ import EmailListing from './pages/emailListing.js';
 import Search from './pages/search.js';
 import Ingredients from './pages/ingredients.js';
 import Hours from './pages/hours.js';
+import InitialModal from './components/inital-modal';
 
 import { Helmet } from 'react-helmet';
 import { DataProvider, DataContext } from './hooks/dataContext.js';

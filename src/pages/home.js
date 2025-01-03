@@ -198,8 +198,6 @@ function Home() {
                      </div>
                   ) : (
                      categories.map(category => {
-                        console.log(category);
-
                         const image_id = category.image_id;
                         const category_name = category.name;
                         const category_id = category.id;
