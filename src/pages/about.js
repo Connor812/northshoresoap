@@ -102,16 +102,7 @@ function About() {
                            alt="Worker"
                         />
                         <h4 className="worker-name">STEPHANIE MISNER</h4>
-                        Meet Stephanie Misner, the owner and operator of North Shore Soapworks. She and her husband Scott, were both born and raised in
-                        beautiful Port Dover and just couldn’t think of raising their
-                        family anywhere else! Stephanie has been lucky enough to have worked as
-                        a dental hygienist in the community for over 30 years and
-                        physically she was ready for change. Her new venture as
-                        owner/operator at North Shore Soapworks has continued to allow
-                        her to be surrounded with wonderful people while still promoting wellness and
-                        health. She is still able to be creative which satisfies her
-                        artistic side. The best part is that she can bring her dog,
-                        Daisy to work with her every day!
+                        Meet Stephanie Misner, the owner and operator of North Shore Soapworks. She and her husband Scott, were both born and raised in beautiful Port Dover and just couldn’t think of raising their family anywhere else! Stephanie has been lucky enough to have worked as a dental hygienist in the community for over 30 years and physically she was ready for change. Her new venture as owner/operator at North Shore Soapworks has continued to allow her to be surrounded with wonderful people while still promoting wellness and health. She is still able to be creative which satisfies her artistic side. The best part is that she can bring her dog, Daisy to work with her every day!
                      </p>
 
                   </div>
@@ -128,17 +119,7 @@ function About() {
                      />
                      <h4 className="worker-name">Trish</h4>
                      <p>
-                        Our dynamic and creative soap maker that has been here since day ONE! Most
-                        days Trish can be found in our little soap factory, conjuring up
-                        fresh new ideas for soaps and scents, and of course, keeping
-                        your long time favourites well stocked. Before becoming a soap
-                        maker, Trish was a Pharmacy Technician for 20 years, which in
-                        turn has made her the most organized of our bunch by far. Aren't
-                        we all so lucky she made the jump into soap making?! In her
-                        spare time Trish enjoys cooking, spending time with family and
-                        friends, and taking care of her beautiful home. Here at North
-                        Shore Soapworks we are thankful for Trish every day as she keeps
-                        us on task, keeps us fed and keeps our water glasses full!
+                        Our dynamic and creative soap maker that has been here since day ONE! Most days Trish can be found in our little soap factory, conjuring up fresh new ideas for soaps and scents, and of course, keeping your long time favourites well stocked. Before becoming a soap maker, Trish was a Pharmacy Technician for 20 years, which in turn has made her the most organized of our bunch by far. Aren't we all so lucky she made the jump into soap making?! In her spare time Trish enjoys cooking, spending time with family and friends, and taking care of her beautiful home. Here at North Shore Soapworks we are thankful for Trish every day as she keeps us on task, keeps us fed and keeps our water glasses full!
                      </p>
                   </div>
                </div>
@@ -154,41 +135,7 @@ function About() {
                      />
                      <h4 className="worker-name">Sarah</h4>
                      <p>
-                        The newest face at North Shore Soapworks.
-                        Although her journey here has just begun, her history with
-                        Stephanie goes back to day one. They are cousins and Steph played a
-                        very large part in Sarah's childhood. The family vibe continues
-                        through the entire staff as everyone has welcomed Sarah with open
-                        arms. She has always loved people and all things that smell good
-                        so whether she's out in the front or in the factory, she's in her
-                        element!
-                     </p>
-                  </div>
-               </div>
-            </div>
-
-            <div className="worker-container">
-               <div className="worker">
-                  <div className="worker-description">
-                     <img
-                        loading="lazy"
-                        src="https://northshoresoapworks.com/assets/staff_images/haley.jpg"
-                        alt="Worker"
-                     />
-                     <h4 className="worker-name">Hayley</h4>
-                     <p>
-                        Now that we’ve got her back, Hayley can be found helping our
-                        guests in the store, brewing up our signature lotions, salts,
-                        and even dabbling in the soap making! Before stepping into her
-                        position here, Hayley was an international flight attendant
-                        which has provided her with the ability to seamlessly jump into
-                        any role needed here and provide a high standard of
-                        customer service. As a new mom, outside of the soap store Hayley
-                        enjoys slow mornings with her daughter rediscovering all the
-                        little things in life, spending time in nature, and renovating
-                        their little home with her husband. Here at North Shore
-                        Soapworks we are grateful for Hayley and the energy she brings.
-                        She keeps us laughing, and she makes sure that our work playlists are spot on.
+                        Sarah is a valued member of the North Shore Soapworks team, bringing warmth, positivity, and a true love for people to everything she does. Over the past year, she has learned so much and is now following in Trish’s footsteps learning the art of soap making—where she’s doing an incredible job! Her connection to Soapworks runs deep: as cousins, Sarah and Stephanie go back to day one, with Steph playing a big role in Sarah’s childhood. That family bond carries through the entire team, creating the welcoming atmosphere our customers feel when they walk through the door. Whether she’s greeting visitors up front or hard at work in the factory, Sarah is always in her element—surrounded by wonderful scents and smiling faces. With her constant smile and willingness to lend a hand, she truly embodies the heart and spirit of North Shore Soapworks.
                      </p>
                   </div>
                </div>
@@ -230,12 +177,39 @@ function About() {
                      />
                      <h4 className="worker-name">Emily</h4>
                      <p>
-                        Emily is our "girl Saturday". You can find her wrapping soap,
-                        restocking shelves and she is our resident tech-girl. Her
-                        favourite Northshore soap is Sunny Day, a fresh punch of citrus.
-                        She is a proud Waterford Wolf, a volleyball enthusiast, and
-                        loves jigsaw puzzles. In her free time, you can find her
-                        wandering in the woods or on her stand-up paddleboard or playing with her new puppy.
+                        Emily is our "Girl Saturday". You can find her wrapping soap, restocking shelves and she is our resident tech-girl. Her favourite North Shore soap is Energy, a punch of spicy citrus. She is a proud Waterford Wolf, a volleyball enthusiast, and loves a good puzzle. In her spare time, you can find her wandering in the woods with her puppy.
+                     </p>
+                  </div>
+               </div>
+            </div>
+
+            <div className="worker-container">
+               <div className="worker">
+                  <div className="worker-description">
+                     <img
+                        loading="lazy"
+                        src="https://northshoresoapworks.com/assets/staff_images/nicole.jpg"
+                        alt="Worker"
+                     />
+                     <h4 className="worker-name">Nicole</h4>
+                     <p>
+                        A proud lifelong resident of Norfolk County, Nicole has always loved the charm and close-knit feel of small-town life. She first joined North Shore Soapworks during the busy holiday season last year and quickly became a valued part of our team. Now, she’s apprenticing under Trish, our master soap maker, to learn the art and craft of soap making. When she’s not at the shop, you can often find Nicole baking up something delicious in her kitchen, strolling through town, or planning her next travel adventure. Stop by and say hello — she’s always happy to share her favourite products with you.
+                     </p>
+                  </div>
+               </div>
+            </div>
+
+            <div className="worker-container">
+               <div className="worker">
+                  <div className="worker-description">
+                     <img
+                        loading="lazy"
+                        src="https://northshoresoapworks.com/assets/staff_images/delaney.jpg"
+                        alt="Worker"
+                     />
+                     <h4 className="worker-name">Delaney</h4>
+                     <p>
+                        Our newest and youngest team member, Delaney loves chatting with visitors and sharing her favourite soap, Venus. Outside of work and when not busy with her studies at SCS, she enjoys reading, singing, and sipping tea. She always brings positivity to the shop and can’t wait to welcome you in!
                      </p>
                   </div>
                </div>
@@ -251,7 +225,7 @@ function About() {
                      />
                      <h4 className="worker-name">Daisy</h4>
                      <p>
-                        Meet Daisy -she’s a little girl with a big attitude! Daisy is an 9 year old Shih Tzu who can’t get enough of the “shop-dog life”-she lives for love, cuddles and treats (especially treats). Some believe that she is actually the owner of North Shore Soapworks and we all work for her!
+                        Daisy is our sweet, 11-year-old Shih Tzu and the beloved resident shop pup at North Shore Soapworks. She lives for love, cuddles, and treats—and can often be found greeting visitors with a wagging tail and a big heart. Daisy makes every visit to the shop just a little brighter
                      </p>
                   </div>
                </div>

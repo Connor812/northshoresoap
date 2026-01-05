@@ -44,7 +44,7 @@ function hours() {
                 <div className="hours">
                     <h2>Hours Of Operation</h2>
                     <hr />
-                    Monday: CLOSED <br />
+                    Monday: 10:00 AM – 5:00 PM <br />
                     Tuesday: 10:00 AM – 5:00 PM <br />
                     Wednesday: 10:00 AM – 5:00 PM <br />
                     Thursday: 10:00 AM – 5:00 PM <br />
